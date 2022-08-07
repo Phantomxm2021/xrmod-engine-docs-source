@@ -1,0 +1,50 @@
+{
+  "version.label": {
+    "message": "当前",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Prepare For Developer": {
+    "message": "为开发者做准备",
+    "description": "The label for category Prepare For Developer in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Prepare For Developer.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category Prepare For Developer in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Dev-Tools": {
+    "message": "开发工具",
+    "description": "The label for category Dev-Tools in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Dev-Tools.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category Dev-Tools in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.AR-Blocks": {
+    "message": "AR-Blocks",
+    "description": "The label for category AR-Blocks in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.AR-Blocks.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category AR-Blocks in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Basics": {
+    "message": "教程 - 基础知识",
+    "description": "The label for category Tutorial - Basics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Exapmles": {
+    "message": "示例",
+    "description": "The label for category Exapmles in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Exapmles.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category Exapmles in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Limition": {
+    "message": "限制",
+    "description": "The label for category Limition in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Limition.link.generated-index.description": {
+    "message": "5 minutes to learn the most important Docusaurus concepts.",
+    "description": "The generated-index page description for category Limition in sidebar tutorialSidebar"
+  }
+}
