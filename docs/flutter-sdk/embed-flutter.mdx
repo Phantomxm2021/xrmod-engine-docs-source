@@ -1,0 +1,159 @@
+---
+sidebar_position: 2
+title: Embed SDK Flutter
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## What is Flutter?
+[Flutter](https://flutter.dev/) is Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, desktop, and embedded devices from a single codebase.
+
+
+## XR-MOD with Flutter
+In the past, to use AR-MOD sdk in Flutter, developers need to create AR-MOD plug-ins for Flutter projects, so that Flutter can use AR-MOD! 
+We also found this problem, so we launched a plug-in that fully supports Flutter in version 0.0.4. We pushed it to pub.dev and the name is [flutter_armod_widget](https://pub.dev/packages/flutter_armod_widget).
+From now on I will lead you to see how to use AR-MOD SDK in Flutter.
+
+:::caution
+We will skip how to install flutter and how to create a project with flutter 
+:::
+
+## Setup Flutter project
+
+### Step 1
+
+Open the `pubspec.yaml` file and write the `flutter_armod_widget: ^2.0.0-pre.1` to dependencies .
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_armod_widget: ^2.0.0-pre.1
+```
+
+### Step 2
+
+Run the `flutter pub get` command in your project's termial to install the dependencies.
+
+### Step 3
+
+Download and unzip the AR-MOD SDK Framework from [github](https://github.com/Phantomxm2021/ARMOD-Framework).
+ 
+<Tabs
+  groupId="platform-setup"
+  defaultValue="android"
+  values={[
+    { label: "Android", value: "android" },
+    { label: "iOS", value: "ios" },
+  ]}
+>
+<TabItem value="android">
+
+Go to the location of `FLUTTER-SDK-PATH/.pub-cache/hosted/pub.dartlang.org/flutter_armod_widget-VERSION/` folder, 
+then paste the libs to android platform folder.
+
+</TabItem>
+
+
+<TabItem value="ios">
+
+- Create the ThirdParties folder to your XCode project.
+- Import UnityFramework.framework to the folder(ThridParties).
+- Add the Framewrok to `Xcode` -> `Targets` -> `Your APP` -> `General` -> `Franework,Libraries, and Embedded Content` area, And set the Embed mode to Embed & Sign.
+- Execute the cd iOS command and run Pod install command in your termial.
+
+</TabItem>
+
+</Tabs>
+
+### Step 4
+- Run `Flutter pub get` command in your termial again.
+- Create and write your app token to [PhantomsXRConfig.dart](https://github.com/Phantomxm2021/ARMOD-FlutterAppDemo/blob/main/lib/src/config/phantomsxrConfig.dart).
+- And write a new screen for AR-MOD.
+
+
+## Build and Test
+
+<Tabs
+  groupId="platform-setup"
+  defaultValue="android"
+  values={[
+    { label: "Android", value: "android" },
+    { label: "iOS", value: "ios" },
+  ]}
+>
+<TabItem value="android">
+
+:::success
+No additional configuration required
+:::
+
+</TabItem>
+
+
+<TabItem value="ios">
+
+If you're using Swift, open the `ios/Runner/AppDelegate.swift` file and change the following:
+
+```swift diff title="AppDelegate.swift"
+import UIKit
+import Flutter
+import flutter_armod_widget
+
+@UIApplicationMain
+@objc class AppDelegate: FlutterAppDelegate {
+  override func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
+  
+    InitARMODIntegrationWithOptions(argc: CommandLine.argc, argv: CommandLine.unsafeArgv, launchOptions)
+    let nativeCalls: AnyClass? = NSClassFromString("FrameworkLibAPI")
+    nativeCalls?.registerAPIforNativeCalls(ARMODCallbackAPI())
+    
+    GeneratedPluginRegistrant.register(with: self)
+    return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+  }
+}
+
+```
+
+If you're using Objective-C, open the `ios/Runner/main.m` file and change the following:
+
+```objectivec title="main.m"
+#import "flutter_armod_widget.swift.h"
+int main(int argc, char * argv[]) {
+    @autoreleasepool {
+        InitARMODIntegration(argc, argv);
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+    }
+}
+```
+
+Edit the `info.plist`
+
+```json
+<dict>
+    <key>io.flutter.embedded_views_preview</key>
+    <string>YES</string>
+</dict>
+
+<dict>
+    <key>Privacy - Camera Usage Description</key>
+    <string>$(PRODUCT_NAME) uses Cameras</string>
+</dict>
+
+<dict>
+    <key>NSBonjourServices</key>
+    <string>_dartobservatory._tcp</string>
+</dict>
+```
+
+
+</TabItem>
+
+</Tabs>
+
+
+OK, you just need to run `flutter run --release` command in the terminal.  An AR app will be run in your phone!
+[Click here](https://github.com/Phantomxm2021/ARMOD-FlutterAppDemo) to download this source code!

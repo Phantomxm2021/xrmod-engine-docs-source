@@ -1,0 +1,36 @@
+---
+title: GetValueByKey
+---
+
+## Description
+
+Read data temporarily stored on the device
+
+## Return
+
+| Type   | Description      |
+| ------ | ---------------- |
+| <highlight color="#AE6221">String</highlight> | The data queried |
+
+## Parameters
+
+| Param         | Description                                                    |
+| ------------- | -------------------------------------------------------------- |
+| \_projectName | Use ProjectName+Key storage to prevent Key from being occupied |
+| \_key         | Unique name                                                    |
+
+## Method
+
+```cs
+public string GetValueByKey(string _projectName, string _key)
+```
+
+## Example
+
+```cs 
+internal static API ARMODAPI = new API(nameof(APITest));
+private void OnLoad(){
+    ARMODAPI.SaveKeyAndValue(nameof(APITest),"StoreKey","StoreValue");
+    Debug.Log(ARMODAPI.GetValueByKey(nameof(APITest),"StoreKey"));
+}
+```

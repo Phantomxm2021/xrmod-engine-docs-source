@@ -1,0 +1,92 @@
+---
+sidebar_position: 1
+title: AR Algorithm Block
+---
+
+## AR Algorithm
+
+用于配置 AR 体验的主算法；每个 AR 体验都必须用主算法进行配置。当主算法运行失败时进行替换。(只支持启动、关闭和运行时的附加算法)
+
+## Algorithm Auto Start
+
+主算法自动启动，不需要调用脚本。
+
+### Focus Slam
+
+聚焦的 SLAM 算法，AR 虚拟体被放置在指标的位置上。
+
+<coverimg
+  url={require("@site/static/static/blocks/features-block/focus-slam.png")}
+  height="25rem"
+  padding="0"
+/>
+
+### Plane Detection Mode
+
+SLAM 寻找平面的算法，有水平、垂直和两者选项。
+
+<coverimg
+  url={require("@site/static/static/blocks/features-block/plane-detection.png")}
+  height="25rem"
+  padding="0"
+/>
+
+### Anchor
+
+锚点式 SLAM 算法将 AR 虚拟体铆在锚点上。
+
+### Gyro
+
+只有 3Dof 算法的 AR 模式被打开，体验者只能通过 360° 旋转来观看，没有空间运动的感知。
+
+### Fixed
+
+贴纸模式，将 AR 的虚拟和思考放在屏幕上。不能有 6D 的知觉。
+
+### Image Tracking
+
+图像跟踪，将 AR 虚拟体和图像联系在一起，当图片移动时，虚拟体也会随之移动。
+
+<coverimg
+  url={require("@site/static/static/blocks/features-block/image-tracking.jpeg")}
+  height="25rem"
+  padding="0"
+/>
+
+### Max Moving Of Tracking
+
+在 AR 体验中可以追踪的最大图片数量。
+
+### Immersal
+
+Immersal 是一家专注于 AR 云的技术公司；它使用 Immersal SDK 建立厘米级、耐用的多用户 AR 应用，可以在支持 AR 的移动设备和眼镜上使用。
+
+<coverimg
+  url={require("@site/static/static/blocks/features-block/immersalsdk.jpg")}
+  height="25rem"
+  padding="0"
+/>
+
+#### Immersal 特点介绍:
+
+- 快速视觉定位，系统开销低
+- 定位可在设备上离线运行或在云端在线运行
+- iOS、Android 和与华为 AR 引擎兼容的设备上的插件
+- Immersal 云服务的 REST API 适用于任何设备
+- 在 App Store 上有预建的应用程序，可用于绘制真实世界的位置图
+- 甚至可以绘制室内和室外大型城市区域的地图
+- 非常小的地图文件格式，极其优化
+- 具有共享选项的私人/公共地图
+- 全球地图协调支持 WGS84 和 ECEF
+- 使用 GPS 坐标来标记和搜索地图
+- 点云的纹理网格和可用的测绘空间
+- 在同一空间内同时支持多张地图
+- 易于使用的 Unity 范例，带有室内导航等模板
+- 详细的文档帮助开发者开始工作
+- 使用 3D 地图查看器来开发门户
+- 开发者令牌
+- 通过 Immersal Dashboard 获得的开发者令牌。用于连接到 Immersal 服务器进行认证。
+
+### Face Mesh
+
+Face Mesh是一个脸部几何解决方案；它将实时构建一个脸部网格，并为脸部生成一个专属的脸部模型。

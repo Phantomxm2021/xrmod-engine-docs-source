@@ -1,0 +1,64 @@
+---
+sidebar_position: 2
+title: MonoBehaviour binder
+---
+
+import ImageWithText from '@site/src/components/ImageWithText'
+
+
+## Intro
+
+[MonoBehaviour](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html) is the base class from which every Unity script derives.When you use C#, you must explicitly derive from MonoBehaviour. 
+
+In XR MOD development, we cannot directly drag and drop Monobehaviour into game objects.
+
+<coverimg  url={require('@site/static/static/dev-tools/monobinder/DragAndDropMonoBehaviour.gif')}/>
+
+
+Even if the traditional drag-and-drop is not supported, we provide another way to bind MonoBehaviour. We call it Mono Binder.
+
+<coverimg  url={require('@site/static/static/dev-tools/monobinder/MonoBinder.gif')}/>
+
+
+
+## How to use it
+
+### Manual
+
+- Add MonoBinder to your own game object
+- Typing your script namespace and class name
+- Click the Binding button
+
+Well done! You have mastered how to use monobinder. You may not understand the panel parameters. Next, we will introduce the function and usage of each parameter of the panel in detail.
+
+<ImageWithText imagePath={require("@site/static/static/dev-tools/monobinder/MonoBinderDetail.png")} size="100%">
+
+|Id|Name|Description|
+|---|---|---|
+|1|ScriptList||MonoBehaviour list|
+|2|Element|MonoBehaviour binding configure.|
+|3|ClassNamespace|Your script namespace|
+|4|ClassName|Your script class name|
+|5|ActivateAfterInitialization|Automatically activate after initialization|
+|6|AutoPaddingData|Automatically fill in data for all fields|
+|7|Constructor|Whether to use the constructor|
+|8|Fields|All public fields in the script|
+|9|Binding|Auto binding fields|
+|10|Refresh|Refresh bound fields and remove uselessfields|
+|11|FieldName|The name of the field in the script|
+|12|Value|The value of the field in the script|
+|13|GameObject|Allow you drag-and-drop gameobjec for it|
+|14|FieldType|The type of the field in the script
+
+</ImageWithText>
+
+### Auto Convert
+<ImageWithText imagePath={require("@site/static/static/dev-tools/monobinder/ConvertToMonoBinder.png")}>
+
+- Write a C# script 
+- Extends `XRMODBehaviour` script
+- Write logic code according to the workflow of Unity Monobehaviour
+- Add your script to Unity-GameObject
+- You will see this script component has a button call `Convert To MonoBinder` and click it
+
+</ImageWithText>

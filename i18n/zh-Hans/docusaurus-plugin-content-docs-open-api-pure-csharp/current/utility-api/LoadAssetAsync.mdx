@@ -1,0 +1,43 @@
+---
+title: LoadAssetAsync
+---
+
+## Description
+
+Asynchronously load a single asset from our package through the project name, and hope to load the asset name.
+
+## Return
+
+:::caution
+This api is loading `Prefab` from disk into memory. It is not instantiating the `Prefab` into the game scene.
+:::
+
+| Type                                           | Description          |
+| ---------------------------------------------- | -------------------- |
+| <highlight color="#3E6ED4"> Object</highlight> | Your asset of T type |
+
+## Parameters
+
+| Param                  | Type   | Description               |
+| ---------------------- | ------ | ------------------------- |
+| T                      | T      | UnityObject Type          |
+| \_projectName          | String | your project name         |
+| \_wannaLoadedAssetName | String | you wanna load asset name |
+
+## Method
+
+```cs
+public async Task<T> LoadAssetAsync<T>(string _projectName, string _wannaLoadedAssetName)
+```
+
+## Example
+
+```cs
+internal static API api = new API(nameof(TestAPI));
+
+public async void OnLoad()
+{
+    var tmp_UICanvasPrefab = await api.LoadAssetAsync<GameObject>("UI_CANVAS_NAME");
+    stackARCanvasGO = Object.Instantiate(tmp_UICanvasPrefab);
+}
+```

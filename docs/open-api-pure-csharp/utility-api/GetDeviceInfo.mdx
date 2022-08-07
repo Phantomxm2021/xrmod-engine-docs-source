@@ -1,0 +1,36 @@
+---
+title: GetDeviceInfo
+---
+
+## Description
+
+Access system and hardware information.
+
+Use this method to figure out capabilities of the underlying platform and hardware. For example, you can check which RenderTexture formats are supported (SupportsRenderTextureFormat), how many CPU threads are available (processorCount), and so on.
+
+## Return
+
+| Type                                          | Description       |
+| --------------------------------------------- | ----------------- |
+| <highlight color="#AE6221">String</highlight> | devices info-Json |
+
+## Method
+
+```cs
+public string GetDeviceInfo()
+```
+
+## Example
+
+```cs
+internal static API ARMODAPI = new API(nameof(APITest));
+private void OnLoad(){
+    //You can also use LitJson to mapping it to a class.
+    //Litjson is already in XRMOD, You just need to add the dependence.
+    Debug.Log(ARMODAPI.GetDeviceInfo());
+}
+```
+
+## Relation
+
+If you want to use Litjson in your XRMOD case, you can click [here](#) to read more about it.

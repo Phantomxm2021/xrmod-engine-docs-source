@@ -1,0 +1,57 @@
+---
+sidebar_position: 4
+title: Visualizer Block
+---
+
+## Custom Plane Visualizer
+
+Customize the plane visualizer, find the plane through the SLAM algorithm and display it with the visualizer.
+
+<coverimg
+  url={require("@site/static/static/blocks/ar-block/feathered-planes.png")}
+  height="25rem"
+  padding="2"
+/>
+
+:::danger
+Place the necessary components of the AR virtual body in SLAM mode, whether it is impossible to place any AR virtual body in the AR world.
+:::
+
+### Visualizer Name
+
+The name of the custom visualizer must be included in the AR experience package.
+
+:::info
+The default visualizer can be selected through the Block menu.
+:::
+
+<coverimg
+  url={require("@site/static/static/blocks/ar-block/plane-visualizer-block.png")}
+  height="100%"
+  padding="0"
+/>
+
+## Point Cloud Visualizer
+
+With a custom point cloud visualizer, the AR device uses the device's camera and image analysis to track specific points in the world, and uses these points to build a map of its environment.
+The point cloud is a set of feature points, which can change between each frame. Some platforms only generate one point cloud, while other platforms organize their feature points into different point clouds in different areas of space.
+Point clouds are considered to be trackable, while individual feature points are not. However, feature points can be uniquely identified between frames because they have unique identifiers.
+
+<coverimg
+  url={require("@site/static/static/blocks/ar-block/point-cloud-visualizer.png")}
+  height="25rem"
+/>
+
+### Visualizer Name
+
+The name of the custom visualizer must be included in the AR experience package.
+
+:::info
+The default visualizer can be selected through the Block menu.
+:::
+
+<coverimg
+  url={require("@site/static/static/blocks/ar-block/point-cloud-visualizer-block.png")}
+  height="100%"
+  padding="0"
+/>

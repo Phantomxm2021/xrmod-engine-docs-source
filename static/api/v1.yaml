@@ -1,0 +1,184 @@
+openapi: 3.0.0
+servers:
+  - url: 'https://phantomsxr.cn/api/v2/'
+    description: ''
+    variables: {}
+info:
+  version: v1
+  title: XRMOD Cloud v1 Collection
+  description: Use the xrmod cloud api for xr content that you own and that creators share.
+  termsOfService: ''
+  contact: {}
+  license:
+    name: ''
+paths:
+  /getarexperiencelist:
+   get:
+      summary: Get all XR-experience
+      description: |
+        Get a list of XR experience created by an vaild license.
+      operationId: GetARExperienceList
+      parameters: 
+        - $ref: '#/components/parameters/packageid'
+        - $ref: '#/components/parameters/page_size'
+        - $ref: '#/components/parameters/page_num'
+        - $ref: '#/components/securitySchemes'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    code: 200,
+                    message: ''
+                    data:                      
+                      all:
+                        - app_uid: 3663670167 
+                          user_uid: 1012451543
+                          project_id: 3749040281
+                          project_name: "SLAMSample"
+                          project_brief: "Place an virutal object in real world."
+                          project_icon: "https://../AR_icon.jpg"
+      tags:
+        - GetXRExperience
+  /getrecommendslist:
+    post:
+      summary: Get recommand list
+      description: |
+        Get a list of XR-erxperience flagged as recommended.
+      operationId: GetRecommendsList
+      parameters: 
+        - $ref: '#/components/securitySchemes'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    code": 200,
+                    message: ''
+                    data:                      
+                      all:
+                        - app_uid: 3663670167 
+                          user_uid: 1012451543
+                          project_id: 3749040281
+                          project_name: "SLAMSample"
+                          project_brief: "Place an virutal object in real world."
+                          project_icon: "https://../AR_icon.jpg"
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    code": 200,
+                    message: ''
+                    data:                      
+                      all:
+                        - app_uid: 3663670167 
+                          user_uid: 1012451543
+                          project_id: 3749040281
+                          project_name: "SLAMSample"
+                          project_brief: "Place an virutal object in real world."
+                          project_icon: "https://../AR_icon.jpg"
+      tags:
+        - GetXRExperience
+  /getarexperience:
+    get:
+      summary: Get XR-Experience detail
+      description: |
+        Via project uid to get a XR-Experience project deatil.
+      operationId: GetARExperience
+      parameters: 
+        - $ref: '#/components/parameters/project_id'
+        - $ref: '#/components/securitySchemes'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    code: 200,
+                    message: ''
+                    data:
+                      app_uid: 3663670167,
+                      user_uid: 1012451543,
+                      project_id: 2917042829,
+                      project_name: "Solar System AR"
+                      project_description: "Descript for solar system."
+                      project_icon: 
+                        "https://.../1012451543/3663670167/2917042829.jpg"
+                      project_header: 
+                        "https://.../1012451543/3663670167/2917042829.jpg"
+                      project_preview: 
+                        "https://.../1012451543/3663670167/2917042829.jpg"
+
+      tags:
+        - GetXRExperience
+      
+
+components:
+  parameters:
+    packageid:
+      name: packageid
+      in: query
+      required: true
+      schema:
+        type: string
+    page_size:
+      name: page_size
+      in: query
+      required: true
+      schema:
+        type: number
+    page_num:
+      name: page_num
+      in: query
+      required: true
+      schema:
+        type: number
+    project_id:
+      name: project_id
+      in: query
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    Authorization:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: |-
+        Prefix the value with `Token` to indicate the custom authorization type
+      
+tags:
+  - name: GetXRExperience
+externalDocs:
+  url: ''
+  description: ''
+security:
+  - Authorization: []

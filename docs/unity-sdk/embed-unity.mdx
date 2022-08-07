@@ -1,0 +1,97 @@
+---
+sidebar_position: 2
+title: Embed SDK Unity
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<coverimg url={require('../../static/static/sdk/unity-sdk/unity-showcase.png')} height="25rem"/>
+
+
+## XRMOD Engine development environment
+Get the basic development environment by reading [the XR Experience Content Development Kit Installation article](../experience-manual/prepare-for-developer/install-xrmod-dev-tools). Since we need to combine XRMOD Engine with Unity to develop a new APP, We need to install some required packages.
+
+
+<Tabs defaultValue='handheldar' values={[
+    {label:"Apple",value:"appleglasses"},
+    {label:"HandheldAR",value:"handheldar"},
+    {label:"Hololens2",value:"hololens2"},
+    {label:"Quest2",value:"quest2"},
+    {label:"PicoNeo3",value:"piconeo3"},
+    {label:"WebXR",value:"webar"},
+    {label:"Web3D",value:"web3d"},
+    {label:"Classic3D",value:"classic3d"},
+]}>
+
+<TabItem value="handheldar">
+
+- com.phantomsxr.xrmodenginesettings
+- com.phantomsxr.xrmod.handheldar
+- com.phantomsxr.ilcore
+- com.phantomsxr.foundation
+
+:::tip
+How to check the package name?
+<coverimg url={require('../../static/static/sdk/unity-sdk/package-name.png')} height="25rem"/>
+:::
+
+</TabItem>
+
+
+</Tabs>
+
+
+
+After the installation is complete, open the `Edit`->`Project Settings`->`PhantomsXR`->`XR-MOD Engine SDK Settings` in the menu bar at the top of Unity to initialize our project configuration, as shown in the following figure. After completing this step, we can start developing AR-APP.
+
+<coverimg url={require('../../static/static/sdk/unity-sdk/xrmod-settings.png')} height="25rem" />
+
+
+## Launch XRMOD Engine
+
+We create a new Unity Scene and save it (the name of the Unity Scene needs to be changed during the saving process, which is replaced by App, which can be named according to your own preferences.), then add the Unity Scene to the `Build Settings` and set its order. For the first position, the index is `0`.
+
+<coverimg url={require('../../static/static/sdk/unity-sdk/scene-list.png')} height="10rem" />
+
+Create a new folder in the Assets panel named Scripts (used to store project scripts - personal habits), create a new C# Script in the contents of the folder and name it App.
+
+After waiting for Unity to compile, we double-click the Script we just created to open it for editing. The idea flow is roughly as follows:
+
+1. Get SDK EntryPoint
+2. Build and configure SDKConfiguration and pass in by SDK EntryPoint.Init for SDK initialization
+3. Call SDKEntryPoint.LaunchARQuery to start XR and load the content. To use this method, you need to pass in the item ID or item name
+
+After understanding the general idea process, we can start work. First, we can use `FindObjectOfType<SDKEntryPoint>()` to get our SDKEntryPoint object, so that we can use the methods in SDKEntryPoint. The code looks like this:
+
+```csharp
+public void ARModuleStart(){
+    SDKEntryPoint tmp_Entry = FindObjectOfType<SDKEntryPoint>();
+    SDKConfiguration tmp_Configs = new SDKConfiguration
+    {
+        engineType = EngineType.Unity,
+        dashboardConfig = new DashboardConfig {token = "", dashboardGateway = $"http://localhost:8084"},
+        customConfig = new CustomConfig(),
+        imageCloudRecognizerConfig = new ImageCloudRecognizerConfig(),
+        AppModel = AppModel.Online
+     };
+    tmp_Entry.InitSDK(JsonUtility.ToJson(tmp_Configs));
+    tmp_Entry.LaunchARQuery("项目ID");
+}
+```
+
+
+| Name                  | Type     | Description                                                                                                     |
+|---------------------|--------|--------------------------------------------------------------------------------------------------------|
+| dashboardConfig     | String | Configure                                                               |
+| token               | String | User authenticate
+| dashboardGateway    | String | Dashboard gateway                                                                                           |
+| timeout             | Int    | Timeout for http request                                                                              |
+| maximumDownloadSize | Float  | The maximum download size of the AR experience pack. If this value is exceeded, the (void)packageSizeMoreThanPresetSize:(float)currentSize preset:(float)presetSize method will be responded to |
+| EngineType          | String | It is used to tell what environment the AR MOD SDK is currently running in. If it is based on Unity secondary development, you need to fill in Unity.                                                     |
+| AppModel            | String | The mode used to distinguish the current App is divided into three cases: Online-interconnection with Dashboard, Offline-not connected to the Internet by loading local content, Simulator--for Unity Editor                 |
+
+
+## Summary
+
+Since then, our AR-APP has been completed. Using the XRMOD Engine has saved us a lot of time, and saved us the logic and knowledge of how to interact with the XR SDK. The next step is to create a beautiful UI/UX and XR experience for it. content. If you don't know how to make content, you can [click here](../experience-manual/tutorial-basics) to read it.

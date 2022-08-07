@@ -1,0 +1,20 @@
+---
+sidebar_position: 6
+title: Graphics
+---
+
+# Quality
+As we know, the quality settings is every important in unity.Setting it appropriately will make our rendered images look better and run with optimal performance. Unity provides 6 default quality level for us to choose. We can set it in Property . We can  add Quality block to setup our graphics level at runtime.
+
+> Unity allows you to set the level of graphical quality it attempts to render. Generally speaking, quality comes at the expense of framerate and so it may be best not to aim for the highest quality on mobile devices or older hardware since it tends to have a detrimental effect on gameplay. Use the Quality settings (menu: `Edit` > `Project Settings`, then select the `Quality` category) to select the quality level in the Editor for the chosen device. It is split into two main areas: the Quality matrix appears at the top; and below it, the settings for the selected quality level appear.
+From:[Unity Docs](https://docs.unity3d.com/2020.3/Documentation/Manual/class-QualitySettings.html)
+
+
+<coverimg  url={require('@site/static/static/blocks/graphics-block/graphics.png')} height="100%" padding="0.5rem"/>
+
+:::caution
+If you set the quality level in the Editor, it can only be used in the Editor, and cannot be used in the XRMOD SDK. XRMOD runs at low level by default. If your shader uses Stencil, Depth Texture ,HDR  etc., please set it to high level.
+:::
+
+<coverimg  url={require('@site/static/static/blocks/graphics-block/graphicssettings.png')} height="100%" padding="0.5rem"/>
+

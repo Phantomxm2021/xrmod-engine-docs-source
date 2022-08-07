@@ -1,0 +1,186 @@
+---
+sidebar_position: 2
+title: Embed SDK Java
+---
+import ImageWithText from '@site/src/components/ImageWithText'
+
+<coverimg url={require('../../static/static/sdk/android-sdk/anddroid-studio-view.png')} height="25rem" />
+
+## Download the XRMOD AAR
+
+The first step to enhancing your application is to get our SDK！
+We have uploaded XRMOD Framework to github. You can [click here](https://github.com/Phantomxm2021/ARMOD-Framework) to go to the github page and download our XRMOD AAR. If you think XRMOD is good please give us a star. Thank you!
+
+
+## Import XRMOD AAR
+Select your project's `app` folder, via the context menu `Reveal in Finder (Mac)` or `Show in Explorer (Windows)`. Place all downloaded AAR files in `app/libs/`.
+
+<coverimg url={require('../../static/static/sdk/android-sdk/appfolder.png')} height="100%" />
+
+
+<table>
+    <tr>
+        <td>Image</td>
+        <td>Name</td>
+        <td>Format</td>
+        <td>Brief</td>       
+    </tr>
+      <tr>
+        <td rowspan="7">
+         <coverimg url={require('../../static/static/sdk/android-sdk/dragtoset.png')} height="25rem" />
+        </td>
+    </tr>
+    <tr>
+        <td>unityLibrary-release</td>
+        <td>AAR</td>
+        <td>Main library</td>
+    </tr>
+    <tr>
+       
+        <td>XRMODAPI-release</td>
+        <td>AAR</td>
+        <td>All API</td>
+    </tr>
+    <tr>
+        
+        <td>UnityARCore</td>
+        <td>AAR</td>
+        <td>ARCore</td>
+    </tr>
+    <tr>
+        
+        <td>arcore_client</td>
+        <td>AAR</td>
+        <td>ARCore</td>
+    </tr>
+    <tr>
+        
+        <td>ARPresto</td>
+        <td>AAR</td>
+        <td>ARCore</td>
+    </tr>
+    <tr>
+        
+        <td>unityandroidpermissions</td>
+        <td>AAR</td>
+        <td>ARCore</td>
+    </tr>
+</table>
+
+
+## Embed Coding
+
+### NDK Build Configure
+
+Back to Android Studio Editor. And Edit `build.gradle(Module:YOUR_PROJECT_NAME.app)`. Append some configre's code.
+Adding NDK to `android` -> `defaultConfig` block.
+
+```gradle title="build.gradle(Module:ProjectName.app)"
+ndk {
+    abiFilters 'armeabi-v7a', 'x86', 'arm64-v8a'
+}
+```
+
+```gradle title="build.gradle(Module:ProjectName.app)"
+android {
+	  ...
+    defaultConfig {
+				...
+				//New config
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86', 'arm64-v8a'
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+		...
+}
+```
+
+:::caution
+Please set up according to the architecture you need
+:::
+
+
+### Dependencies setup
+Adding dependencies. You can also use `implementation(name:'AAR_FILE_NAME',ext:'aar')` to import new dependencies.
+
+```gradle title="build.gradle(Module:ProjectName.app)"
+implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+```
+
+```gradle title="build.gradle(Module:ProjectName.app)"
+dependencies {
+		//New dependencies
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.1'
+    implementation 'androidx.navigation:navigation-ui:2.3.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+```
+
+**Sync your gradle!**
+
+<coverimg url={require('../../static/static/sdk/android-sdk/syncgradle.png')} height="100%" />
+
+```gradle title="catlog"
+> Task :prepareKotlinBuildScriptModel UP-TO-DATE
+
+BUILD SUCCESSFUL in 762ms
+```
+
+### Implement Callback
+You must implement all abstract methods. These are callbacks of the XRMOD SDK.
+
+### Launch AR
+Create a new `Activity` call it `ARView`. Then extends `AbstractXRMODActivity` and implementing abstract method `onCreateUI`
+Go to , adding the `ARView` activity in `application` block.
+
+```xml title="androidmanifest.xml"
+<activity android:name=".ARView" android:screenOrientation="fullSensor" android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density" android:hardwareAccelerated="false" android:process=":Unity"
+            android:label="@string/app_name">
+</activity>
+```
+
+Add some code to onCreateUI function.
+
+```java
+//Init sdk
+initXRMOD("JSON Config",MainActivity.class);
+
+//Add UI from layout file
+LayoutInflater tmp_Inflater = getLayoutInflater();
+View tmp_ARView = tmp_Inflater.inflate(R.layout.arview_main,null);
+getXRMODFrameLayout().addView(tmp_ARView);
+```
+
+Add new function to stop the ARView.
+
+```java
+public void CloseARView(View _v){
+        unloadAndHideXRMOD();
+    }
+```
+
+Back to MainActivity.java, adding a new function to call the sdk.
+
+```java
+public void ARLauncher(View _v){}
+```
+
+Using the Intent to start a new activity.
+
+```java
+Intent intent = new Intent(this, ARView.class);
+intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+startActivityForResult(intent, 1);
+```
+
+## Summary
+
+More infomation of Native API you should read Android Native Calls Protocol API. We uploaded the sample project of this Native Android (Java) project to github. At now you can download our source project from github.

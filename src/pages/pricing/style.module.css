@@ -1,0 +1,94 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  row-gap: 24px;
+  padding: auto;
+}
+
+.free{
+  color: red;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0.75rem;
+  text-decoration: none;
+  color: var(--docs-color-text);
+
+  --ifm-link-hover-decoration: none;
+  --ifm-link-hover-color: inherit;
+  cursor: pointer;
+
+  transition-property: background-color, color;
+
+  border: 1px solid var(--docs-color-border);
+  border-radius: 8px;
+}
+
+.button {
+    background-color: var(--docs-color-primary);
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15rem;
+  }
+
+  .button:hover {
+    background-color: var(--docs-color-primary-100); 
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15rem;
+  }
+
+.recommandcard{
+  border-color: var( --docs-color-primary-100);
+}
+/* .card:hover {
+  background-color: var(--docs-color-background-100);
+} */
+
+.card:hover .image {
+  transform: scale(125%) translate3d(0, 0, 0);
+}
+
+.cardheader {
+  padding: 2rem 0 0.5rem 0;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--docs-color-border);
+}
+
+.cardbottom {
+  width: 100%;
+  padding: 1rem 0 0 0;
+  margin: 0.5rem 0 0 0;
+  border-top: 1px solid var(--docs-color-border);
+}
+
+.remarktext{
+    font-size: small;
+    color: var(--docs-color-text-100);
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

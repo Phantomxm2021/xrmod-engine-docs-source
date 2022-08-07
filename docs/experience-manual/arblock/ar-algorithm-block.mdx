@@ -1,0 +1,71 @@
+---
+sidebar_position: 1
+title: AR Algorithm Block
+---
+
+## AR Algorithm
+Used to configure the main algorithm of the AR experience; each AR experience must be configured with the main algorithm. Replace when the main algorithm fails to run. (Only supports startup, shutdown, and additional algorithms at runtime)
+
+### Algorithm Auto Start
+The main algorithm starts automatically, without the need for script calls.
+
+### Focus Slam
+Focused SLAM algorithm, the AR virtual body is placed on the position of the indicator.
+
+<coverimg url={require('@site/static/static/blocks/features-block/focus-slam.png')} height="25rem" padding="0"/>
+
+### Plane Detection Mode
+SLAM finds the plane algorithm, there are Horizontal, Vertical, and Both options.
+
+<coverimg url={require('@site/static/static/blocks/features-block/plane-detection.png')} height="25rem" padding="0"/>
+
+### Anchor
+The anchor point type SLAM algorithm rivets the AR virtual body on the anchor point.
+
+### Gyro
+Only the AR mode of the 3Dof algorithm is turned on, and the experiencer can only view it by rotating 360°, and there is no perception of spatial movement.
+
+### Fixed
+Sticker mode, which puts the AR virtual and thoughtful on the screen. Cannot have 6Dof perception.
+
+### Image Tracking
+Image tracking, which links the AR virtual body and Image together, and when the picture moves, the virtual body will also move with it.
+<coverimg url={require('@site/static/static/blocks/features-block/image-tracking.jpeg')} height="25rem" padding="0"/>
+
+
+
+### Max Moving Of Tracking
+The maximum number of pictures that can be tracked in the AR experience.
+
+### Immersal
+Immersal  is a technology company focusing on AR cloud; it uses Immersal SDK to build centimeter-level, durable multi-user AR applications, which can be used on AR-enabled mobile devices and glasses.
+
+<coverimg url={require('@site/static/static/blocks/features-block/immersalsdk.jpg')} height="25rem" padding="0"/>
+
+#### Immersal Features:
+
+
+- Fast visual positioning, low system overhead
+- Positioning can be run offline on the device or online in the cloud
+- Plug-ins on iOS, Android and devices compatible with Huawei AR Engine
+- Immersal Cloud Service's REST API for any device
+- Pre-built applications are available on the App Store to map real-world locations
+- It can even map indoor and outdoor large urban areas
+- Very small map file format, extremely optimized
+- Private/public map with sharing options
+- Global map coordination supports WGS84 and ECEF
+- Use GPS coordinates to mark and search the map
+- Textured mesh of point cloud and available mapping space
+- Support multiple maps at the same time in the same space
+- Easy-to-use Unity example with templates for indoor navigation and more
+- Detailed documentation helps developers get started
+- Use the 3D map viewer to develop the portal
+- Developer Token
+- Developer Token obtained through Immersal Dashboard. Used to connect to Immersal server for authentication.
+
+### Face Mesh
+Face Mesh is a face geometry solution; it will construct a face mesh in real time, and generate an exclusive face model for the face.
+
+:::danger
+FaceMesh Visualizer will be create by yourself. And the Name  must be consistent with Your Project.Because ARMOD will - automatically load our facemesh visualizer.
+:::
