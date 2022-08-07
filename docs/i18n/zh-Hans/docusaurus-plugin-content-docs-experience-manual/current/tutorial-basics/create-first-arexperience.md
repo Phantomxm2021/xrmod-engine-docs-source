@@ -3,9 +3,9 @@ sidebar_position: 1
 title: Create First ARExperience
 ---
 
-## Introduce
+## Introduction 
 
-This article will introduce the AR experience of IKEA Place furniture placement in Focus SLAM mode. Focus SLAM is a focused SLAM algorithm that places the AR virtual body on the position of the indicator.
+This article will Introduction  the AR experience of IKEA Place furniture placement in Focus SLAM mode. Focus SLAM is a focused SLAM algorithm that places the AR virtual body on the position of the indicator.
 
 
 ## Prepare

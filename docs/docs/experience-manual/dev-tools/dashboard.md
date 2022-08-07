@@ -27,4 +27,4 @@ Go to the Develop Center and we can see right side have a menu button, click it.
 
 ## Summary
 
-This article introduces how to use the dashboard to configure and manage our ARExperience and associate ARExperience with ARShowcase.For specific API usage, please refer to Rest API.
+This article Introduction s how to use the dashboard to configure and manage our ARExperience and associate ARExperience with ARShowcase.For specific API usage, please refer to Rest API.

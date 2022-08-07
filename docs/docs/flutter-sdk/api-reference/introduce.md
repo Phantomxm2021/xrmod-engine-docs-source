@@ -1,5 +1,5 @@
 ---
-title: Introduce
+title: Introduction 
 sidebar_position: 1
 keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
 image: img/xrmod-docs-card.png

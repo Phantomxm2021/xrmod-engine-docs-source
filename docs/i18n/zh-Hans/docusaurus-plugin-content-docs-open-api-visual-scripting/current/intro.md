@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-title: Introduce
+title: Introduction 
 slug: /
 ---
 
