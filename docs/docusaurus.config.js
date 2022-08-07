@@ -30,7 +30,7 @@ function defineSection(section, version = {}, options = {}) {
       id: section,
       sidebarPath: require.resolve("./sidebars.js"),
       breadcrumbs: false,
-      editUrl: "https://github.com/Phantomxm2021/xrmod-engine-doc/tree/main",
+      editUrl: "https://github.com/Phantomxm2021/xrmod-engine-docs-source/tree/main",
       versions: version && {
         current: {
           label: version.label,
@@ -90,7 +90,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/Phantomxm2021/xrmod-engine-doc/tree/main",
+            "https://github.com/Phantomxm2021/xrmod-engine-docs-source/tree/main",
 
           ...defaultSettings,
         },
@@ -100,7 +100,7 @@ const config = {
         //   // Please change this to your repo.
         //   // Remove this to remove the "edit this page" links.
         //   editUrl:
-        //     'https://github.com/Phantomxm2021/xrmod-engine-doc/tree/main',
+        //     'https://github.com/Phantomxm2021/xrmod-engine-docs-source/tree/main',
         // },
         theme: {
           customCss: [
