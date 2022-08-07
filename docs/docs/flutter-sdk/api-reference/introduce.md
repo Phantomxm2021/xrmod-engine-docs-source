@@ -1,6 +1,9 @@
 ---
 title: Introduce
 sidebar_position: 1
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+image: img/xrmod-docs-card.png
+description: This API is provided by XMROD Engine for Flutter platform, allowing developers to better embed XRMOD into their applications.
 ---
 
 This API is all the open interfaces provided by XMROD Engine for Flutter platform, allowing developers to better embed XRMOD into their applications.

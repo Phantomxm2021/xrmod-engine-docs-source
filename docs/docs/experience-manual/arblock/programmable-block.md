@@ -1,6 +1,9 @@
 ---
 sidebar_position: 3
 title: Programmable Block
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+image: img/xrmod-docs-card.png
+description: programmable block description of xrmod in package tools editor.
 ---
 
 

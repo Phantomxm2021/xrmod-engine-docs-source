@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
-description: Install the XRMOD Engine development kit to build XR experience content with a standardized process.
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+image: img/xrmod-docs-card.png
+description: install the xrmod engine development kit to build xr experience content with a standardized process.
 ---
 
 # Install Dev-tools

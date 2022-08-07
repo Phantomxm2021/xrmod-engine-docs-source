@@ -2,6 +2,9 @@
 sidebar_position: 0
 title: Introduce
 slug: /
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+image: img/xrmod-docs-card.png
+description: It allows us to write complex scripts to make our XR creative interactive content. Content developed by this API.
 ---
 
 import VideoPlayer from '@site/src/components/VideoPlayer'

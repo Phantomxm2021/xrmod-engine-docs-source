@@ -1,6 +1,9 @@
 ---
 sidebar_position: 1
 title: Create First ARExperience
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+image: img/xrmod-docs-card.png
+description: create your first xr(ar/vr/mr) experience case with xrmod engine
 ---
 
 ## Introduce

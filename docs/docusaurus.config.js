@@ -30,7 +30,8 @@ function defineSection(section, version = {}, options = {}) {
       id: section,
       sidebarPath: require.resolve("./sidebars.js"),
       breadcrumbs: false,
-      editUrl: "https://github.com/Phantomxm2021/xrmod-engine-docs-source/tree/main/docs",
+      editUrl:
+        "https://github.com/Phantomxm2021/xrmod-engine-docs-source/tree/main/docs",
       versions: version && {
         current: {
           label: version.label,
@@ -149,6 +150,18 @@ const config = {
     webpackPlugin,
     posthogPlugin,
   ],
+  themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        language: ["en", "zh"],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        docsRouteBasePath:"/"
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -165,10 +178,10 @@ const config = {
       navbar: {
         title: "XRMOD Manual",
         logo: {
-          href: '/',
-          src: '/logo/light.svg',
-          srcDark: '/logo/dark.svg',
-          alt: 'XRMOD Manual',
+          href: "/",
+          src: "/logo/light.svg",
+          srcDark: "/logo/dark.svg",
+          alt: "XRMOD Manual",
         },
         items: [
           {
@@ -287,13 +300,20 @@ const config = {
       posthog: {
         apiKey: "phc_KSFZUh36KxomBDSpJ9F7K98ZMtC9MnbGsgU34XkTe9c",
       },
-      algolia: {
-        appId: "YJJPYDXNO5",
-        apiKey: "2612ff09a2bd4d36fc6679036a741f0d",
-        indexName: "docs",
-        contextualSearch: true,
-        searchParameters: {},
-      },
+      // algolia: {
+      //   appId: "YJJPYDXNO5",
+      //   apiKey: "2612ff09a2bd4d36fc6679036a741f0d",
+      //   indexName: "docs",
+      //   contextualSearch: true,
+      //   searchParameters: {},
+      // },
+      metadata: [
+        {
+          name: "ar,vr,mr,xr,hololen,meta,verse,facebook,microsoft,apple,arkit,arcore,easyar,vuforia,slam,增强现实,sdk,ar sdk,",
+          content:
+            "ar,vr,mr,xr,hololen,meta,verse,facebook,microsoft,apple,arkit,arcore,easyar,vuforia,slam,增强现实,sdk,ar sdk",
+        },
+      ],
     }),
 };
 

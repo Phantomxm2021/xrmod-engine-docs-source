@@ -1,6 +1,9 @@
 ---
 sidebar_position: 3
 title: Rendering Assistant
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+image: img/xrmod-docs-card.png
+description: prefab baker tutorial
 ---
 
 ## What is the Rendering Assistant(Prefab baker)?

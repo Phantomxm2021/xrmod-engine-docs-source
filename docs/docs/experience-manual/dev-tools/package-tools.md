@@ -1,6 +1,9 @@
 ---
 sidebar_position: 1
 title: Package Tools Editor
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+image: img/xrmod-docs-card.png
+description:  package tools editor tutorial
 ---
 
 ## What is the Package Tools

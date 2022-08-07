@@ -1,6 +1,9 @@
 ---
 sidebar_position: 4
 title: Remote Debug(ThirdParties)
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+image: img/xrmod-docs-card.png
+description: ar remote debug 
 ---
 
 ## What is Remote debug
