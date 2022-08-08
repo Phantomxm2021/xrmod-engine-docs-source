@@ -146,6 +146,13 @@ const config = {
     //     disableInDev: true,
     //   },
     // ],
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-02WKKNH4ZE',
+        anonymizeIP: true,
+      },
+    ],
     ...SECTIONS,
     webpackPlugin,
     posthogPlugin,
