@@ -50,7 +50,16 @@ Move mouse to left side's project area and right click, Select `New Project` in 
     - MAIN Entry Create Project Name + MAINENTRY
 - Set the required features (on-demand)
 
-<coverimg  url={require('@site/static/static/dev-tools/packagetoolseditor/package-tools-xr-project-detail.png')} height="100%" padding="0.5rem"/>
+
+
+import VideoPlayer from '@site/src/components/VideoPlayer'
+
+<VideoPlayer src="/static/videos/AddFeatures.mp4" className="custom-video-showcase" />
+
+:::tip
+**How to add new feature block?**  
+Edit your project and switch to the `Properties` section, then `right-click (mouse)` in an blank area. You will see the menu pop up.
+:::
 
 ### Collect AR Objects
 - Go to Content Section
@@ -72,7 +81,7 @@ Move mouse to left side's project area and right click, Select `New Project` in 
 2. Make sure the scene has been saved or not modified, otherwise it will not be packaged successfully.
 :::
 
-So far, the AR creative interactive experience resource package has been built, and it can be deployed to the [Dashboard](/)  later.
+So far, the AR creative interactive experience resource package has been built, and it can be deployed to the [Dashboard](../dev-tools/dashboard.md)  later.
 
 :::info
 The AR creative experience content package will be output to your project root directory ServerData/package platform (such as: iOS)/project name under
