@@ -1,6 +1,5 @@
 ## Description
 
-
 获取应用的基础信息
 
 :::danger
@@ -17,13 +16,13 @@
 public void TryAcquireAppInfo(TryAcquireAppInfoNotificationData _data)
 ```
 
-
 ## Relation
-当你使用这个API时，你需要实现相应平台的`TryAcquireInformation`回调方法。
 
-|Platform|
-|---|
-|[iOS](../../ios-sdk/api-reference/xrmod-native-calls-protocol-api#tryacquireinformation)|
-|[Android](../../android-sdk/api-reference/xrmod-native-calls-protocol-api#tryacquireinformation)|
-|[Flutter](../../flutter-sdk/api-reference/xrmod-native-calls-protocol-api#tryacquireinformation)|
-|[Unity](../../unity-sdk/api-reference/xrmod-native-calls-protocol-api#tryacquireinformation)|
+当你使用这个 API 时，你需要实现相应平台的`TryAcquireInformation`回调方法。
+
+| Platform                                                                      |
+| ----------------------------------------------------------------------------- |
+| [iOS](../../ios-sdk/api-reference/protocol-api/TryAcquireInformation)         |
+| [Android](../../android-sdk/api-reference/protocol-api/TryAcquireInformation) |
+| [Flutter](../../flutter-sdk/api-reference/protocol-api/TryAcquireInformation) |
+| [Unity](../../unity-sdk/api-reference/protocol-api/TryAcquireInformation)     |

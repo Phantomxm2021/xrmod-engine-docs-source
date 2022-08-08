@@ -20,4 +20,4 @@ As mentioned above, XR-Experience is not included in the installation package. T
 You do not need to change the logic code of the original app when adjusting the content of XR-Experience. You just need to make adjustments for your specific XR-Experience.
 
 XR-Experience can be built using the Unity Editor, and we also offer a number of toolchains for Unity ideas. 
-If you want to learn how to build an XR experience, [click here](../experience-manual/category/tutorial---basics) to read the article.
+If you want to learn how to build an XR experience, [click here](../experience-manual/tutorial-basics/create-first-arexperience) to read the article.

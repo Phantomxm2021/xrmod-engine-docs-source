@@ -16,13 +16,13 @@ Developers need to implement **TryAcquireInformation** on the corresponding plat
 public void TryAcquireAppInfo(TryAcquireAppInfoNotificationData _data)
 ```
 
-
 ## Relation
+
 When you use this API, you need to implement the `TryAcquireInformation` callback method of the corresponding platform.
 
-|Platform|
-|---|
-|[iOS](../../ios-sdk/api-reference/xrmod-native-calls-protocol-api#tryacquireinformation)|
-|[Android](../../android-sdk/api-reference/xrmod-native-calls-protocol-api#tryacquireinformation)|
-|[Flutter](../../flutter-sdk/api-reference/xrmod-native-calls-protocol-api#tryacquireinformation)|
-|[Unity](../../unity-sdk/api-reference/xrmod-native-calls-protocol-api#tryacquireinformation)|
+| Platform                                                                      |
+| ----------------------------------------------------------------------------- |
+| [iOS](../../ios-sdk/api-reference/protocol-api/TryAcquireInformation)         |
+| [Android](../../android-sdk/api-reference/protocol-api/TryAcquireInformation) |
+| [Flutter](../../flutter-sdk/api-reference/protocol-api/TryAcquireInformation) |
+| [Unity](../../unity-sdk/api-reference/protocol-api/TryAcquireInformation)     |
