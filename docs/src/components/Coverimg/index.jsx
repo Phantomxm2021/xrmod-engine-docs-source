@@ -6,9 +6,11 @@ import clsx from "clsx";
 
 export const CoverImage = ({
   url,
+  width,
   height,
   fit = "cover",
   borderRadius = "0.5rem",
+  paddingBottom='1rem',
   label,
 }) => (
   <PhotoProvider>
@@ -17,9 +19,11 @@ export const CoverImage = ({
         className={clsx(styles.imgContainer)}
         style={{
           height: height,
+          width: width,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          paddingBottom:paddingBottom,
         }}
       >
         <img

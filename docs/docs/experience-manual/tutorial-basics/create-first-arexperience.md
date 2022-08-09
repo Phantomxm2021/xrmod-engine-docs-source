@@ -10,20 +10,31 @@ description: create your first xr(ar/vr/mr) experience case with xrmod engine
 
 This article will Introduction  the AR experience of IKEA Place furniture placement in Focus SLAM mode. Focus SLAM is a focused SLAM algorithm that places the AR virtual body on the position of the indicator.
 
+---
 
 ## Prepare
 
 Before starting to create AR experiences, the following software and development kits must be installed:
 
-Content Dev-Tools:
+<table>
+<tr>
+    <th>Content Dev-Tools</th>
+    <th>XRMOD tools chain</th>
+</tr>
+
+<tr>
+
+<td>
 
 - [Unity Engine 2021.3f1](https://unity.com/)
 - Script code editor
-    - [Rider](https://www.jetbrains.com/rider/)
-    - [Visual studio code](https://code.visualstudio.com/)
-    - [Visual studio](https://visualstudio.microsoft.com/)
+  - [Rider](https://www.jetbrains.com/rider/)
+  - [Visual studio code](https://code.visualstudio.com/)
+  - [Visual studio](https://visualstudio.microsoft.com/)
 
-XRMOD tools chain:
+</td>
+
+<td>
 
 - XRMOD API
 - XRMOD IL code
@@ -34,6 +45,12 @@ XRMOD tools chain:
 - XRMOD Render Assistant
 - ARFoundation (ARKit/ARCore/ARKit FaceTracking)
 
+</td>
+
+</tr>
+
+</table>
+
 :::info
 #### How do I get a development kit?
 You can read [this article](../prepare-for-developer/install-xrmod-dev-tools.md) to install it!
@@ -41,6 +58,8 @@ You can read [this article](../prepare-for-developer/install-xrmod-dev-tools.md)
 ### How to create a Unity project?
 You can read [this article](../prepare-for-developer/install-unityengine.md#extras) to create it!
 :::
+
+---
 
 ## Create an XRMOD project
 
@@ -95,10 +114,11 @@ Build Platform and Platform Group must be consistent, otherwise an error will oc
 
 <coverimg url={require('@site/static/static/tutorial-basics/tutor-basics-template-build.png')} />
 
+---
 
 ## Deploy
 
-Click the `Show in file browser` button to go to the XR experience package directory after your XRMOD project build.You will see the following file:
+Click the `Show in file browser` button to go to the XR experience package directory after your XRMOD project build.You will see the following files:
 
 |Name|Type|Description|
 |---|---|---|
@@ -111,4 +131,4 @@ Click the `Show in file browser` button to go to the XR experience package direc
 
 We just need to upload `YOUR_PROJECT_NAME.arexperience` and `YOUR_PROJECT_NAME.json` files. `build.json` is the project build log file, so we do not upload it.
 
-Now you can upload your build assets to the XRMOD cloud.To learn more about XRMOD Cloud [click here](../dev-tools/dashboard.md) for more information.
+Now you can upload your build assets to the XRMOD cloud.To learn more about XRMOD Cloud [click here](../dev-tools/dashboard) for more information.

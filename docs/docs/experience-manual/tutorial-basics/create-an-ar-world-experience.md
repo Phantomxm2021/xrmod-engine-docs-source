@@ -1,6 +1,9 @@
 ---
 title: Create An AR World Experience
 sidebar_position: 2
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+image: img/xrmod-docs-card.png
+description: Cloning the Earth using AR technology
 ---
 
 ## Introduction
@@ -16,6 +19,8 @@ In short, the AR world is a virtual world, or call it the earth Clone Project. W
 We are in the pre-change phase, so cloning the entire the earth is difficult for us. Although we cannot clone the whole earth, we can clone a small part of it, such as buildings, shopping areas, parks, and landmarks.
 
 <coverimg url={require('@site/static/static/tutorial-basics/ar-world/landmark.png')} label="Copyright @Snapchat, AR World of landmark"/>
+
+---
 
 ## Prepare
 
@@ -62,19 +67,20 @@ Before starting to create AR experiences, the following software and development
 
 #### How do I get a development kit?
 
-- You can read [this article](../prepare-for-developer/install-xrmod-dev-tools.md) to install it!
+- You can read [this article](../prepare-for-developer/install-xrmod-dev-tools) to install it!
 
 #### How to create a Unity project?
 
-- You can read [this article](../prepare-for-developer/install-unityengine.md#extras) to create it!
-  :::
+- You can read [this article](../prepare-for-developer/install-unityengine#extras) to create it!
+:::
 
 ### Mapping Physical World
 
 :::tip
 If you don't know how to mapping the world, you can click [here](./how-to-mapping-the-world) to read more.
-
 :::
+
+---
 
 ## Create An XRMOD Project
 
@@ -113,7 +119,7 @@ Through the previous introduction and preparation, we have a clear understanding
 <coverimg url={require('@site/static/static/dev-tools/packagetoolseditor/package-editor.png')} label="Open Package Tools Editor"/>
 
 :::tip
-If you don't know how to use Package Tools Editor, please [click here](../dev-tools/package-tools.md) to check.
+If you don't know how to use Package Tools Editor, please [click here](../dev-tools/package-tools) to check.
 :::
 
 1. Create a project by right-clicking in the `project area` and selecting `New Project` from the popup menu
@@ -194,6 +200,8 @@ Finally we need to save the results of our Prefab edits, which can be done by **
 
 <VideoPlayer src="/static/videos/tutorials/arworld/LocalizerEvent.mp4" className="custom-video-showcase" />
 
+---
+
 ## Configuration experience
 
 In the previous step we have already created all the necessary resources, next start the configuration, set XR-MOD Project Properties:
@@ -214,6 +222,8 @@ To learn more about attribute feature blocks, please see the following links:
 :::
 
 <VideoPlayer src="/static/videos/tutorials/arworld/SetupConfigure.mp4" className="custom-video-showcase" />
+
+---
 
 ## Collection Objects
 
@@ -344,6 +354,8 @@ VisualScripting gameobject name must be the same as the name in `Contents` secti
 
 </Tabs>
 
+---
+
 ## Build
 
 Now that we have all the configuration done, next we need to build it into an experience package.
@@ -358,6 +370,8 @@ Build Platform and Platform Group must be consistent, otherwise an error will oc
 :::
 
 <VideoPlayer src="/static/videos/tutorials/arworld/Build.mp4" className="custom-video-showcase" />
+
+---
 
 ## Deploy
 
@@ -380,9 +394,19 @@ The online plan is relatively simple, just go to the XRMOD Cloud back office and
 - Create a new App if app don't exist
 - Create a new Project if project don't exist
 - Upload your XR-Experience package to your desired platform
+- Click the `Show in file browser` button to go to the XR experience package directory after your XRMOD project build.You will see the following files:
+
+|Name|Type|Description|
+|---|---|---|
+|focusexample.arexperience|arexperience|All experience inculded, e.g. 3DModels,Textures,Scripts|
+|focusexample.json|json|ARExperience file detail and all contents information|
+|buildlogtep.json|json|Build detail|
+
+We just need to upload `YOUR_PROJECT_NAME.arexperience` and `YOUR_PROJECT_NAME.json` files. `build.json` is the project build log file, so we do not upload it.
 
 :::info
-`desired platform` means the platform you choose when [building](#build)
+`desired platform` means the platform you choose when [building](#build).  
+Now you can upload your build assets to the XRMOD cloud.To learn more about XRMOD Cloud [click here](../dev-tools/dashboard) for more information.
 :::
 
 </TabItem>
