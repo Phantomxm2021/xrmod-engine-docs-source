@@ -1,34 +1,27 @@
 import React from "react";
 import "react-photo-view/dist/react-photo-view.css";
 import { PhotoProvider, PhotoView } from "react-photo-view";
+import styles from "./styles.module.css";
+import clsx from "clsx";
 
 export const CoverImage = ({
   url,
   height,
-  padding = 2,
   fit = "cover",
   borderRadius = "0.5rem",
+  label,
 }) => (
-  // <div
-  //   style={{
-  //     height: height,
-  //     paddingBottom: padding + "rem",
-  //   }}
-  // >
-  //   <Image
-  //     img={url}
-  //     style={{
-  //       objectFit: fit,
-  //       width: "100%",
-  //       height: "100%",
-  //       borderRadius: borderRadius,
-  //     }}
-  //   ></Image>
-  // </div>
-
   <PhotoProvider>
     <PhotoView src={url.default}>
-      <div style={{ height: height }}>
+      <div
+        className={clsx(styles.imgContainer)}
+        style={{
+          height: height,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <img
           src={url.default}
           alt=""
@@ -39,6 +32,8 @@ export const CoverImage = ({
             height: "100%",
           }}
         />
+
+        {label && <div className={clsx(styles.imgLabel)}>{label}</div>}
       </div>
     </PhotoView>
   </PhotoProvider>

@@ -15,7 +15,7 @@ This article will Introduction  the AR experience of IKEA Place furniture placem
 
 Before starting to create AR experiences, the following software and development kits must be installed:
 
-Content Dev-Tool:
+Content Dev-Tools:
 
 - [Unity Engine 2021.3f1](https://unity.com/)
 - Script code editor

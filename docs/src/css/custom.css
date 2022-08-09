@@ -524,6 +524,7 @@ html[data-theme="dark"]
   height: 25rem;
   border-radius: 18px;
   object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 .dyte-video-showcase {
