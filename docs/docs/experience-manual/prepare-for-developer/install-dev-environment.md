@@ -1,6 +1,6 @@
 ---
 title: Install XR-Dev Environment
-sidebar_position: 2
+sidebar_position: 3
 keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
 image: img/xrmod-docs-card.png
 description: using Unity engine to create our XR Experience contents.
@@ -14,54 +14,12 @@ import TabItem from '@theme/TabItem';
 
 ## Installation
 
-In the previous chapter, we have installed Unity and created a Unity project. Next, we need to install the XRMOD development kit. Before the project starts, we need to install the XRMOD Kit using the `Unity Package Manager` .
 
-
-### Add Registries
-
-1. Open Unity Editor and create an URP project
-2. Set the `Unity Package Manager` registries through `Edit`->`ProjectSetting`->`Package Manager`
-4. Typing inthe form below in `Package Manager`->`Scoped Registries`, checked the `enable Preview Packages` and `Enable Pre-release Packages`, then click Apply to save your setings.
-
-|Name|URL|Scope(s)|
-|---|---|---|
-|PhantomsXR|	https://registry.npmjs.org	|com.phantomsxr|
-
-<coverimg  url={require('@site/static/static/prepare-for-developer/unity-package-registries-setup.png')}/>
-
-
-
-:::tip
-Try to install the recommended version.  
-**How to get recommened version**?  
-Click the small triangle(▶️) on the left to expand it.
-:::
-
-5. Open the `Unity Package Manager` via `Window` > `Package Manager` in the top menu bar
-6. Switch the `registry` to `My Registries` again and you will see all development packages.
-
-
-<coverimg  url={require('@site/static/static/prepare-for-developer/unity-swtich-registries.jpg')}/>
-
-### Install packages
-
-Initialize our Unity project by installing `XRMOD Engine Settings`, and then install the corresponding Package according to the platform you need to develop.
-
-
-<coverimg  url={require('@site/static/static/prepare-for-developer/unity-install-packages.png')}/>
-
-
-:::tips
-Here is an example of handheldAR:
-1. Install `XRMOD Engine SEtgings`
-2. Install `HandHeldAR` and `XRMOD IL Core`
-:::
+Get the basic development environment by reading [the XR Experience Content Development Kit Installation article](./install-xrmod-dev-tools). Since we need to combine XRMOD Engine with Unity to develop a new APP, We need to install some required packages.
 
 Everything is ready, we use the shortcut keys (**Mac**: *Command+Shift+B*; **Win**: Ctrl+Shift+B) to open the Build Settings panel and change to the platform we need.
 
 <coverimg url={require('@site/static/static/sdk/unity-sdk/switch-platform.png')} fit="scale-down" height="25rem" label="Switch Platform"/>
-
-Get the basic development environment by reading [the XR Experience Content Development Kit Installation article](./install-xrmod-dev-tools). Since we need to combine XRMOD Engine with Unity to develop a new APP, We need to install some required packages.
 
 
 <Tabs defaultValue='handheldar' values={[

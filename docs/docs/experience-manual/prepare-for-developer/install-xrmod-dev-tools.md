@@ -33,6 +33,12 @@ In the previous chapter, we have installed Unity and created a Unity project. Ne
 
 ## Install packages
 
+:::tips
+Here is an example of handheldAR:
+1. Install `XRMOD Engine SEtgings`
+2. Install `HandHeldAR` and `XRMOD IL Core`
+:::
+
 Initialize our Unity project by installing `XRMOD Engine Settings`, and then install the corresponding Package according to the platform you need to develop.
 
 
