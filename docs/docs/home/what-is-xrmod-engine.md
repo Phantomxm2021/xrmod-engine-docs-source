@@ -1,39 +1,30 @@
 ---
 sidebar_position: 1
-title: Creator Manual Introduction 
+title: What is XRMOD engine
 keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
 image: img/xrmod-docs-card.png
-description: what is xrmod engine, it a metaverse construction system. it's free.
-slug: /
+description: XRMOD Engine is a free watermark-free metaverse build system that supports commercial licenses (free commercial licenses).
 ---
-# Manual Introduction 
 
-The goal of this manual is to provide a beginner to proficient guide in XR content creation.
+In short, XRMODEngine is a metaverse construction system developed based on the OpenXR protocol. Not only VR (Virtual Reality), AR (Augmented Reality), MR (Mixed Reality), but also continued support for traditional screen reading methods.
+XRMOD Engine is a free watermark-free metaverse build system that supports commercial licenses (free commercial licenses).
 
-If you are still a beginner, don't worry that you can't make an xr experience, in xrmod engine we provide many ways to help build the xr experience you have conceived.
+## Concept of XRMOD
+MOD is both Modification. The concept is widely used in games and corresponds to modifiable video games. Famous games like Warcraft, Red Alert, Half-Life, CS, Victory Day and more!
+We ported the MOD concept to the XRMOD Engine, giving users more freedom to create the creative interactive experience content they need! In this process, users do not need to worry about algorithm and code implementation, but only need to focus on the production of innovative interactive experience content. With just a small amount of code, you can use and create greater business value in applications that use XRMOD Engine.
 
-Let's discover **XRMOD engine in less than 5 minutes**.
 
-:::tip
-We recommend that you read all chapters in sidebar order.
-:::
+The XRMOD engine can be a module or an unity plugin, depending on the environment you are using. 
 
-## What's XRMOD engine
-
-In short, XRMOD Engine is a metaverse construction system developed based on the OpenXR protocol. Not only VR (Virtual Reality), AR (Augmented Reality), MR (Mixed Reality), but also continued support for traditional screen reading methods.
-
-XRMOD engine is a free and without watermark metaverse construction system that supports commercial licenses (free commercial licenses).
-
-## What's mean of MOD in the XRMOD
-
-MOD is Modification or module. The concept is widely used in games and corresponds to modifiable video games. Famous games like Warcraft, Red Alert, Half-Life, CS, Victory Day and more!
-
-We ported the MOD concept to the XRMOD Engine, giving users more freedom to create the creative interactive experience content they need! In this process, users do not need to worry about algorithm and code implementation, but only need to focus on the production of innovative interactive experience content. With only a small amount of code, you can use and create greater business value in applications that use XRMOD Engine.
-
+|Name|Description|
+|---|---|
+|Be Module|As the name implies, it will allow developers to embed XRMOD Engine into the App (with Unity).|
+|Be Unity Plugin| XRMOD Engine provides full support for the Unity Editor, which can be used by creators not only for the creation of XR experience content, but also for plug-ins for Unity cross-platform applications.|
 
 ## Features
 
 import FeatureGrid from '@site/src/components/FeatureGrid'
+
 
 <FeatureGrid
   basePath="/static/"
@@ -62,10 +53,6 @@ import FeatureGrid from '@site/src/components/FeatureGrid'
     
   ]}
 />
-
-## Repositories
-import UrlGrid from '@site/src/components/UrlGrid'
-
 
 <UrlGrid
   basePath="/static/repository/"

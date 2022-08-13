@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 ## Installation
 
 
-Get the basic development environment by reading [the XR Experience Content Development Kit Installation article](./install-xrmod-dev-tools). Since we need to combine XRMOD Engine with Unity to develop a new APP, We need to install some required packages.
+Get the basic development environment by reading [the XR Experience Content Development Kit Installation article](./install-xrmod-dev-tools). Since we need to combine XRMOD Engine with Unity to develop a new APP or XR-Experience content, We need to install some required packages.
 
 Everything is ready, we use the shortcut keys (**Mac**: *Command+Shift+B*; **Win**: Ctrl+Shift+B) to open the Build Settings panel and change to the platform we need.
 
@@ -69,7 +69,7 @@ Here we select `Go Ahead` and that's it.
 
 ## Initialization
 
-After the installation is complete, open the `Edit`->`Project Settings`->`PhantomsXR`->`XR-MOD Engine SDK Settings` in the menu bar at the top of Unity to initialize our project configuration, as shown in the following figure. After completing this step, we can start developing AR-APP.
+After the installation is complete, open the `Edit`->`Project Settings`->`PhantomsXR`->`XR-MOD Engine SDK Settings` in the menu bar at the top of Unity to initialize our project configuration, as shown in the following figure. After completing this step, we can start developing AR-APP or XR-Experience content.
 
 <coverimg url={require('@site/static/static/sdk/unity-sdk/xrmod-init.png')} height="25rem" />
 
@@ -100,7 +100,7 @@ Now you can see a new settings view appear; Set up according to the order of the
 
 
 :::tip
-If a ❌ appears in the [5] area you will see the **Fix** button behind it, click on it to fix it.
+If a ❌ <sup>6</sup> appears in the [5] area you will see the **Fix** button behind it, click on it to fix it.
 :::
 
 :::danger
@@ -108,5 +108,5 @@ If a ❌ appears in the [5] area you will see the **Fix** button behind it, clic
 - Make sure that all options in area 5 are ✅ status
 :::
 
-Once all the configuration is done, we are ready to develop the content. Click [here](../tutorial-basics/create-first-arexperience) to learn how to develop your first XR Experience content.
+Once all the configuration is done, we are ready to develop the content. Click [here](../tutorial-advanced/create-first-arexperience) to learn how to develop your first XR Experience content.
 

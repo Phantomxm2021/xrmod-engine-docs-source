@@ -29,6 +29,7 @@ In the previous chapter, we have installed Unity and created a Unity project. Ne
 <coverimg  url={require('@site/static/static/prepare-for-developer/unity-swtich-registries.jpg')}/>
 
 
+<coverimg  url={require('@site/static/static/prepare-for-developer/unity-install-packages-1.png')}/>
 
 
 ## Install packages
@@ -40,7 +41,6 @@ Here is an example of handheldAR:
 :::
 
 Initialize our Unity project by installing `XRMOD Engine Settings`, and then install the corresponding Package according to the platform you need to develop.
-
 
 <coverimg  url={require('@site/static/static/prepare-for-developer/unity-install-packages.png')}/>
 
@@ -56,8 +56,9 @@ Here is an example of handheldAR:
 
 Open the `ProjectSettings` panel via `Edit`->`ProjectSettings`. Then to find the PhantomsXR tab and expand it, switch to the `XR-MOD Engine SDK Settings`. Select the platform you want to develop on in the SDK settings, then click the `Apply` button in the upper right corner to save your choice.
 
-<coverimg  url={require('@site/static/static/prepare-for-developer/unity-Initialize-xrmod.png')}/>
+<coverimg url={require('@site/static/static/sdk/unity-sdk/xrmod-settings.png')}/>
 
 :::caution
-If there is a red `X` icon under Environment Settings, please use the `Fix` button on the right to fix it.
+If a ❌ <sup>6</sup> appears in the [5] area you will see the **Fix** button behind it, click on it to fix it.
+
 :::

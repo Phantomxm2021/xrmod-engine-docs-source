@@ -1,9 +1,9 @@
 ---
 title: Create An AR World Experience
-sidebar_position: 2
 keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
 image: img/xrmod-docs-card.png
 description: Cloning the Earth using AR technology
+sidebar_position: 9
 ---
 
 ## Introduction
@@ -77,7 +77,7 @@ Before starting to create AR experiences, the following software and development
 ### Mapping Physical World
 
 :::tip
-If you don't know how to mapping the world, you can click [here](./how-to-mapping-the-world) to read more.
+If you don't know how to mapping the world, you can click [here](../tutorial-basics/how-to-mapping-the-world) to read more.
 :::
 
 ---

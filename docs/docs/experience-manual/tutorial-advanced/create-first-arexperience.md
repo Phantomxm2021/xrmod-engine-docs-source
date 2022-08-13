@@ -1,9 +1,9 @@
 ---
-sidebar_position: 1
 title: Create First ARExperience
 keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
 image: img/xrmod-docs-card.png
 description: create your first xr(ar/vr/mr) experience case with xrmod engine
+sidebar_position: 1
 ---
 
 ## Introduction 
@@ -53,10 +53,10 @@ Before starting to create AR experiences, the following software and development
 
 :::info
 #### How do I get a development kit?
-You can read [this article](../prepare-for-developer/install-xrmod-dev-tools.md) to install it!
+You can read [this article](../prepare-for-developer/install-xrmod-dev-tools) to install it!
 
 ### How to create a Unity project?
-You can read [this article](../prepare-for-developer/install-unityengine.md#extras) to create it!
+You can read [this article](../prepare-for-developer/install-unityengine#extras) to create it!
 :::
 
 ---
@@ -96,7 +96,7 @@ Through the previous introduction and preparation, we have a clear understanding
 <coverimg url={require('@site/static/static/dev-tools/packagetoolseditor/package-editor.png')} />
 
 :::tip
-If you don't know how to use Package Tools Editor, please [click here](../dev-tools/package-tools.md) to check.
+If you don't know how to use Package Tools Editor, please [click here](../dev-tools/package-tools) to check.
 :::
 
 1. Create a project by right-clicking in the `project area` and selecting `New Project` from the popup menu

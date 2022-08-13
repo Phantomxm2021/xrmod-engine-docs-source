@@ -42,6 +42,8 @@ Move mouse to left side's project area and right click, Select `New Project` in 
 <coverimg  url={require('@site/static/static/dev-tools/packagetoolseditor/package-tool-create-project.png')} height="100%" padding="0.5rem"/>
 <coverimg  url={require('@site/static/static/dev-tools/packagetoolseditor/package-tools-select-template.png')} height="100%" padding="0.5rem"/>
 
+### Project Editing
+
 
 ### Add AR Experience Features
 - Set the AR algorithm am Algorithm (required)

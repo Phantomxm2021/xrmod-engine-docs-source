@@ -247,4 +247,4 @@ public void DisableAR(){
 
 ## Summary
 
-Since then, our AR-APP has been completed. Using the XRMOD Engine has saved us a lot of time, and saved us the logic and knowledge of how to interact with the XR SDK. The next step is to create a beautiful UI/UX and XR experience for it. content. If you don't know how to make content, you can [click here](../experience-manual/tutorial-basics/create-first-arexperience) to read it.
+Since then, our AR-APP has been completed. Using the XRMOD Engine has saved us a lot of time, and saved us the logic and knowledge of how to interact with the XR SDK. The next step is to create a beautiful UI/UX and XR experience for it. content. If you don't know how to make content, you can [click here](../experience-manual/tutorial-advanced/create-first-arexperience) to read it.

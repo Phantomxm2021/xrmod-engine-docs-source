@@ -43,11 +43,11 @@ Go to Menu bar and select the `Tools`->`VisualScripting`->`Init XR-MOD`. The ini
 
 Well done. Here you have finished the visual scripting setup and initialization, Now you can enjoy creating to your heart's content.
 
-# Testing
+# Validation
 
-In Unity Editor Project Panel Right-Click to create a new file of Bolt graph by `Create` > `Bolt`/`VisualScripting` > `Flow Graph`. Selete the Graph and Double Click or click the Edit Graph in Inspector ,  you will see the graph window is appears.
+In Unity Editor Project Panel Right-Click to create a new file of Bolt graph by `Create` > `Bolt`/`VisualScripting` > `Script Graph`. Selete the Graph and Double Click or click the Edit Graph in Inspector ,  you will see the graph window is appears.
 
-:::tip
+:::info
 **Why are there bolt folders and keywords?**  
 Because Bolt was acquired by Unity and renamed Visualscripting.
 :::
