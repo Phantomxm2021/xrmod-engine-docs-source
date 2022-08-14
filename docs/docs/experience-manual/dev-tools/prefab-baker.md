@@ -73,7 +73,7 @@ Let's go and bake it. We can open the `PrefabBaker` setting panel via `Tools`->`
 
 Now we have completed the setup. Click the Open Baker button to display baking setup panel. We can see the error in the window. Now we need click Change button to reset the saved Lightmaps folder path.
 
-<coverimg  url={require('@site/static/static/dev-tools/prefabbaker/prefabbakesettings.png')} height="100%" padding="0.5rem"/>
+<coverimg  url={require('@site/static/static/dev-tools/prefabbaker/bake-window.png')} height="100%" padding="0.5rem"/>
 
 
 :::tip

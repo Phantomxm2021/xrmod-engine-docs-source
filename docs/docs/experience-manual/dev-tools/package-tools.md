@@ -42,7 +42,27 @@ Move mouse to left side's project area and right click, Select `New Project` in 
 <coverimg  url={require('@site/static/static/dev-tools/packagetoolseditor/package-tool-create-project.png')} height="100%" padding="0.5rem"/>
 <coverimg  url={require('@site/static/static/dev-tools/packagetoolseditor/package-tools-select-template.png')} height="100%" padding="0.5rem"/>
 
-### Project Editing
+### Project Directory
+
+```text
+ARWorldCase
+    ├─Artwork      
+    ├─AutomaticGenerated    
+    ├─Configures
+    └─Scripts
+      ├─Editor
+      └─Runtime
+```
+
+| Name               | Describe                                                                                                                                                                                 |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ARWorldCase        | Project name for the XR-MOD project                                                                                                                                                      |
+| Artwork            | Store and manage art resources, you can create subfolders for classified management                                                                                                      |
+| AutomaticGenerated | When building the package body, such as MOD dll, AR function configuration files, etc. are automatically generated and are necessary configurations                                      |
+| Configures         | Automatically created when the project is created to cache the configuration of the AR function. After the project is created, it cannot be deleted, otherwise an error will be reported |
+| Scripts            | The location where all the code of the project is stored                                                                                                                                 |
+| Editor             | It is only used in the Unity Editor, generally stores auxiliary resource scripts such as the quick configuration panel of the project, and does not participate in runtime construction  |
+| Runtime            | Stores the runtime code of AR projects, more scripts can be created to implement more interesting logic                                                                                  |
 
 
 ### Add AR Experience Features
