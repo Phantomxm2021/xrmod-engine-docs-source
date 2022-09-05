@@ -144,13 +144,20 @@ Create a new folder in the Assets panel named **Scripts** (used to store project
 
 After waiting for Unity to compile, we double-click the Script we just created to open it for editing. The idea flow is roughly as follows:
 
-1. Get SDK EntryPoint
-2. Build and configure SDKConfiguration and pass in by SDK EntryPoint.Init for SDK initialization
-3. Call `SDKEntryPoint.LaunchXRQuery` to start XR and load the content. To use this method, you need to pass in the item ID or item name
+1. Calling [SDKInitialization.Initialize](./api-reference/xrmod-api/SDKInitialization) to initialize XRMOD sdk and delay 125ms 
+2. After 125ms we calling [FindObjectOfType](https://docs.unity3d.com/ScriptReference/Object.FindObjectsOfType.html) to get [SDKEntryPoint](./api-reference/xrmod-api/SdkEntryPoint)
+2. Build and configure [SDKConfiguration](./api-reference/xrmod-api/SdkConfigure/Sdkconfiguration) and pass in by SDK EntryPoint.
+3. Calling [SDKEntryPoint.Init](./api-reference/xrmod-api/SdkEntryPoint#initsdk) and [SDKEntryPoint.LaunchXRQuery](./api-reference/xrmod-api/SdkEntryPoint#launchxrquery) to start XR and load the content.
 
-After understanding the general idea process, we can start work. First, we can use `FindObjectOfType<SDKEntryPoint>()` to get our SDKEntryPoint object, so that we can use the methods in SDKEntryPoint. The code looks like this:
+:::caution
+To use **SDKEntryPoint.LaunchXRQuery**, you need to pass in the **project id** or **project name**
+:::
+
+
 
 ```csharp
+using SDKEntry.Runtime;
+
 public async void ARModuleStart(){
     
     // Reinitialization
@@ -174,6 +181,9 @@ public async void ARModuleStart(){
     tmp_Entry.LaunchXRQuery("PROJECT UID");
 }
 ```
+:::tip
+If you chose our XRMOD cloud, you can typing `https://phantomsxr.cn/api/v2/getarresource` for the [dashboardGateway](./api-reference/xrmod-api/SdkConfigure/DashboardConfig) field.
+:::
 
 
 | Name                  | Type     | Description                                                                                                     |
@@ -186,13 +196,11 @@ public async void ARModuleStart(){
 | EngineType          | String | It is used to tell what environment the AR MOD SDK is currently running in. If it is based on Unity secondary development, you need to fill in Unity.                                                     |
 | AppModel            | String | The mode used to distinguish the current App is divided into three cases: Online-interconnection with Dashboard, Offline-not connected to the Internet by loading local content, Simulator--for Unity Editor                 |
 
-:::tip
-Call this method when you need to use XR to turn it on.
-:::
+
 
 ## Close XRMOD
 
-Since it can be turned on and off on demand, xrmod allows you to call `Dispose` to turn off XR.
+Since it can be turned on and off on demand, xrmod allows you to call [Dispose](./api-reference/xrmod-api/SdkEntryPoint#dispose) to turn off XR.
 
 ```cs
 public void DisableAR(){
@@ -204,12 +212,33 @@ public void DisableAR(){
     SceneManager.LoadScene("Main");
 }
 ```
-## Build
+## Managed code stripping
 
-```xml
+During the build process, Unity removes unused or unreachable code through a process called [managed code stripping](https://docs.unity3d.com/Manual/ManagedCodeStripping.html), which can significantly decrease your application’s final size. Managed code stripping removes code from managed assemblies, including assemblies built from the C# scripts
+ in your project, assemblies that are part of packages and plugins, and assemblies in .NET Framework.
+
+Unity uses a tool called the Unity linker to perform a static analysis of the code in your project’s assemblies. The static analysis identifies any classes, portions of classes, functions, or portions of functions that can’t be reached during execution. This analysis only includes code that exists at build time because runtime generated code doesn’t exist when Unity performs the static analysis.
+
+You can configure the level of code stripping Unity performs for your project using the **Managed Stripping Level** setting. To prevent Unity removing specific parts of your code, use annotations to indicate which parts of your code base the Unity linker should preserve. For more information, see Unity [linker](https://docs.unity3d.com/Manual/unity-linker.html).
+
+**Example**:
+```log
+Could not produce class with ID 91.  
+This could be caused by a class being stripped from the build even though it is needed. Try disabling 'Strip Engine Code' in Player Settings.
+```
+
+So we can copy the xml on the below into our project. 
+
+:::tip
+**HandheldARModule.Runtime** is a customized dependency library for handhelds(Mobile:Android device or iPhone), you need to choose according to your platform 
+:::
+ 
+```xml title="link.xml"
 <linker>
-    <!--Base Module-->
+    <!-- Chose your platform -->
     <assembly fullname="HandheldARModule.Runtime" preserve="all"/>
+    <!-- Chose your platform -->
+
     <assembly fullname="GLTFExtension.Runtime" preserve="all"/>
     <assembly fullname="SDKEntry.Runtime" preserve="all"/>
     <assembly fullname="BaseFeaturesModule.Runtime" preserve="all"/>
@@ -244,6 +273,14 @@ public void DisableAR(){
 </linker>
 
 ```
+
+## Build app
+
+Now you can open **BuildSetting** window to build your app via `File`->`BuildSettings`. 
+
+:::danger
+XRMOD experience scripts cannot directly call third-party methods or developer-defined script methods.  However, we also provide a way to do this, [click here to ready more](./custom-il-method).
+:::
 
 ## Summary
 
