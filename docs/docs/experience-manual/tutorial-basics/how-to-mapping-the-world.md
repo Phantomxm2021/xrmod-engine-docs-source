@@ -13,6 +13,12 @@ A **Feature Point** is a distinct, high-contrast visual feature in an image. A c
 
 Map construction works by finding the same **Feature Points** in multiple images from different viewpoints and estimating the 3D structure of scene by triangulating those feature points.
 
+:::caution
+The app requires a license. You can apply for a free commercial license by sending an email to us(info@phantomsxr.com). The email content format is as follows.  
+- Subject: [Request] XRMOD WorldMapper License  
+- Content: The name of the applicant's company or individual, and the industry sector to be used.  
+:::
+
 It is important to try to cover the target environment from multiple viewpoints and possibly different distances if necessary.
 
 :::caution
