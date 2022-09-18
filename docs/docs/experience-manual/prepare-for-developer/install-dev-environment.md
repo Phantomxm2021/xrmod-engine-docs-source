@@ -1,7 +1,7 @@
 ---
 title: Install XR-Dev Environment
 sidebar_position: 3
-keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,XR,facebook,meta,unity]
 image: img/xrmod-docs-card.png
 description: using Unity engine to create our XR Experience contents.
 ---

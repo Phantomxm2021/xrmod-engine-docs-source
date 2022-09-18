@@ -18,7 +18,7 @@ export default function FooterLayout({ style, links, logo, copyright }) {
             reality functions on the cross platform. Embedding XRMOD engine on
             the cross platform does not need to change your original business
             and code, and only needs to call several APIs to complete the
-            embedding. XRMOD engine is a free and without watermark metaverse
+            embedding. XRMOD engine is a free and without watermark XR
             construction system that supports commercial licenses (free
             commercial licenses).
           </Translate>

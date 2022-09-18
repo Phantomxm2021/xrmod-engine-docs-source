@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
 title: Introduction 
-keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,XR,facebook,meta,unity]
 image: img/xrmod-docs-card.png
-description: what is xrmod engine, it a metaverse construction system. it's free.
+description: what is xrmod engine, it a XR construction system. it's free.
 slug: /
 ---
 
@@ -19,9 +19,9 @@ We recommend that you read all chapters in sidebar order.
 
 ## What's XRMOD engine
 
-In short, XRMOD Engine is a metaverse construction system developed based on the OpenXR protocol. Not only VR (Virtual Reality), AR (Augmented Reality), MR (Mixed Reality), but also continued support for traditional screen reading methods.
+In short, XRMOD Engine is a XR construction system developed based on the OpenXR protocol. Not only VR (Virtual Reality), AR (Augmented Reality), MR (Mixed Reality), but also continued support for traditional screen reading methods.
 
-XRMOD engine is a free and without watermark metaverse construction system that supports commercial licenses (free commercial licenses).
+XRMOD engine is a free and without watermark XR construction system that supports commercial licenses (free commercial licenses).
 
 ## What's mean of MOD in the XRMOD
 

@@ -1,7 +1,7 @@
 ---
 title: Introduction 
 sidebar_position: 1
-keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,XR,facebook,meta,unity]
 image: img/xrmod-docs-card.png
 description: This API is provided by XMROD Engine for iOS platform, allowing developers to better embed XRMOD into their applications.
 ---

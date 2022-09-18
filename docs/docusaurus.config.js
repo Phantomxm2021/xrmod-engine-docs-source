@@ -30,6 +30,8 @@ function defineSection(section, version = {}, options = {}) {
       id: section,
       sidebarPath: require.resolve("./sidebars.js"),
       breadcrumbs: false,
+      showLastUpdateTime:true,
+      showLastUpdateAuthor:false,
       editUrl:
         "https://github.com/Phantomxm2021/xrmod-engine-docs-source/tree/main/docs",
       versions: version && {
@@ -57,7 +59,7 @@ const SECTIONS = [
 const config = {
   title: "XRMOD Engine Manual",
   tagline:
-    "XRMOD Engine is a free watermark-free metaverse build system that supports commercial licenses (free commercial licenses).",
+    "XRMOD Engine is a free watermark-free XR build system that supports commercial licenses (free commercial licenses).",
   url: "https://docs.phantomsxr.com",
   baseUrl: "/",
   onBrokenLinks: "warn",

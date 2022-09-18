@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: CMS Dashboard 
-keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,XR,facebook,meta,unity]
 image: img/xrmod-docs-card.png
 description: xrmod case with dashboard.
 ---

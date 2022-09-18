@@ -1,6 +1,6 @@
 ---
 title: How To Use MonoBehaviour
-keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,XR,facebook,meta,unity]
 image: img/xrmod-docs-card.png
 description: Uisng Package Tools Editor to create a XRMOD proejct.
 sidebar_position: 4

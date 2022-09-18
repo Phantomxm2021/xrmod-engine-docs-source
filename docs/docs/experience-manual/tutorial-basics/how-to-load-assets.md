@@ -14,7 +14,7 @@ keywords:
     xrmod,
     mod,
     doc,
-    metaverse,
+    XR,
     facebook,
     meta,
     unity,

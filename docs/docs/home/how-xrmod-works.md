@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
 title: How XRMOD works
-keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,XR,facebook,meta,unity]
 image: img/xrmod-docs-card.png
 description: Introducing how xrmod works, so you can understand more about xrmod.
 ---
 
-XRMOD Engine is a metaverse construction system developed based on the OpenXR protocol. And XR-Experience content create by Unity Editor.  
+XRMOD Engine is a XR construction system developed based on the OpenXR protocol. And XR-Experience content create by Unity Editor.  
 
 XRMOD Engine can embed to a native App or build a standalone app with Unity Editor.
 

@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
 title: What is XRMOD engine
-keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,metaverse,facebook,meta,unity]
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,XR,facebook,meta,unity]
 image: img/xrmod-docs-card.png
-description: XRMOD Engine is a free watermark-free metaverse build system that supports commercial licenses (free commercial licenses).
+description: XRMOD Engine is a free watermark-free XR build system that supports commercial licenses (free commercial licenses).
 ---
 
-In short, XRMODEngine is a metaverse construction system developed based on the OpenXR protocol. Not only VR (Virtual Reality), AR (Augmented Reality), MR (Mixed Reality), but also continued support for traditional screen reading methods.
-XRMOD Engine is a free watermark-free metaverse build system that supports commercial licenses (free commercial licenses).
+In short, XRMODEngine is a XR construction system developed based on the OpenXR protocol. Not only VR (Virtual Reality), AR (Augmented Reality), MR (Mixed Reality), but also continued support for traditional screen reading methods.
+XRMOD Engine is a free watermark-free XR build system that supports commercial licenses (free commercial licenses).
 
 ## Concept of XRMOD
 MOD is both Modification. The concept is widely used in games and corresponds to modifiable video games. Famous games like Warcraft, Red Alert, Half-Life, CS, Victory Day and more!
