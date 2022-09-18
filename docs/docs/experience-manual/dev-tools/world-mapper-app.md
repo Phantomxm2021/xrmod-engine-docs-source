@@ -6,21 +6,6 @@ image: img/xrmod-docs-card.png
 description: Create AR experiences that merge digital and physical realities for consumers, industrial use, ad campaigns and more.
 ---
 
-## Quick Start
-The app has two modes, workspace and visualize.
-
-#### Workspace Mode
-The map construction mode. This mode allows you to take images and submit the image set for map construction in the Cloud Service.
-
-#### Visualize Mode
-Allows you to download constructed maps and test localization. Useful for quick map inspection and evaluation. The map list has basic map management features. You can delete maps and also restore previously captured map's image sets to the workspace if you want to extend/update the map.
-
-import VideoPlayer from '@site/src/components/VideoPlayer'
-
-<VideoPlayer src="/static/dev-tools/worldmapper/ImmersalQuickStartAtMapping.mp4" className="custom-video-showcase" />
-
----
-
 ## User Interface
 ### SignIn
 
