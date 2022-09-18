@@ -23,7 +23,7 @@ Content: The name of the applicant's company or individual, and the industry sec
 
 There's an info panel in the top part of the screen. It shows you how many captured images have been uploaded to the Cloud Service's workspace and how many images are still waiting to be uploaded from your device.  
 
-If you have enabled GPS, which you should to fully leverage all Immersal SDK features, the info panel also shows the device's current latitude, longitude, and altitude as well as estimated horizontal and vertical accuracy in meters.   
+If you have enabled GPS, which you should to fully leverage all Immersal features, the info panel also shows the device's current latitude, longitude, and altitude as well as estimated horizontal and vertical accuracy in meters.   
 
 There are three buttons in the workspace mode:  
 - **Switch Mode** switches between workspace and visualize modes  
@@ -74,7 +74,7 @@ The comparison and notification is a useful guide when mapping but connecting al
 
 There's an info panel in the top part of the screen. It shows you how many localization attempts were successful out of all attempts.
 
-If you localized to a map with GPS coordinates, the info panel also shows you the Visual GPS position from the Immersal SDK. This position is derived from the map's coordinates but it's updated every frame to match the camera view.
+If you localized to a map with GPS coordinates, the info panel also shows you the Visual GPS position from the Immersal. This position is derived from the map's coordinates but it's updated every frame to match the camera view.
 
 There are four buttons in the visualize mode:
 - **Download Maps** opens the map list where you can manage previously constructed maps
