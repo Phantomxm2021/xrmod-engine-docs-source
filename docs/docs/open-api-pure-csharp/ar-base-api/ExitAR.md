@@ -1,15 +1,14 @@
 ---
-title: ExitAR
+title: Exit
 ---
 
-## ExitAR
 
 ## Description
 
-Exit the AR
+Exit the XRMOD
 
 ## Method
 
 ```cs
-public void ExitAR()
+public void Exit()
 ```
