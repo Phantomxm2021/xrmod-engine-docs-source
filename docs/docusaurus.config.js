@@ -216,7 +216,7 @@ const config = {
             to: "/api/",
             position: "left",
           },
-          { to: "pricing", label: "Pricing", position: "left" },
+          // { to: "pricing", label: "Pricing", position: "left" },
           { to: "changelog", label: "Changelog", position: "left" },
           // {to: '/blog', label: 'Blog', position: 'left'},
           // {

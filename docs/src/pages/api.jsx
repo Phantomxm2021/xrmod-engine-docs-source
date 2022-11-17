@@ -12,7 +12,7 @@ import RunInPostmanButton from '../components/RunInPostmanButton';
 
 const API_TOOLTIP_KEY = 'dyte-api-v2-tooltip-shown';
 
-function APIElement({ layout = 'sidebar', currentVersion = 'v1' }) {
+function APIElement({ layout = 'sidebar', currentVersion = 'v2' }) {
   return (
     <BrowserOnly
       fallback={
@@ -50,10 +50,10 @@ export default function Home() {
   const location = router.location;
 
   const url = new URL(
-    `https://docs.dyte.io${location.pathname}${location.search}`
+    `https://docs.phantomsxr.com${location.pathname}${location.search}`
   );
 
-  const currentVersion = url.searchParams.get('v') || 'v1';
+  const currentVersion = url.searchParams.get('v') || 'v2';
 
   useEffect(() => {
     // show V2 tooltip only if user hasn't seen it yet

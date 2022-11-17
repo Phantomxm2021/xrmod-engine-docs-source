@@ -1,0 +1,107 @@
+---
+sidebar_position: 5
+title: XR-MOD Cloud
+keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,XR,facebook,meta,unity]
+image: img/xrmod-docs-card.png
+description: xrmod case with XR-MOD Cloud.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## What is the Dashbaord of XRMOD?
+
+The XR-MOD Cloud is the XR content manager system. It helps our XR Experience and showcase make more flexible and convenient.
+
+<coverimg  url={require('@site/static/static/dev-tools/cmsdashboard/dashboard_en.jpg')} height="100%" padding="0.5rem"/>
+
+## How to use the Dashboard?
+
+At the first, XR-Creatives need go to XR-MOD Cloud(https://phantomsxr.com)  and register an account. After the registration, XR-MOD Cloud will send a mail to XR-Creatives's mailbox, please go to the mailbox to verify XR-Creatives account.
+
+After verifying the account, use the account and password just registered to sign in.
+
+
+### How to create App
+Since XR-Creatives are new user so XR-Creatives need to create an app for binding XRMOD application client.
+
+1. Start creating a new application via the green button on the top right
+
+    <coverimg  url={require('@site/static/static/dev-tools/cmsdashboard/create_app.jpg')} height="100%" padding="0.5rem" label="Create a new app"/>
+
+2. Follow the prompts to fill in your application information.
+
+    <coverimg  url={require('@site/static/static/dev-tools/cmsdashboard/create_app_2.jpg')} height="100%" padding="0.5rem" label="Create a new app"/>
+
+    :::danger Bundle Id
+    It will be associated with your application in order to use OpenAPI.
+    :::
+
+    :::caution Bundle Id
+     A bundle ID or bundle identifier uniquely identifies an application in XR-MOD Cloud's ecosystem. This means that no two applications can have the same bundle identifier. To avoid conflicts, PhantomXR encourages developers to use reverse domain name notation for choosing an application's bundle identifier. 
+    :::
+### Create ARExperience Project
+
+Go to the application we just created; also create your yin through the top right menu. You will see a bootstrap screen for creating a project, as shown in the following image:
+
+<coverimg  url={require('@site/static/static/dev-tools/cmsdashboard/create_project.jpg')} height="100%" padding="0.5rem" label="Create a new project"/>
+
+- **Custom**: For hosting your own written XR experience content.
+- **UDM**: UDM is a customization system that allows users to assemble their own products through XR. This feature does not require you to write a single line of code, just upload a 3D model from the console or use the public repository to create an XR experience.
+- **Other**: A different perspective on the world, some interesting experiences are being developed and conceived.
+
+### Hosting your XR-Experience
+
+
+
+<Tabs
+  groupId="project-type"
+  defaultValue="custom"
+  values={[
+    { label: "Custom", value: "custom" },
+    { label: "UDM", value: "udm" },
+  ]}
+>
+<TabItem value="custom">
+
+
+After creating the project, your project is not yet accessible; you still need to upload XR resources.
+
+<coverimg  url={require('@site/static/static/dev-tools/cmsdashboard/project_detail.jpg')} height="100%" padding="0.5rem" label="Create a new project"/>
+
+:::caution
+XR resources are saved as soon as they are uploaded, other project fields need to be saved via the top right menu
+:::
+
+</TabItem>
+
+
+<TabItem value="udm">
+
+The UDM project is created and is just as unusable. You need to upload your model in XRCloud Editor to do so, as shown below.
+
+<coverimg  url={require('@site/static/static/dev-tools/cmsdashboard/project_detail_udm.jpg')} height="100%" padding="0.5rem" label="UDM project"/>
+
+After uploading and setting up your UDM model, you also need to save the project via the Save menu in the FIle menu in the upper left corner of XRMOD Cloud, otherwise the data will not be stored.
+
+<coverimg  url={require('@site/static/static/dev-tools/cmsdashboard/save_udm.jpg')} height="100%" padding="0.5rem" label="Save UDM"/>
+
+</TabItem>
+
+</Tabs>
+
+### Review XR-Experience
+
+Go to your XR project and set its status to **Publish** (check the Publish box), then save your project via right top menu.
+
+<coverimg  url={require('@site/static/static/dev-tools/cmsdashboard/project_state.jpg')} height="100%" padding="0.5rem"/>
+
+If you don't have your own XR app yet, you can scan the QR code to download the ARMOD app to see your XR experience.
+
+<coverimg  url={require('@site/static/static/dev-tools/cmsdashboard/ARMODApp.png')} height="100%" padding="0.5rem"/>
+
+Ok. If you use our ARMOD APP, you can turn on the share of your project; this will allow you to see your XR experience in the ARMOD App community page. If you do not want to turn on sharing, you can also enter your XR-Experience Id on the third page of the ARMOD APP to experience it.
+
+## Summary
+
+This article Introduction s how to use the XRMOD Cloud to configure and manage our ARExperience and associate XRExperience with XRShowcase.For specific API usage, please refer to Restful API.
