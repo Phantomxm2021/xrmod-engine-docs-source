@@ -202,15 +202,15 @@ Finally we need to save the results of our Prefab edits, which can be done by **
 
 ## Configuration experience
 
-In the previous step we have already created all the necessary resources, next start the configuration, set XR-MOD Project Properties:
+在上一步中，我们已经创建了所有必要的资源，接下来开始配置，设置XR-MOD项目属性。
 
-1. Set the `Device Type` of `XR Algorithm` to `Handheld AR`
-2. set `XR Algorithm` to `Immersal`
-3. Add `Programmable`
-4. Keep all default
+1. 将`XR Algorithm`的`Device Type`设置为`Handheld AR`。
+2. 将`XR Algorithm` 设置为 `Immersal`。
+3. 添加 `Programmable`。
+4. 保持所有默认
 
 :::info
-To learn more about attribute feature blocks, please see the following links:
+要了解更多关于属性特征块的信息，请看以下链接。
 
 - [Version Checker](../../experience-manual/arblock/version-check-block)
 - [AR World Scale](../../experience-manual/arblock/features#arworld-scale-block)
