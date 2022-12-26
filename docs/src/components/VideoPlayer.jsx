@@ -12,7 +12,6 @@ export default function VideoPlayer({ src, mobile, className, ...rest }) {
       muted
       {...rest}
       webkit-playsinline="true"
-      playsinline="true"
       x5-video-player-type="h5"
       x5-video-player-fullscreen="true"
     />

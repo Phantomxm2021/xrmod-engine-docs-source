@@ -18,7 +18,7 @@ public void TryAcquireAppInfo(TryAcquireAppInfoNotificationData _data)
 
 ## Relation
 
-当你使用这个 API 时，你需要实现相应平台的`TryAcquireInformation`回调方法。
+当您使用这个 API 时，您需要实现相应平台的`TryAcquireInformation`回调方法。
 
 | Platform                                                                      |
 | ----------------------------------------------------------------------------- |

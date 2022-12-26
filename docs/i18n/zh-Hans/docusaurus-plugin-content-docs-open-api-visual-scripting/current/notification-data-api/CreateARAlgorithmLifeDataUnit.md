@@ -1,6 +1,6 @@
 ## Description
 
-BaseNotificationData的子类。当你调用ChangeARAlgorithmLife方法时，将需要把这个数据传递给ARMOD SDK。
+BaseNotificationData的子类。当您调用ChangeARAlgorithmLife方法时，将需要把这个数据传递给ARMOD SDK。
 
 
 ## Return

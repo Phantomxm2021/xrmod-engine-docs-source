@@ -60,7 +60,7 @@ import VideoPlayer from '@site/src/components/VideoPlayer'
 ### 收集 AR 对象
 
 - 转到 Content 部分
-- 从 Unity Assets 面板拖动 AR 内容资源到内容；并使用短名称命名。你可以在资源上点击右键，选择短名称
+- 从 Unity Assets 面板拖动 AR 内容资源到内容；并使用短名称命名。您可以在资源上点击右键，选择短名称
 
 <coverimg url={require('@site/static/static/dev-tools/packagetoolseditor/package-tools-collect-objects.png')} height="100%" padding="0.5rem"/>
 
@@ -82,10 +82,10 @@ import VideoPlayer from '@site/src/components/VideoPlayer'
 至此，AR 创意互动体验资源包已经建成，以后可以部署到[Dashboard](../dev-tools/dashboard.md)。
 
 :::info
-AR 创意体验内容包将被输出到你的项目根目录 ServerData/package 平台（如：iOS/项目名称下）。
+AR 创意体验内容包将被输出到您的项目根目录 ServerData/package 平台（如：iOS/项目名称下）。
 
 - 您的项目名称.arexperience
-- 你的项目名称.json
+- 您的项目名称.json
   这些文件稍后将被上传到我们的仪表板。
 :::
 

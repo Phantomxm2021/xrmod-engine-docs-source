@@ -1,6 +1,6 @@
 ## Description
 
-BaseNotificationData的子类。当你调用该方法时，需要将该数据传递给ARMOD SDK。
+BaseNotificationData的子类。当您调用该方法时，需要将该数据传递给ARMOD SDK。
 
 
 :::info

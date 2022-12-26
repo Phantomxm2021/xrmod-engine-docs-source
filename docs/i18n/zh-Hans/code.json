@@ -286,7 +286,7 @@
     "description": "To prompt users to load the full image. sizeMessage is a parenthesized size figure."
   },
   "theme.IdealImageMessage.offline": {
-    "message": "你的浏览器处于离线状态。图片未加载",
+    "message": "您的浏览器处于离线状态。图片未加载",
     "description": "When the user is viewing an offline document"
   },
   "theme.IdealImageMessage.404error": {
@@ -302,7 +302,7 @@
     "description": "The card title"
   },
   "Take you to understand xrmod before and after, let you know more about xrmod engine.": {
-    "message": "带你了解xrmod前后，让你更了解xrmod引擎。",
+    "message": "带您了解xrmod前后，让您更了解xrmod引擎。",
     "description": "The card title"
   },
   "How XRMOD works": {
@@ -313,18 +313,18 @@
     "message": "XRMOD Engine 文档"
   },
   "Explore our guides and examples to integrate XRMOD engine easily into your apps. And make amzing XR-Experience.": {
-    "message": "探索我们的指南和实例，将XRMOD引擎轻松整合到您的应用程序中。让你的XR体验更加精彩。"
+    "message": "探索我们的指南和实例，将XRMOD引擎轻松整合到您的应用程序中。让您的XR体验更加精彩。"
   },
   "Essential reading for a better understanding of how to best use XRMOD SDKs": {
     "message": "为更好地了解如何更好地使用XRMOD SDKs，必须阅读的内容",
     "description": "The card description"
   },
   "Integrate XRMOD in your Android App": {
-    "message": "在你的安卓应用中整合XRMOD",
+    "message": "在您的安卓应用中整合XRMOD",
     "description": "The card description"
   },
   "Integrate XRMOD in your iOS App": {
-    "message": "在你的iOS应用程序中整合XRMOD",
+    "message": "在您的iOS应用程序中整合XRMOD",
     "description": "The card description"
   },
   "Integrate XRMOD in your Flutter App": {
@@ -363,7 +363,7 @@
     "message": "XRMOD Engine资费标准"
   },
   "All plans are on a per-company basis, meaning you can publish as many applications as you’d like under a single plan.": {
-    "message": "所有计划都是以公司为单位的，这意味着你可以在一个计划下发布你想要的许多应用程序。"
+    "message": "所有计划都是以公司为单位的，这意味着您可以在一个计划下发布您想要的许多应用程序。"
   },
   "To boost the AR industry, we offer a completely free commercial license that suits most developers.": {
     "message": "为了促进AR产业的发展，我们提供了一个完全免费的商业许可，适合大多数开发者。"
@@ -462,7 +462,7 @@
     "message": "每月无限的API调用次数"
   },
   "Private cloud instance on your platform of choice.": {
-    "message": "在你选择的平台上的私有云实例。"
+    "message": "在您选择的平台上的私有云实例。"
   },
   "Only support Android and iOS platform.": {
     "message": "只支持安卓和iOS平台。"
@@ -486,7 +486,7 @@
     "message": "定制XRMOD云"
   },
   "The XRMOD engine provides a solution for implementing augmented reality functions on the cross platform. Embedding XRMOD engine on the cross platform does not need to change your original business and code, and only needs to call several APIs to complete the embedding. XRMOD engine is a free and without watermark XR construction system that supports commercial licenses (free commercial licenses).": {
-    "message": "XRMOD引擎为在跨平台上实现增强现实功能提供了一个解决方案。在跨平台上嵌入XRMOD引擎不需要改变你原有的业务和代码，只需要调用几个API即可完成嵌入。XRMOD引擎是一个免费的、无水印的元空间构建系统，支持商业许可（免费商业许可）。"
+    "message": "XRMOD引擎为在跨平台上实现增强现实功能提供了一个解决方案。在跨平台上嵌入XRMOD引擎不需要改变您原有的业务和代码，只需要调用几个API即可完成嵌入。XRMOD引擎是一个免费的、无水印的元空间构建系统，支持商业许可（免费商业许可）。"
   },
   "Sign up to get 10,000 API calls per month for free!": {
     "message": "注册后，每月可免费获得10,000次API调用!"
@@ -567,7 +567,7 @@
     "description": "The title for error screen of search modal"
   },
   "theme.SearchModal.errorScreen.helpText": {
-    "message": "你可能需要检查网络连接。",
+    "message": "您可能需要检查网络连接。",
     "description": "The help text for error screen of search modal"
   },
   "theme.SearchModal.footer.selectText": {

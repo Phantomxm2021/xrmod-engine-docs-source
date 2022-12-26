@@ -11,7 +11,7 @@ import VideoPlayer from '@site/src/components/VideoPlayer'
 将一个虚拟物体贴到现实世界。
 
 :::caution
-这个方法将自动创建Anchor进行定位，所以如果你用这个方法生成多个锚，会影响你的性能。
+这个方法将自动创建Anchor进行定位，所以如果您用这个方法生成多个锚，会影响您的性能。
 :::
 
 ## Parameters

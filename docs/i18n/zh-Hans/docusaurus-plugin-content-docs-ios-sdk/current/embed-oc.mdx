@@ -15,7 +15,7 @@ import TabItem from "@theme/TabItem";
 
 ## 导入 ARMOD 框架
 
-将 ARMOD SDK 和脚本拖放到你的项目中。
+将 ARMOD SDK 和脚本拖放到您的项目中。
 
 <coverimg url={require("@site/static/static/sdk/ios-sdk/setup.png")} height="100%" padding="0" />
 
@@ -42,7 +42,7 @@ ARMODCommunicationLayer.h 和 ARMODCommunicationLayer.mm 是 Unity 交互的连�
 在我们开始之前，我们必须弄清楚 ARMOD 和 Native 应用程序之间的关系。
 
 - 首先要明确的是，ARMOD 不包含任何用户界面
-- ARMOD 只允许你插入视图或堆栈
+- ARMOD 只允许您插入视图或堆栈
 - UI 事件和数据只由 iOS Native Calls Protocol API 通知。
 - UI 操作事件只由 iOS ARMOD API 通知 ARMOD 引擎。
 
@@ -125,8 +125,8 @@ int main(int argc, char * argv[]) {
 
 ### 启动 AR
 
-因为每次启动 ARMOD 时，你都需要传递信息来初始化 SDK，以便验证你相应的账户。
-我们需要调用以下一行代码进行初始化。由于 ARMOD 初始化接口只支持 JSON 格式的数据，你可以使用你喜欢的数据格式将其转换为 json，然后传入此方法。
+因为每次启动 ARMOD 时，您都需要传递信息来初始化 SDK，以便验证您相应的账户。
+我们需要调用以下一行代码进行初始化。由于 ARMOD 初始化接口只支持 JSON 格式的数据，您可以使用您喜欢的数据格式将其转换为 json，然后传入此方法。
 
 ```objectivec
 //Configure AR SDK. We need to convert the dictionary to NSString and then pass it to our SDK.
@@ -167,11 +167,11 @@ int main(int argc, char * argv[]) {
 <coverimg url={require("@site/static/static/sdk/ios-sdk/configure.png")} height="25rem" padding="0" />
 
 :::caution
-imageCloudRecognizerConfig 还不被支持，所以你可以忽略它。
+imageCloudRecognizerConfig 还不被支持，所以您可以忽略它。
 :::
 
 :::danger
-这是我们的 Json 格式。你必须与这个格式保持一致！。
+这是我们的 Json 格式。您必须与这个格式保持一致！。
 
 ```json
 {
@@ -245,7 +245,7 @@ ARMOD UnityFramework不支持Bitcode
 
 ## 总结
 
-更多关于Native API的信息，你应该阅读iOS Native Calls Protocol API。我们把这个Native OC项目的样本项目上传到github。现在你可以从github下载我们的源代码项目。
+更多关于Native API的信息，您应该阅读iOS Native Calls Protocol API。我们把这个Native OC项目的样本项目上传到github。现在您可以从github下载我们的源代码项目。
 
 ## 常见的错误
 
@@ -263,4 +263,4 @@ ARMODs/Unity/ARMOD-iOS-Unity/ARMOD-iOS/Build/U201904/
 Classes/UI/SplashScreen.mm, line 186.
 ```
 
-将UILaunchStoryboardName字段添加到你项目的plist中。
+将UILaunchStoryboardName字段添加到您项目的plist中。

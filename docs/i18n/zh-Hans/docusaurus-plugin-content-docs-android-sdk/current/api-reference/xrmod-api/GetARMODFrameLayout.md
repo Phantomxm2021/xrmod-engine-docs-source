@@ -1,6 +1,6 @@
 ## Description
 
-获取当前的 ARMOD FrameLayout。你可以调用此方法来获得框架布局，并增加你的自定义 UI。
+获取当前的 ARMOD FrameLayout。您可以调用此方法来获得框架布局，并增加您的自定义 UI。
 
 
 ## Return

@@ -36,7 +36,7 @@ dependencies:
 
 ### 第二步
 
-在你的项目术语中运行`flutter pub get`命令，以安装依赖性。
+在您的项目术语中运行`flutter pub get`命令，以安装依赖性。
 
 ### 第三步
 
@@ -59,10 +59,10 @@ dependencies:
 
 <TabItem value="ios">
 
-- 在你的 XCode 项目中创建 ThirdParties 文件夹。
+- 在您的 XCode 项目中创建 ThirdParties 文件夹。
 - 将 UnityFramework.framework 导入该文件夹（ThridParties）。
 - 将框架添加到`Xcode`->`Targets`->`Your APP`->`General`->`Franework,Libraries,and Embedded Content`区域，并将嵌入模式设置为嵌入和签署。
-- 执行 cd iOS 命令并在你的终端上运行 Pod 安装命令。
+- 执行 cd iOS 命令并在您的终端上运行 Pod 安装命令。
 
 </TabItem>
 
@@ -70,8 +70,8 @@ dependencies:
 
 ### 第四步
 
-- 再次在你的终端中运行`Flutter pub get`命令。
-- 创建并写入你的应用程序令牌到[PhantomsXRConfig.dart](https://github.com/Phantomxm2021/ARMOD-FlutterAppDemo/blob/main/lib/src/config/phantomsxrConfig.dart)。
+- 再次在您的终端中运行`Flutter pub get`命令。
+- 创建并写入您的应用程序令牌到[PhantomsXRConfig.dart](https://github.com/Phantomxm2021/ARMOD-FlutterAppDemo/blob/main/lib/src/config/phantomsxrConfig.dart)。
 - 并为 AR-MOD 写一个新的屏幕。
 
 ## Build and Test
@@ -95,7 +95,7 @@ dependencies:
 
 <TabItem value="ios-swift">
 
-如果你使用的是 Swift，打开`ios/Runner/AppDelegate.swift`文件，修改如下。
+如果您使用的是 Swift，打开`ios/Runner/AppDelegate.swift`文件，修改如下。
 
 ```swift diff title="AppDelegate.swift"
 import UIKit
@@ -143,7 +143,7 @@ import flutter_armod_widget
 
 <TabItem value="ios-objc">
 
-如果你使用 Objective-C，打开`ios/Runner/main.m`文件，修改如下。
+如果您使用 Objective-C，打开`ios/Runner/main.m`文件，修改如下。
 
 ```objectivec title="main.m"
 #import "flutter_armod_widget.swift.h"
@@ -178,5 +178,5 @@ int main(int argc, char * argv[]) {
 
 </Tabs>
 
-OK，你只需要在终端运行`flutter run --release`命令。一个 AR 应用就会在你的手机中运行!
+OK，您只需要在终端运行`flutter run --release`命令。一个 AR 应用就会在您的手机中运行!
 [点击这里](https://github.com/Phantomxm2021/ARMOD-FlutterAppDemo)下载这个源代码!

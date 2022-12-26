@@ -16,7 +16,7 @@ Unity 将为当前活动场景烘烤光照图，得到的图像文件将被移�
 
 ## Notes:
 
-- 确保你的烘烤场景的照明设置与你的关卡场景相匹配（同样的天幕光源和定向灯，如果有的话）。
+- 确保您的烘烤场景的照明设置与您的关卡场景相匹配（同样的天幕光源和定向灯，如果有的话）。
 - 快速烘烤是为了快速制作光影原型，它将使用低质量的快速烘烤预览（使用这个药水不会覆盖当前场景的照明设置）。
 - 当烘烤多个预制板时，如果它们之间的距离很近，它们的灯光会影响彼此的光影，建议一次烘烤一个预制板以避免这种结果，或者把预制板放在离对方很远的地方。
 - 将脚本添加到不是Prefab的物体上并点击烘烤，将自动把游戏物体转换成Prefab并保存在与当前打开的场景相同的文件夹中。
@@ -27,7 +27,7 @@ Unity 将为当前活动场景烘烤光照图，得到的图像文件将被移�
 
 ## Install
 
-首先，你需要从我们的注册表中安装渲染助手。我们可以打开包管理器面板，将注册表切换到我的注册表，然后你就可以在包管理器面板中看到 XRMOD Rendering Assistant。Prefab Bake 已经包含在其中，所以我们需要安装它。点击 "安装 "按钮来安装这个包。
+首先，您需要从我们的注册表中安装渲染助手。我们可以打开包管理器面板，将注册表切换到我的注册表，然后您就可以在包管理器面板中看到 XRMOD Rendering Assistant。Prefab Bake 已经包含在其中，所以我们需要安装它。点击 "安装 "按钮来安装这个包。
 
 <coverimg url={require('@site/static/static/dev-tools/prefabbaker/installprefabbaker.png')} height="100%" padding="0.5rem"/>
 
@@ -37,7 +37,7 @@ Unity 将为当前活动场景烘烤光照图，得到的图像文件将被移�
 
 <coverimg url={require('@site/static/static/dev-tools/prefabbaker/newscene.png')} height="100%" padding="0.5rem"/>
 
-创建三个空的 GameObjects 并命名为：Chair（随你喜欢的名字）、Meshes、Lights。然后把 Meshes 和 Lights 放在 Chair 下面，让它们成为 Chair 的子对象。
+创建三个空的 GameObjects 并命名为：Chair（随您喜欢的名字）、Meshes、Lights。然后把 Meshes 和 Lights 放在 Chair 下面，让它们成为 Chair 的子对象。
 
 <coverimg url={require('@site/static/static/dev-tools/prefabbaker/makevirutalobject.png')} height="100%" padding="0.5rem"/>
 
@@ -45,14 +45,14 @@ Unity 将为当前活动场景烘烤光照图，得到的图像文件将被移�
 
 <coverimg url={require('@site/static/static/dev-tools/prefabbaker/hierarchystate.png')} height="100%" padding="0.5rem"/>
 
-确保`Lighting Settings Assets`已经存在，如果没有，你必须通过`New Lighting Settings`按钮创建一个新的。通过 `Window`->`Rendering`->`Lighting`打开 Unity Lighting 面板。
+确保`Lighting Settings Assets`已经存在，如果没有，您必须通过`New Lighting Settings`按钮创建一个新的。通过 `Window`->`Rendering`->`Lighting`打开 Unity Lighting 面板。
 
 |                                                                                           |                                                                                          |
 | ----------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------- |
 | <coverimg url={require('@site/static/static/dev-tools/prefabbaker/openlighting.png')} height="100%" padding="0"/> | <coverimg url={require('@site/static/static/dev-tools/prefabbaker/setlighting.png')} height="100%" padding="0"/> |
 
 :::tip
-如果你想获得更好的烘烤效果，请在灯光面板上对烘烤值进行详细调整和实验。
+如果您想获得更好的烘烤效果，请在灯光面板上对烘烤值进行详细调整和实验。
 :::
 
 在所有的照明设置完成后，我们需要将`PrefabBaker`脚本组件添加到我们的假根节点。如下面的图片所示。
@@ -71,7 +71,7 @@ Unity 将为当前活动场景烘烤光照图，得到的图像文件将被移�
 
 :::tip
 
-- 我们建议你将保存路径设置为ARMOD项目艺术品文件夹。
+- 我们建议您将保存路径设置为ARMOD项目艺术品文件夹。
 - 如果勾选了 `Automatically clean up the scene lightmap`，"Prefab Bake"将清理当前预览中的所有烘烤。但是这并不能清除我们的数据，而只是预览数据。
 :::
 

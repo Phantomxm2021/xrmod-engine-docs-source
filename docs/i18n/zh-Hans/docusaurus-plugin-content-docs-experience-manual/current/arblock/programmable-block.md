@@ -11,7 +11,7 @@ title: Programmable Block
 C#脚本不能与可视化脚本混合使用。
 :::
 
-正如它的名字一样。这个选项允许你选择编写 C#脚本或 Visual 脚本。
+正如它的名字一样。这个选项允许您选择编写 C#脚本或 Visual 脚本。
 
 ## Domain Name
 

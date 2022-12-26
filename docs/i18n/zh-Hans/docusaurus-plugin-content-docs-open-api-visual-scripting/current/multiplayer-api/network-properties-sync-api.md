@@ -33,7 +33,7 @@ public Action<string, NetworkIdentity> CustomPropertiesSyncedCallback;
 
 #### Description
 
-改变实体健康值。你可以注册健康值变化事件来监听值的变化。
+改变实体健康值。您可以注册健康值变化事件来监听值的变化。
 
 
 ```cs
@@ -129,7 +129,7 @@ public void CmdDegradeLevel(int _level, NetworkIdentity _sender)
 
 #### Description
 
-改变实体的级别值。你可以注册级别值变化事件来监听值的变化。
+改变实体的级别值。您可以注册级别值变化事件来监听值的变化。
 
 
 #### Parameters
@@ -166,7 +166,7 @@ public void CmdSetObjectName(string _name,NetworkIdentity _sender)
 
 #### Description
 
-命名你的游戏对象并同步给所有用户。
+命名您的游戏对象并同步给所有用户。
 
 
 #### Parameters

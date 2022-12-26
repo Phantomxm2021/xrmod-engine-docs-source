@@ -1,6 +1,6 @@
 ## Description
 
-BaseNotificationData的子类。当你调用StickObject方法时，将需要把这些数据传递给ARMOD SDK。
+BaseNotificationData的子类。当您调用StickObject方法时，将需要把这些数据传递给ARMOD SDK。
 
 
 ## Return
