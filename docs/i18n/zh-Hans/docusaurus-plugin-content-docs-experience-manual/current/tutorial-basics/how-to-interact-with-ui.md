@@ -1,5 +1,5 @@
 ---
-title: How To Interact With UI
+title: 如何与用户界面交互
 keywords:
   [
     ar,
@@ -26,51 +26,51 @@ sidebar_position: 3
 
 import VideoPlayer from '@site/src/components/VideoPlayer'
 
-In [How to load assets](./how-to-load-assets) section, we leaned how to load art assets via CSharp scripting.In this section, we will continue using the project from the previous section. And discuss how to use UGUI in XRMOD Engine.
+在[如何加载资产](../how-to-load-assets)部分，我们讲述了如何通过CSharp脚本加载艺术资产。在这部分，我们将继续使用上一节的项目。并讨论如何在XRMOD引擎中使用UGUI。
 
-## Build Interface
+## 构建界面
 
-1. Right-click on **Hierarchy** panel
-2. Select `UI`->`Button-TextMeshPro` to create a new UGUI interface and rename the button to `ClickMe`
-3. Rename the `ClickMe` button's parent(--Canvas) to `UICanvas`
-4. Set the `ClickMe` button's label from `Button` to `ClickMe`
+1. 右键单击**Hierarchy**面板
+2. 选择`UI`->`Button-TextMeshPro`，创建一个新的UGUI界面，并将按钮重命名为`ClickMe`。
+3. 将`ClickMe`按钮的父级（--Canvas）重命名为`UICanvas`。
+4. 将`ClickMe`按钮的标签从`Button`改为`ClickMe`。
 
-### Adaptive screen
+### 自适应屏幕
 
-we need to select the `UICanvas` game object and find [`CanvasScaler`](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-CanvasScaler.html).
+我们需要选择`UICanvas`游戏对象并找到[`CanvasScaler`](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-CanvasScaler.html)。
 
-1. Set UI Scale Mode from **Constant Pixel Size** to **Scale With Screen Szie**
-2. Set **Reference Resolution** from `800x600 ` to `1080x1920`
-3. Set **Match** from `0` to `1`
-4. Resize the **ClickMe** button and and adjust the position
-5. Set the **ClickMe** button RectTransform anchor to **Bottom**
+1. 将用户界面缩放模式从**Constant Pixel Size**设置为**Scale With Screen Szie**
+2. 将**Reference Resolution**从`800x600 `设置为`1080x1920`
+3. 设置**Match**从`0`到`1`
+4. 调整**ClickMe**按钮的大小，并调整其位置。
+5. 设置**ClickMe**按钮的RectTransform锚点为**Bottom**。
 
 <VideoPlayer src="/static/tutorial-basics/how-to-interact-with-ui/AdapterScreen.mp4" className="custom-video-showcase" />
 
-## Become A Prefab
+## 成为预制构件
 
-Drag-and-drop **EventSystem** to `UICanvas`, set the parent node of **EventSystem** to `UICanvas`. Then drag-and-drop **UICanvas** from **Hierarchy** to your `YOURPROJECT/Artwork/Prefabs`
+将**EventSystem**拖放至`UICanvas`，将**EventSystem**的父节点设置为 `UICanvas`。然后将**UICanvas**从**层次结构中拖放到你的`YOURPROJECT/Artwork/Prefabs`中。
 
 :::info
-Q: Why should EventSystem be a child of UIcanvas?  
-A: Because UGUI need an EventSystem to recived our input
+问：为什么EventSystem要成为UIcanvas的一个子系统？ 
+答：因为UGUI需要一个事件系统来接收我们的输入。
 :::
 
 <VideoPlayer src="/static/tutorial-basics/how-to-interact-with-ui/BecomeAPrefab.mp4" className="custom-video-showcase" />
 
-## Collection Assets
+## 收集资产
 
-1. Open PackageToolsEditor
-2. Switch to **Contents** section
-3. Drag-and-drop **UICanvas** from `YOURPROJECT/Artwork/Prefabs` to **Contents** of PackageTools Editor
+1. 打开PackageToolsEditor
+2. 切换到**Contents**部分
+3. 从`YOURPROJECT/Artwork/Prefabs`拖放**UICanvas**到PackageTools Editor的**Contents**。
 
 <VideoPlayer src="/static/tutorial-basics/how-to-interact-with-ui/CollectionAssets.mp4" className="custom-video-showcase" />
 
-## Interact
+## 互動
 
-As in the [How to load assets](./how-to-load-assets) section, double-click to open the **YOURPROJECTMainEntry.cs** file in `YOUR PROJECT/Scripts/Runtime/`.
+如[如何加载资产](../how-to-load-assets)部分，双击打开`YOUR PROJECT/Scripts/Runtime/`中的**YOURPROJECTMainEntry.cs**文件。
 
-Write some code for it.
+为它写一些代码。
 
 ```cs title="HowToCreateProjectMainEntry.cs" showLineNumbers
 
@@ -104,40 +104,40 @@ namespace HowToCreateProject.Runtime
     }
 }
 ```
-**Description** 
+**描述** 
 
-1. Lines 21->22 of the code above are loading and instantiating our UICanvas, 
-2. Line 23 is for finding our **ClickMe** object,
-3. Line 24 is to get the **Button** component of our ClickMe game object
-4. Line 25 adds an event callback for the button click
+1. 第21->22行是加载和实例化我们的UICanvas。
+2. 第23行是为了找到我们的**ClickMe**对象。
+3. 第24行是为了获得ClickMe游戏对象的**Button**组件。
+4. 第25行为按钮的点击添加一个事件回调。
 
-## Build XR-Experience
+## 建立XR-体验
 
-1. Go to **PackageToolsEditor** 
-2. Switch to **Build** section
-3. Select the platform you need to build.
-4. Click the **Build AR-Experience** button to start the build
+1. 转到**PackageToolsEditor**。
+2. 切换到**Build**部分
+3. 选择你需要构建的平台。
+4. 点击**Build AR-Experience**按钮，开始构建。
 
 :::danger
-**Build Platform** and **Platform Group** The two selected platforms must be the same.
+**Build Platform**和**Platform Group**所选的两个平台必须是相同的。
 :::
 
 <VideoPlayer src="/static/tutorial-basics/how-to-load-assets/BuildXRExperience.mp4" className="custom-video-showcase" />
 
 
-## Testing
+## 测试
 
-Now we have done all the work, but we don't know if the content loads properly yet, so we need to test further to verify our results.
+现在我们已经完成了所有的工作，但我们还不知道内容是否正常加载，所以我们需要进一步测试以验证我们的结果。
 
-**How to testing**?
+**如何测试**?
 
-XRMOD Engine currently provides processes such as loading tests within the Unity Editor, so we can verify all logic from within the Unity Editor. Before we can start testing we need to install the XRMOD Engine Simulator plugin via the Unity Package Manager.
+XRMOD引擎目前提供了在Unity编辑器中加载测试等流程，所以我们可以在Unity编辑器中验证所有的逻辑。在开始测试之前，我们需要通过Unity Package Manager安装XRMOD Engine Simulator插件。
 
 :::info
-[Click here](../prepare-for-developer/install-xrmod-dev-tools) to learn how to install the XRMOD engine toolchain.
+[点击这里](../prepare-for-developer/install-xrmod-dev-tools)来学习如何安装XRMOD引擎工具链。
 :::
 
-In here, we need to install XRMOD Engine Simulator plugin. 
+在这里，我们需要安装XRMOD引擎模拟器插件。
 
 <center>
 
@@ -146,7 +146,7 @@ In here, we need to install XRMOD Engine Simulator plugin.
 </center>
 
 
-When you finish the installation you can see an XR button in the top left corner of the Unity editor, which is mainly used to start the XRMOD Engine emulator.
+当你完成安装后，你可以在Unity编辑器的左上角看到一个XR按钮，这主要是用来启动XRMOD引擎模拟器的。
 
 <center>
 
@@ -154,22 +154,21 @@ When you finish the installation you can see an XR button in the top left corner
 
 </center>
 
-### Launch Simulator
+### 启动模拟器
 
-1. Click left-top **XR Play** button to launch XRMOD Engine simulator
-2. Switch to **Game** view
-3. Typing your project name into simulator
-4. Click **Fetch Project** to loading our project
+1. 点击左上方的**XR Play**按钮，启动XRMOD引擎模拟器。
+2. 切换到**Game**视图
+3. 将你的项目名称输入模拟器
+4. 点击**Fetch Project**来加载我们的项目
 
 <VideoPlayer src="/static/tutorial-basics/how-to-interact-with-ui/Test.mp4" className="custom-video-showcase" />
 
-## Summary
+## 总结
 
-In this section we learned how to interact with UI in XRMOD Engine. It is clear that it is consistent with Unity's workflow. But why haven't we talked about a different kind of workflow(Drag and drop to add events) for Unity？The explanation is as follows:
+在本节中，我们学习了如何在XRMOD引擎中与UI交互。很明显，这与Unity的工作流程是一致的。但为什么我们没有谈到Unity的另一种工作流程（拖放添加事件）？ 解释如下。
 
 
-
-**XRMOD Engien does not support drag and drop of `custom MonoBehaviour` into our game objects. So we can only add response events to the Button by means of code.** 
+**XRMOD Engien不支持将`自定义MonoBehaviour`拖放至我们的游戏对象中。因此，我们只能通过代码将响应事件添加到按钮中**。
 
 <center>
 <coverimg  url={require('@site/static/static/tutorial-basics/how-to-interact-with-ui/DonotDragToAddEvent.png')} width="25%" padding="0.5rem" label="Don't do this"/>

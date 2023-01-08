@@ -9,11 +9,11 @@ sidebar_position: 1
 在此之前，我们已经创建了一个Unity项目并安装了XRMOD开发环境。现在我们将创建我们的第一个XRMOD项目。
 
 :::info
-如果你还没有安装Unity，[点击这里](.../prepare-for-developer/install-unityengine)去看看如何安装。 
+如果你还没有安装Unity，[点击这里](../prepare-for-developer/install-unityengine)去看看如何安装。 
 :::
 
 :::info
-如果你还没有安装XRMOD开发环境，请[点击这里](.../prepare-for-developer/install-dev-environment)看看如何安装。
+如果你还没有安装XRMOD开发环境，请[点击这里](../prepare-for-developer/install-dev-environment)看看如何安装。
 :::
 
 ## 创建我们的项目
@@ -37,7 +37,7 @@ sidebar_position: 1
 </center>
 
 :::danger
-项目存储路径必须在**Unity Assets文件夹内（在Unity项目的Project目录下），否则不能被识别和创建。
+项目存储路径必须在**Unity Assets**文件夹内（在Unity项目的Project目录下），否则不能被识别和创建。
 :::
 
 <center>

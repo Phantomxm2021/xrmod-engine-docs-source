@@ -1,5 +1,5 @@
 ---
-title: How To Load Assets
+title: 如何加载资产
 keywords:
   [
     ar,
@@ -24,50 +24,50 @@ description: Using ARMODAPI to load your assets
 sidebar_position: 2
 ---
 
-The XRMOD engine allows creators to load custom assets via CSharp scripts or visual scripts.
+XRMOD引擎允许创作者通过CSharp脚本或可视化脚本加载自定义资产。
 
-**But, how should we do that?**
+**但是，我们应该如何做到这一点?**
 
 :::danger
-You must install [Unity Engine](../prepare-for-developer/install-unityengine) and [Dev-environment](../prepare-for-developer/install-dev-environment).
+你必须安装[Unity Engine](../prepare-for-developer/install-unityengine)和[Dev-environment](../prepare-for-developer/install-dev-environment)。
 :::
 
-At the first, we need to create a XRMOD project([How to create](../tutorial-basics/how-create-xrmod-project)).
+首先，我们需要创建一个XRMOD项目（[如何创建](../tutorial-basics/how-create-xrmod-project)）。
 
 :::info
-How to find XRMOD project after created?  
-[click here](../dev-tools/package-tools#project-editing) to know more
+如何在创建后找到XRMOD项目？ 
+[点击这里](../dev-tools/package-tools#project-editing)了解更多信息
 :::
 
-## Collection Assets
+## 收集资产
 
-Creative can import their own art assets or use Unity builtin assets([Primitive Objects](https://docs.unity3d.com/Manual/PrimitiveObjects.html)).
+创意者可以导入自己的艺术资产或使用Unity内置资产（[Primitive Objects](https://docs.unity3d.com/Manual/PrimitiveObjects.html)）。
 
 :::info
-[click here](https://docs.unity3d.com/Manual/ImportingAssets.html) to know about Unity how to import assets.
+[点击这里](https://docs.unity3d.com/Manual/ImportingAssets.html)，了解Unity如何导入资产。
 :::
 
-Follows Steps:
+跟随步骤:
 
-1. Import your art assets into `Your Project/Artwork` folder
-2. Create a new folder and name it to `Prefabs`. This folder will be used to store the project's prefabs
-3. Drag-and-drop art asset into **Unity Scene** or **Hierarchy**
-4. Processing your art assets, e.g. Rendering of models, mapping, scale, etc
-5. Drag-and-drop your art asset from **Unity Scene** or **Hierarch** to `Your Project/Artwork/Prefabs` folder, it will become a [prefab](https://docs.unity3d.com/Manual/Prefabs.html)
-6. Drag-and-drop your prefab of art work to **PackageToolsEditor**->**Contents**
+1. 将你的艺术资产导入`你的项目/Artwork`文件夹中。
+2. 创建一个新的文件夹并将其命名为`Prefabs`。这个文件夹将用来存储项目的预制体。
+3. 将艺术资产拖放至**Unity Scene**或**Hierarchy**
+4. 处理你的艺术资产，例如，模型的渲染、贴图、比例等。
+5. 将你的艺术资产从**Unity Scene**或**Hierarch**拖放至`你的项目/Artwork/Prefabs`文件夹，它将成为一个[Prefab](https://docs.unity3d.com/Manual/Prefabs.html)
+6. 将你的艺术作品的预制件拖放至 **PackageToolsEditor**->**Contents**
 
 import VideoPlayer from '@site/src/components/VideoPlayer'
 
 <VideoPlayer src="/static/tutorial-basics/how-to-load-assets/MakePrefab.mp4" className="custom-video-showcase" />
 
-## Editing Script
+## 编辑脚本
 
-Go to `PROJECT_PATH`->`PROJECT_NAME`->`Scripts`->`Runtime` and open `PROJECTNAMEMainEntry.cs` file(By double-clicking).
+进入`PROJECT_PATH`->`PROJECT_NAME`->`Scripts`->`Runtime`并打开`PROJECTNAMEMainEntry.cs`文件（通过双击）。
 
-Then write some code on `OnLoad` meethod.
+然后在`OnLoad`方法上写一些代码。
 
 :::danger
-**ARMODAPI.LoadAssetAsync<GameObject\>("VirtualObject");** The object name(`VirtualObject`) must be the same as in `PackageToolsEditor`->`Contents` assets name.
+**ARMODAPI.LoadAssetAsync<GameObject/>("VirtualObject");**对象名称（`VirtualObject`）必须与`PackageToolsEditor`->Contents`资产名称相同。
 :::
 
 ```cs title="HowToCreateProjectMainEntry.cs"
@@ -99,44 +99,44 @@ namespace HowToCreateProject.Runtime
 }
 ```
 
-We use [`LoadAssetAsync`](../../open-api-pure-csharp/utility-api/LoadAssetAsync) to load our virtual objects from the XR-Experience package by asset name and type. Because the `LoadAssetAsync` method loads the asset from disk to memory, it does not instantiate the asset, so we need to call `Instantiate` method to instantiate it.
+我们使用[`LoadAssetAsync`](../../open-api-pure-csharp/utility-api/LoadAssetAsync)来按资产名称和类型从XR-Experience包中加载我们的虚拟对象。因为`LoadAssetAsync`方法将资产从磁盘加载到内存，它并没有将资产实例化，所以我们需要调用`Instantiate`方法来实例化它。
 
-## Programmable Block
+## 可编程块
 
-1. Go to **PackageToolsEditor**
-2. Switch to **Properties** section
-3. Move your mouse point to free area
-4. Right click your mouse button
-5. Select `Programmable`
+1. 转到**PackageToolsEditor**
+2. 切换到**Properties**部分
+3. 将你的鼠标指向自由区域
+4. 右击你的鼠标按钮
+5. 选择`Programmable`
 
 <VideoPlayer src="/static/tutorial-basics/how-to-load-assets/AddProgrammableBlock.mp4" className="custom-video-showcase" />
 
-## Build XR-Experience
+## 建立XR-体验
 
-1. Go to **PackageToolsEditor**
-2. Switch to **Build** section
-3. Select the platform you need to build.
-4. Click the **Build AR-Experience** button to start the build
+1. 转到**PackageToolsEditor**
+2. 切换到**Build**部分
+3. 选择你需要构建的平台
+4. 点击**Build AR-Experience**按钮，开始构建
 
 :::danger
-**Build Platform** and **Platform Group** The two selected platforms must be the same.
+**Build Platform**和**Platform Group**所选的两个平台必须是相同的。
 :::
 
 <VideoPlayer src="/static/tutorial-basics/how-to-load-assets/BuildXRExperience.mp4" className="custom-video-showcase" />
 
-## Testing
+## 测试
 
-Now we have done all the work, but we don't know if the content loads properly yet, so we need to test further to verify our results.
+现在我们已经完成了所有的工作，但我们还不知道内容是否正常加载，所以我们需要进一步测试以验证我们的结果。
 
-**How to testing**?
+**如何测试**?
 
-XRMOD Engine currently provides processes such as loading tests within the Unity Editor, so we can verify all logic from within the Unity Editor. Before we can start testing we need to install the XRMOD Engine Simulator plugin via the Unity Package Manager.
+XRMOD引擎目前提供了在Unity编辑器中加载测试等流程，所以我们可以在Unity编辑器中验证所有的逻辑。在开始测试之前，我们需要通过Unity Package Manager安装XRMOD Engine Simulator插件。
 
 :::info
-[Click here](../prepare-for-developer/install-xrmod-dev-tools) to learn how to install the XRMOD engine toolchain.
+[点击这里](../prepare-for-developer/install-xrmod-dev-tools)来学习如何安装XRMOD引擎工具链。
 :::
 
-In here, we need to install XRMOD Engine Simulator plugin.
+在这里，我们需要安装XRMOD引擎模拟器插件。
 
 <center>
 
@@ -144,7 +144,7 @@ In here, we need to install XRMOD Engine Simulator plugin.
 
 </center>
 
-When you finish the installation you can see an XR button in the top left corner of the Unity editor, which is mainly used to start the XRMOD Engine emulator.
+当你完成安装后，你可以在Unity编辑器的左上角看到一个XR按钮，这主要是用来启动XRMOD引擎模拟器的。
 
 <center>
 
@@ -152,20 +152,20 @@ When you finish the installation you can see an XR button in the top left corner
 
 </center>
 
-### Launch Simulator
+### 启动模拟器
 
-1. Click left-top **XR Play** button to launch XRMOD Engine simulator
-2. Switch to **Game** view
-3. Typing your project name into simulator
-4. Click **Fetch Project** to loading our project
+1. 点击左上方的**XR Play**按钮，启动XRMOD引擎模拟器。
+2. 切换到**Game**视图
+3. 将你的项目名称输入模拟器
+4. 点击**Fetch Project**来加载我们的项目
 
 <VideoPlayer src="/static/tutorial-basics/how-to-load-assets/Test.mp4" className="custom-video-showcase" />
 
-## Summary
+## 总结
 
-In this section we learned how to load an assets in XRMOD Engine. During the loading process we need to pay attention to the following:
+在这一节中，我们学习了如何在XRMOD引擎中加载一个资产。在加载过程中，我们需要注意以下几点。
 
-1. Loading asset via `ARMODAPI.LoadAssetAsync` methods
-2. `ARMODAPI.LoadAssetAsync` needs to pass in the type to be loaded and the name of the item to be loaded
-3. `ARMODAPI.LoadAssetAsync` is an asynchronous method that needs to be marked as async in the function and add `await` before the `ARMODAPI.LoadAssetAsync` method
-4. The name of the object loaded in the API must be the same as the name of the assets in `PackageToolsEditor`->`Contents`
+1. 通过`ARMODAPI.LoadAssetAsync`方法加载资产。
+2. `ARMODAPI.LoadAssetAsync`需要传入要加载的类型和要加载的项目名称。
+3. `ARMODAPI.LoadAssetAsync`是一个异步方法，需要在函数中标记为异步，并在`ARMODAPI.LoadAssetAsync`方法前添加`await`。
+4. 在API中加载的对象的名称必须与`PackageToolsEditor`->`Contents`中的资产名称相同。

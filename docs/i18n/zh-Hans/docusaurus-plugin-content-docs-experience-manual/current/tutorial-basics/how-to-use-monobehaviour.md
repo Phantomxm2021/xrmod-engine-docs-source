@@ -1,5 +1,5 @@
 ---
-title: How To Use MonoBehaviour
+title: 如何使用MonoBehaviour
 keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,XR,facebook,meta,unity]
 image: img/xrmod-docs-card.png
 description: Uisng Package Tools Editor to create a XRMOD proejct.
@@ -8,24 +8,24 @@ sidebar_position: 4
 import VideoPlayer from '@site/src/components/VideoPlayer'
 
 
-We have learned how to load art resources and interact with the UI in the **[How To Load Assets](./how-to-load-assets)** and **[How To Interact With UI](./how-to-interact-with-ui)** sections. Next we will use the same project for creation.
+我们已经在 **[如何加载资产](../how-to-load-assets)** 和 **[如何与用户界面互动](../how-to-interact-with-ui)**部分学习了如何加载艺术资源和与用户界面互动。接下来我们将使用同一个项目进行创建。
 
-MonoBehaviour is the base class from which every Unity script derives. It allows creatives to easily write code for making interactive logic.
+MonoBehaviour是基类，每个Unity脚本都是从它派生出来的。它允许创作者轻松地编写代码来制作互动逻辑。
 
-But. In XRMOD the platform (policy) restrictions lead to the inability to drag and drop MonoBehaviour onto the GameObject as in traditional Unity development.
+但是，在XRMOD中，平台（策略）限制导致无法像传统的Unity开发那样将MonoBehaviour拖放到GameObject上。
 
 
-There is a sayingIn other words well:**"In the end thing will mend"**, so we use another way to mount MonoBehaviour on GameObject.
+有一句话说得好：**"物极必反"**，所以我们用另一种方式将MonoBehaviour安装在GameObject上。
 
-This approach we call [**MonoBinder**](../dev-tools/binding-monobehaviour). 
+这种方法我们称之为[**MonoBinder**](../dev-tools/binding-monobehaviour)。
 
-## How To Do
+## 如何做到
 
-At the first, we need to write a class that inherits from **MonoBehaviour**. Let's do it!
+首先，我们需要写一个继承自**MonoBehaviour**的类。让我们开始吧!
 
-1. Go to `YOURPROJECT/Script/Runtime`
-2. Create a **C# Script** class and call it `RotateCubeMonoBehaviour`
-3. Double-click on the script to open
+1. 进入`YOURPROJECT/Script/Runtime`
+2. 创建一个**C#Script**类，将其称为`RotateCubeMonoBehaviour`
+3. 双击该脚本以打开
 
 ```cs title="RotateCubeMonoBehaviour.cs"
 using System;
@@ -83,35 +83,35 @@ namespace HowToCreateProject.Runtime
 
 <VideoPlayer src="/static/tutorial-basics/how-to-use-monobehaviour/CreateScript.mp4" className="custom-video-showcase" />
 
-## Primitive Objects
+## 原始的物体
 
-When we are done editing **RotateCubeMonoBehaviour**, back to Unity. Use the shortcut keys (Mac: Command+N, Win: Ctrl+N) to create a new scene and create an [Unity Primitive Objects](https://docs.unity3d.com/Manual/PrimitiveObjects.html) in the new scene; create a Cube object by right-click `Hierarchy`->`3D Objects`->`Cube` , select the Cube again, and create a child object for it `Sphere` and adjust the `scale` and `position`.
+当我们完成编辑**RotateCubeMonoBehaviour**后，回到Unity。使用快捷键（Mac: Command+N, Win: Ctrl+N）创建一个新的场景，并在新场景中创建一个[Unity Primitive Objects](https://docs.unity3d.com/Manual/PrimitiveObjects.html)；通过右击`Hierarchy`->`3D Objects`->`Cube`创建一个Cube对象，再次选择Cube，并为其创建一个子对象`Sphere`并调整`scale`和`position`。
 
 <VideoPlayer src="/static/tutorial-basics/how-to-use-monobehaviour/PrimitiveObjects.mp4" className="custom-video-showcase" />
 
-## Mounting MonoBehaviour
+## 挂载MonoBehaviour
 
-Next, drag and drop the **RotateCubeMonoBehaviour** to mount the **Cube** game object. Filling the child of **Shpere** into `Child Game Object` field of **RotateCubeMonoBehaviour**. Then set the active state of the child objects of the **Sphere** game object to `deactivated`.
+接下来，拖放**RotateCubeMonoBehaviour**来安装**Cube**游戏对象。将**Sphere**的子对象填入**RotateCubeMonoBehaviour**的`Child Game Object`字段。然后将**Sphere**游戏对象的子对象的活动状态设置为`deactivated`。
 
 <VideoPlayer src="/static/tutorial-basics/how-to-use-monobehaviour/MountAndFilling.mp4" className="custom-video-showcase" />
 
 
-## Convert And Become A Prefab
+## 转换并成为预制体
 
-We have finished setting up the RotateCubeMonoBehaviour script, but it doesn't run on the XRMOD Engine yet; so we need to configure it further.
+我们已经完成了RotateCubeMonoBehaviour脚本的设置，但是它还没有在XRMOD引擎上运行；所以我们需要进一步配置它。
 
 
 :::info
-The conversion process is fully automatic, so there is no need for the creator to set it up manually.
+转换过程是全自动的，所以创作者不需要手动设置。
 :::
 
-1. Select **Cube** game object
-2. Find **RotateCubeMonoBehaviour** component
-3. Click **Convert to MonoBinder** to start the conversion process
-4. Drag-and-drop Cube to `YOURPROJECT`->`Artwork`->`Prefabs`, let it become a prefab
+1. 选择**Cube**游戏对象
+2. 找到**RotateCubeMonoBehaviour**组件。
+3. 点击**Convert to MonoBinder**，开始转换过程。
+4. 将Cube拖放到`YOURPROJECT`->`Artwork`->`Prefabs`，让它成为一个prefab。
 
 :::caution
-Certain restrictions currently exist, [click here](../dev-tools/binding-monobehaviour#limitation) for more information.
+目前存在某些限制，[点击这里](.../dev-tools/binding-monobehaviour#limitation)获取更多信息。
 :::
 
 <VideoPlayer src="/static/tutorial-basics/how-to-use-monobehaviour/ConvertAndPrefab.mp4" className="custom-video-showcase" />
@@ -119,9 +119,9 @@ Certain restrictions currently exist, [click here](../dev-tools/binding-monobeha
 
 ## Collection Assets
 
-1. Open PackageToolsEditor
-2. Switch to **Contents** section
-3. Drag-and-drop **Cube** from `YOURPROJECT/Artwork/Prefabs` to **Contents** of PackageTools Editor
+1. 打开PackageToolsEditor
+2. 切换到**Contents**部分
+3. 从`YOURPROJECT/Artwork/Prefabs`拖放**Cube**到PackageTools Editor的**Contents**。
 
 <center>
 
@@ -129,14 +129,14 @@ Certain restrictions currently exist, [click here](../dev-tools/binding-monobeha
 
 </center>
 
-## Loading Cube
+## 加载立方体
 
-Go to `PROJECT_PATH`->`PROJECT_NAME`->`Scripts`->`Runtime` and open `PROJECTNAMEMainEntry.cs` file(By double-clicking).
+进入`PROJECT_PATH`->`PROJECT_NAME`->`Scripts`->`Runtime`并打开`PROJECTNAMEMainEntry.cs`文件（通过双击）。
 
-Then write some code on `OnLoad` meethod.
+然后在`OnLoad`方法上写一些代码。
 
 :::danger
-**ARMODAPI.LoadAssetAsync<GameObject\>("Cube");** The object name(`Cube`) must be the same as in `PackageToolsEditor`->`Contents` assets name.
+**ARMODAPI.LoadAssetAsync<GameObject\>("Cube");**对象名称(`Cube`)必须与`PackageToolsEditor`->`Contents`资产名称相同。
 :::
 
 ```cs title="PROJECTNAMEMainEntry.cs"
@@ -177,15 +177,15 @@ namespace HowToCreateProject.Runtime
 ```
 
 
-## Build XR-Experience
+## 建立XR-体验
 
-1. Go to **PackageToolsEditor** 
-2. Switch to **Build** section
-3. Select the platform you need to build.
-4. Click the **Build AR-Experience** button to start the build
+1. 转到**PackageToolsEditor**。
+2. 切换到**Build**部分
+3. 选择你需要构建的平台。
+4. 点击**Build AR-Experience**按钮，开始构建。
 
 :::danger
-**Build Platform** and **Platform Group** The two selected platforms must be the same.
+**Build Platform**和**Platform Group**所选的两个平台必须是相同的。
 :::
 
 <VideoPlayer src="/static/tutorial-basics/how-to-load-assets/BuildXRExperience.mp4" className="custom-video-showcase" />
@@ -193,20 +193,19 @@ namespace HowToCreateProject.Runtime
 
 
 
-## Testing
+## 测试
 
+现在我们已经完成了所有的工作，但我们还不知道内容是否正常加载，所以我们需要进一步测试以验证我们的结果。
 
-Now we have done all the work, but we don't know if the content loads properly yet, so we need to test further to verify our results.
+**如何测试**?
 
-**How to testing**?
-
-XRMOD Engine currently provides processes such as loading tests within the Unity Editor, so we can verify all logic from within the Unity Editor. Before we can start testing we need to install the XRMOD Engine Simulator plugin via the Unity Package Manager.
+XRMOD引擎目前提供了在Unity编辑器中加载测试等流程，所以我们可以在Unity编辑器中验证所有的逻辑。在开始测试之前，我们需要通过Unity Package Manager安装XRMOD Engine Simulator插件。
 
 :::info
-[Click here](../prepare-for-developer/install-xrmod-dev-tools) to learn how to install the XRMOD engine toolchain.
+[点击这里](.../prepare-for-developer/install-xrmod-dev-tools)来学习如何安装XRMOD引擎工具链。
 :::
 
-In here, we need to install XRMOD Engine Simulator plugin. 
+在这里，我们需要安装XRMOD引擎模拟器插件。
 
 <center>
 
@@ -215,7 +214,7 @@ In here, we need to install XRMOD Engine Simulator plugin.
 </center>
 
 
-When you finish the installation you can see an XR button in the top left corner of the Unity editor, which is mainly used to start the XRMOD Engine emulator.
+当你完成安装后，你可以在Unity编辑器的左上角看到一个XR按钮，这主要是用来启动XRMOD引擎模拟器的。
 
 <center>
 
@@ -223,20 +222,20 @@ When you finish the installation you can see an XR button in the top left corner
 
 </center>
 
-### Launch Simulator
+### 启动模拟器
 
-1. Click left-top **XR Play** button to launch XRMOD Engine simulator
-2. Switch to **Game** view
-3. Typing your project name into simulator
-4. Click **Fetch Project** to loading our project
+1. 点击左上方的**XR Play**按钮，启动XRMOD引擎模拟器。
+2. 切换到**Game**视图
+3. 将你的项目名称输入模拟器
+4. 点击**Fetch Project**来加载我们的项目
 
 <VideoPlayer src="/static/tutorial-basics/how-to-use-monobehaviour/Test.mp4" className="custom-video-showcase" />
 
 
-## Summary
+## 总结
 
-In this section we learned how to use MonoBehaviour in XRMOD Engine. Using MonoBehaviour in XRMOD Engine has only one more step, which is to convert MonoBehaviour to MonoBinder.
+在本节中，我们学习了如何在XRMOD引擎中使用MonoBehaviour。在XRMOD引擎中使用MonoBehaviour只有一个步骤，那就是将MonoBehaviour转换成MonoBinder。
 
 :::danger
-It is also known that MonoBinder has certain limitations, which can be reviewed [here](../dev-tools/binding-monobehaviour#limitation).
+众所周知，MonoBinder有一定的局限性，这一点可以在[这里](../dev-tools/binding-monobehaviour#limitation)查阅。
 :::
