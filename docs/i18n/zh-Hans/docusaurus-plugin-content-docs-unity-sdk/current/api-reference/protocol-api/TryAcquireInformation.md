@@ -1,15 +1,15 @@
-## Description
+## 描述
 
 从 ARExperience 脚本中获取应用信息
 
-## Parameters
+## 参数
 
-| Param    | Description                             |
+| Param    | 描述                             |
 | -------- | --------------------------------------- |
 | opTag    | 由 AR Experience 发起的操作请求的类型。 |
 | callback | 执行回调（异步）。                      |
 
-## Method
+## 方法
 
 ```cs
 public static event Action<string, TryAcquireInformationDelegate> TryAcquireInformationEventHandle;

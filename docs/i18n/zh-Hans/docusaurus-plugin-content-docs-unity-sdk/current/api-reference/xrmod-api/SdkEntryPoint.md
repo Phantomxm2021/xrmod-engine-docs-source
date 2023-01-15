@@ -81,6 +81,6 @@ SceneManager.LoadScene("Main");
 
 ### 方法
 
-```dart
-Future<void>? cleanCache()
+```cs
+void CleanCache()
 ```

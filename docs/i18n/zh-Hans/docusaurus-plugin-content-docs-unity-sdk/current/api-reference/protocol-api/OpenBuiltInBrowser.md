@@ -1,14 +1,14 @@
-## Description
+## 描述
 
 在一个自定义的浏览器中打开 URL
 
-## Parameters
+## 参数
 
-| Param | Description          |
+| Param | 描述          |
 | ----- | -------------------- |
 | url   | 需要打开的 URL |
 
-## Method
+## 方法
 
 ```cs
 public static event Action<string> OpenBuiltInBrowserEventHandle;
