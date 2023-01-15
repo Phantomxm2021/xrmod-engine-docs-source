@@ -12,5 +12,6 @@
 ## Method
 
 ```cs
-void onPackageSizeMoreThanPresetSize(currentSize, presetSize)
+public static event Action<float, float> PackageSizeMoreThanPresetSizeEventHandle;
+
 ```

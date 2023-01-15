@@ -1,8 +1,8 @@
-## Description
+## 描述
 
 开始加载 ARExperience
 
-## Method
+## 方法
 ```objectivec
 - (void)addLoadingOverlay;
 ```

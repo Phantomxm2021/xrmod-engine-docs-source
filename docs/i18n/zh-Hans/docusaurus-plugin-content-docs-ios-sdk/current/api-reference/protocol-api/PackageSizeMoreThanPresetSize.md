@@ -1,15 +1,15 @@
-## Description
+## 描述
 
 检测到 ARExperience 软件包太大
 
-## Parameters
+## 参数
 
-| Param       | Description           |
+| Param       | 描述                  |
 | ----------- | --------------------- |
 | currentSize | 目前的包大小(M)       |
 | presetSize  | 最大的可下载包大小(M) |
 
-## Method
+## 方法
 
 ```objectivec
 - (void )packageSizeMoreThanPresetSize:(float) currentSize preset:(float) presetSize;

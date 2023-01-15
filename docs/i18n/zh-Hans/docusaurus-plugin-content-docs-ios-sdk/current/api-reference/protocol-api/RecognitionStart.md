@@ -1,12 +1,8 @@
----
-title: RecognitionStart(unavailable)
----
-
-## Description
+## 描述
 
 开始识别
 
-## Method
+## 方法
 
 ```objectivec
 - (void)recognitionStart;

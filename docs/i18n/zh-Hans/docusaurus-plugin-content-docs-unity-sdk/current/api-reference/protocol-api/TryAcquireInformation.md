@@ -11,6 +11,6 @@
 
 ## Method
 
-```dart
+```cs
 public static event Action<string, TryAcquireInformationDelegate> TryAcquireInformationEventHandle;
 ```

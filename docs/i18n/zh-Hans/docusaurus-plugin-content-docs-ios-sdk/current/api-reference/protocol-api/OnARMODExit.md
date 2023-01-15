@@ -1,8 +1,8 @@
-## Description
+## 描述
 
 当XRMOD Engine关闭执行
 
-## Method
+## 方法
 
 ```objectivec
 - (void)onARMODExit;

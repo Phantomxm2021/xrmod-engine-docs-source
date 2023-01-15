@@ -1,8 +1,8 @@
-## Description
+## 描述
 
 当设备不支持 XRMOD执行
 
-## Method
+## 方法
 
 ```objectivec
 - (void)deviceNotSupport;

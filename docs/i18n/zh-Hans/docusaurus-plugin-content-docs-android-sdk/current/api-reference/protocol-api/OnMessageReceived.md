@@ -10,6 +10,6 @@
 
 ## 方法
 
-```objectivec
-- (void )onMessageReceived:(NSString*) data;
+```java
+void onMessageReceived(String data);
 ```

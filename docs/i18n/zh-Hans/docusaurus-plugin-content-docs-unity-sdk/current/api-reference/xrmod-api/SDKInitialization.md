@@ -1,8 +1,8 @@
-## Description
+## 描述
 
 初始化SDK
 
-## Method
+## 方法
 
 ```cs
 SDKInitialization.Initialize();

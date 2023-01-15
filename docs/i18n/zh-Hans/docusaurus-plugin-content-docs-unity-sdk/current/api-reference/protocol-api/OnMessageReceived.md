@@ -10,6 +10,6 @@
 
 ## 方法
 
-```objectivec
-- (void )onMessageReceived:(NSString*) data;
+```cs
+public static event Action<string> OnMessageReceviedHandle;
 ```

@@ -1,4 +1,4 @@
-## Description
+## 描述
 
 用于连接 SDK.注册一个自定义实现的监控协议之间的通信。用于监控和执行 SDK 发送的消息，例如：。
 
@@ -10,14 +10,14 @@
 
 在 ARMOD 加载后的任何时候调用它来设置实现 NativeCallsProtocol 方法的对象。
 
-## Parameters
+## 参数
 
-| Name | Type                | Description                       |
+| Name | Type                | 描述                       |
 | ---- | ------------------- | --------------------------------- |
 | api  | NativeCallsProtocol | 自定义监测协议对象 |
 
 
-## Method
+## 方法
 
 ```objectivec
 - (void) registerAPIforNativeCalls:(id<NativeCallsProtocol>) api

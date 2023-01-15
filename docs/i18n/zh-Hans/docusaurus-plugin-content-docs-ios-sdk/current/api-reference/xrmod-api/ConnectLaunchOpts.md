@@ -1,8 +1,8 @@
-## Description
+## 描述
 
 继承当前 APP 的 LaunchOpts。
 
-## Method
+## 方法
 
 ```objectivec
 - (void) connectLaunchOpts:(NSDictionary*) applaunchOpts

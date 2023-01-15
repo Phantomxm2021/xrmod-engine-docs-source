@@ -1,8 +1,8 @@
-## Description
+## 描述
 
 加载 ARExperience 完毕
 
-## Method
+## 方法
 
 ```objectivec
 - (void)removeLoadingOverlay;

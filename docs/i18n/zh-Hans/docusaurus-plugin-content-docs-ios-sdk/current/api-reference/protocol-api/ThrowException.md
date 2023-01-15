@@ -1,15 +1,15 @@
-## Description
+## 描述
 
 如果发生异常，该方法将被执行
 
-## Parameters
+## 参数
 
-| Param   | Description      |
+| Param   | 描述      |
 | ------- | ---------------- |
 | message | SDK error string |
 | code    | SDK error code   |
 
-## Method
+## 方法
 
 ```objectivec
 - (void)throwException:(NSString *)message errorCode:(int) code;

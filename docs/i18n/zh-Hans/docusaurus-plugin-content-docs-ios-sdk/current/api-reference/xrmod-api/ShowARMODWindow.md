@@ -1,7 +1,7 @@
-## Description
+## 描述
 在 InitARMODModle 之后显示 ARMOD 视图窗口
 
-## Method
+## 方法
 
 ```objectivec
 - (void)showARMODWindow

@@ -1,8 +1,8 @@
-## Description
+## 描述
 
 清理设备中的 ARExperiences 缓存
 
-## Method
+## 方法
 
 ```objectivec
 - (void)cleanCache

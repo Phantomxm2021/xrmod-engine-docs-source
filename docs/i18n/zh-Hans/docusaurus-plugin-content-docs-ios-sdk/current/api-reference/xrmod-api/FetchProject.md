@@ -1,14 +1,14 @@
-## Description
+## 描述
 
-通过项目UID查询ARExperience项目。
+通过项目 UID 查询 ARExperience 项目。
 
-## Parameters 
+## 参数
 
-| Name       | Type     | Description                                                                            |
-| ---------- | -------- | -------------------------------------------------------------------------------------- |
+| Name       | Type     | 描述                                  |
+| ---------- | -------- | ------------------------------------- |
 | projectUid | NSString | 通过项目 UID 查询 ARExperience 项目。 |
 
-## Method
+## 方法
 
 ```objectivec
 - (void)fetchProject:(NSString*) projecetUid

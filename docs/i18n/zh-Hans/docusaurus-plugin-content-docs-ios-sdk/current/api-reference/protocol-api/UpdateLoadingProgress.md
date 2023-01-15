@@ -1,14 +1,14 @@
-## Description
+## 描述
 
 加载 ARExperience 资产进度
 
-## Parameters
+## 参数
 
-| Param    | Description      |
+| Param    | 描述      |
 | -------- | ---------------- |
 | progress | 浮动类型的进度值 |
 
-## Method
+## 方法
 
 ```objectivec
 - (void) updateLoadingProgress:(float) progress;
