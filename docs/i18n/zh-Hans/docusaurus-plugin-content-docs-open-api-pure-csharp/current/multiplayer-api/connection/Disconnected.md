@@ -4,7 +4,7 @@ title: Disconnected
 ---
 
 
-## Description
+## 描述
 
 断开客户端与服务器的连接。
 

@@ -1,16 +1,13 @@
-
-## Description
+## 描述
 
 BaseNotificationData 的子类。当您调用时将此数据传递给 ARMODSDK。
 
-## Parameters
+## 参数
 
-| Param         | Type              | Description                                                    |
-| ------------- | ----------------- | -------------------------------------------------------------- |
-| StickType     | StickTypeEnum     | Interactor type                                                |
-| TrackableType | TrackableTypeEnum | You should set trackabletype when stick type is ByTackableTYpe |
-| Position      | Vector3           | Anchor position(local position)                                |
-| Rotation      | Quaternion        | Anchor rotation(local rotation)                                |
-| Offset        | Vector            | Anchor offset position(local position)                         |
-
-
+| Param         | Type              | 描述                                                   |
+| ------------- | ----------------- | ------------------------------------------------------------- |
+| StickType     | StickTypeEnum     | 交互类型                                                      |
+| TrackableType | TrackableTypeEnum | 当 Stick 类型为 ByTackableTYpe 时，你应该设置 trackabletype。 |
+| Position      | Vector3           | 锚点位置(自身位置)                                            |
+| Rotation      | Quaternion        | 锚定旋转（自身旋转）。                                        |
+| Offset        | Vector            | 锚定偏移位置(自身位置)                                        |

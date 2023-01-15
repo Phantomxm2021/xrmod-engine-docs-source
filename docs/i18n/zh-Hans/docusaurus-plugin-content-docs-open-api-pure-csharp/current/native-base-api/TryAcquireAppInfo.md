@@ -1,4 +1,4 @@
-## Description
+## 描述
 
 获取应用的基础信息
 
@@ -6,17 +6,17 @@
 开发人员需要在相应的平台上实现**TryAcquireInformation**。
 :::
 
-## Parameters
+## 参数
 
-| Param  | Type                              | Description                |
-| ------ | --------------------------------- | -------------------------- |
-| \_data | TryAcquireAppInfoNotificationData | Try acquire operation type |
+| Param  | Type                              | 描述              |
+| ------ | --------------------------------- | ------------------------ |
+| \_data | TryAcquireAppInfoNotificationData | 尝试获取应用信息操作类型 |
 
 ```cs
 public void TryAcquireAppInfo(TryAcquireAppInfoNotificationData _data)
 ```
 
-## Relation
+## 关联
 
 当您使用这个 API 时，您需要实现相应平台的`TryAcquireInformation`回调方法。
 

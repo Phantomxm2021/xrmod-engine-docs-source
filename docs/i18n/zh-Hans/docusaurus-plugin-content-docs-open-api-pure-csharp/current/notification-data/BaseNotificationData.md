@@ -1,12 +1,11 @@
-
-## Description
+## 描述
 
 顾名思义，它是所有通知数据的基类。
 
-## Parameters
+## 参数
 
-| Param           | Type   | Description                         |
-| --------------- | ------ | ----------------------------------- |
-| NotificationAct | Action | Callback                            |
-| ActionName      | String | Current notification name           |
-| BaseData        | String | Additional data, generally not used |
+| Param           | Type   | 描述                 |
+| --------------- | ------ | -------------------- |
+| NotificationAct | Action | 回调                 |
+| ActionName      | String | 当前的通知名称       |
+| BaseData        | String | 附加数据，一般不使用 |

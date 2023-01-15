@@ -1,11 +1,11 @@
 
-## Description
+## 描述
 
 BaseNotificationData 的子类。当您调用 TryAcquireCurrentFrame 方法时，将需要将此数据传递给 ARMODSDK。
 
-## Parameters
+## 参数
 
-| Param                 | Type           | Description               |
+| Param                 | Type           | 描述               |
 | --------------------- | -------------- | ------------------------- |
-| AcquiredTextureFormat | TextureFormat  | Texture format            |
-| ConversionType        | ConversionType | Synchronous, Asynchronous |
+| AcquiredTextureFormat | TextureFormat  | 纹理格式            |
+| ConversionType        | ConversionType | 同步的，异步的 |

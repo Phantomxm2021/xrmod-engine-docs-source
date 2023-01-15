@@ -1,19 +1,18 @@
+## 描述
 
-## Description
+BaseNotificationData 的子类。当使用图像跟踪时，OnEvent 函数将接收这种类型的数据。
 
-BaseNotificationData的子类。当使用图像跟踪时，OnEvent函数将接收这种类型的数据。
+## 参数
 
-## Parameters
+| TrackingState | 描述                                                                                                                                                                                                                                             |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| None          | 图像没有被追踪。请注意，这可能是首次检测到图像时的初始状态。                                                                                                                                                                                     |
+| ​​ Limited    | 图像正在被追踪，但没有那么有效。一个图像被认为是有限的而不是跟踪的情况取决于底层的 AR 框架。可能导致有限追踪的例子包括。1.遮挡图像，使摄像机无法看到。2.图像没有作为移动图像被追踪。例如，如果超过了 maxNumberOfMovingImages，就会发生这种情况。 |
+| Tracking      | 底层的 AR SDK 报告说，它正在积极追踪图像。                                                                                                                                                                                                       |
 
-| TrackingState | Description                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| None          | The image is not being tracked. Note that this may be the initial state when the image is first detected.                                                                                                                                                                                                                                                                                                        |
-| ​​ Limited    | The image is being tracked, but not as effectively. The situations in which an image is considered Limited instead of Tracking depend on the underlying AR framework. Examples that could cause Limited tracking include: 1.Obscuring the image so that it is not visible to the camera. 2.The image is not tracked as a moving image. This can happen, for example, if the maxNumberOfMovingImages is exceeded. |
-| Tracking      | The underlying AR SDK reports that it is actively tracking the image.                                                                                                                                                                                                                                                                                                                                            |
-
-| Param           | Type                | Description                                                                                 |
-| --------------- | ------------------- | ------------------------------------------------------------------------------------------- | --- |
-| MarkerName      | String              | Current tracking or lost image's name                                                       |
-| MarkerState     | MarkerTrackingState | Current tracking state                                                                      |
-| BaseData        | String              | Additional data, generally not used                                                         |
-| MarkerTrackable | Transform           | To track the transform of the image, you can set the parent of our AR virtual object to it. |     |
+| Param           | Type                | 描述                                                             |
+| --------------- | ------------------- | ---------------------------------------------------------------- | --- |
+| MarkerName      | String              | 当前跟踪或丢失的图像的名称                                       |
+| MarkerState     | MarkerTrackingState | 当前的跟踪状态                                                   |
+| BaseData        | String              | 附加数据，一般不使用                                             |
+| MarkerTrackable | Transform           | 为了跟踪图像的变换，你可以将我们的 AR 虚拟对象的父对象设置为它。 |     |
