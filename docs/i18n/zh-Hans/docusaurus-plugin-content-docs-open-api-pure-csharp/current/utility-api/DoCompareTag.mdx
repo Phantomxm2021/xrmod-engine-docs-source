@@ -1,27 +1,24 @@
----
-title: DoCompareTag
----
 
 ## Description
 
-Compare whether two tags are consistent. It is similar to [Unity's CompareTag](https://docs.unity3d.com/ScriptReference/Component.CompareTag.html) method.
+比较两个标签是否一致。它类似于[Unity的CompareTag](https://docs.unity3d.com/ScriptReference/Component.CompareTag.html)方法。
 
-## Parameters
+## 参数
 
 | Param | Type   | Description |
 | ----- | ------ | ----------- |
-| \_tag | String | Unique name |
+| _tag | String | 独一无二的名字 |
 
-## Method
+## 方法
 
 ```cs
 public void DoCompareTag(string _tag)
 ```
 
-## Example
+## 例子
 
 ::: Caution
-You must add the `GameObjectRuntimeTag` script to the gameObject you will use for retrieval and enter `Tag` into the `GameObjectRuntimeTag.RuntimeTag` field.
+你必须将`GameObjectRuntimeTag`脚本添加到你将用于检索的gameObject中，并在`GameObjectRuntimeTag.RuntimeTag`字段中输入`Tag`。
 :::
 
 ```cs

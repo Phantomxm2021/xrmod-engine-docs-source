@@ -1,7 +1,3 @@
----
-title: SetScreenOrientation
----
-
 import VideoPlayer from "@site/src/components/VideoPlayer";
 
 <VideoPlayer
@@ -10,37 +6,37 @@ import VideoPlayer from "@site/src/components/VideoPlayer";
 />
 
 :::caution
-The logical orientation affects not only screen orientation, but also touch coordinates. You should expect drastic changes in the touch positions after changing logical orientation, since touch positions are rotated clockwise or counter-clockwise to match screen coordinates.
+逻辑方向不仅影响屏幕方向，而且也影响触摸坐标。你应该期待改变逻辑方向后触摸位置的剧烈变化，因为触摸位置会顺时针或逆时针旋转以匹配屏幕坐标。
 :::
 
-## Description
+## 描述
 
-Specifies logical orientation of the screen.
+规定屏幕的逻辑方向。
 
 ## Parameters
 
-| Param         | Type              | Description        |
-| ------------- | ----------------- | ------------------ |
-| \_orientation | ScreenOrientation | Screen orientation |
+| Param         | Type              | 描述     |
+| ------------- | ----------------- | -------- |
+| \_orientation | ScreenOrientation | 屏幕方向 |
 
 :::tip Screen Orientation
 
-| Id  | Orientation        | Description                                                             |
-| --- | ------------------ | ----------------------------------------------------------------------- |
-| 0   | Portrait           | Portrait orientation.                                                   |
-| 1   | PortraitUpsideDown | Portrait orientation, upside down.                                      |
-| 2   | LandscapeLeft      | Landscape orientation, counter-clockwise from the portrait orientation. |
-| 3   | LandscapeRight     | Landscape orientation, clockwise from the portrait orientation.         |
+| Id  | Orientation        | 描述                               |
+| --- | ------------------ | ---------------------------------- |
+| 0   | Portrait           | 纵向                               |
+| 1   | PortraitUpsideDown | 纵向，颠倒的方向                   |
+| 2   | LandscapeLeft      | 横向方向，从纵向方向逆时针旋转     |
+| 3   | LandscapeRight     | 横向方向，从纵向方向顺时针方向排列 |
 
 :::
 
-## Method
+## 方法
 
 ```cs
 public void SetScreenOrientation(ScreenOrientation _orientation)
 ```
 
-## Example
+## 例子
 
 ```cs
 internal static API ARMODAPI = new API(nameof(APITest));

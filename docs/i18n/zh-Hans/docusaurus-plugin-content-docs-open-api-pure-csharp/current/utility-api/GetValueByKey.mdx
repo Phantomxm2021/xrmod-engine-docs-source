@@ -1,33 +1,29 @@
----
-title: GetValueByKey
----
+## 描述
 
-## Description
+读取存储在设备上持久化的数据
 
-Read data temporarily stored on the device
+## 返回值
 
-## Return
+| Type                                          | 描述         |
+| --------------------------------------------- | ------------ |
+| <highlight color="#AE6221">String</highlight> | 查询到的数据 |
 
-| Type   | Description      |
-| ------ | ---------------- |
-| <highlight color="#AE6221">String</highlight> | The data queried |
+## 参数
 
-## Parameters
+| Param         | Description                           |
+| ------------- | ------------------------------------- |
+| \_projectName | 使用项目名称+密钥存储，防止密钥被占用 |
+| \_key         | 独一无二的名称                        |
 
-| Param         | Description                                                    |
-| ------------- | -------------------------------------------------------------- |
-| \_projectName | Use ProjectName+Key storage to prevent Key from being occupied |
-| \_key         | Unique name                                                    |
-
-## Method
+## 方法
 
 ```cs
 public string GetValueByKey(string _projectName, string _key)
 ```
 
-## Example
+## 例子
 
-```cs 
+```cs
 internal static API ARMODAPI = new API(nameof(APITest));
 private void OnLoad(){
     ARMODAPI.SaveKeyAndValue(nameof(APITest),"StoreKey","StoreValue");

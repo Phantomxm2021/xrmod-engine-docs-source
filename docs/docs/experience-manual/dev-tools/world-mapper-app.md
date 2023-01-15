@@ -125,5 +125,5 @@ After downloading a map or multiple maps, you can test localization.
 Before a successful localization, the maps are not aligned with the camera view. Localization will attempt to align the maps (map space coordinates) to the camera view (tracker space coordinates).
 
 <center>
-<coverimg  url={require('@site/static/static/dev-tools/worldmapper/visualize_localized.gif')} width="25rem" padding="0"/>
+<coverimg  url={require('@site/static/static/dev-tools/worldmapper/visualize_localized.jpg')} width="25rem" padding="0"/>
 </center>

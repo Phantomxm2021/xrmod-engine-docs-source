@@ -58,6 +58,6 @@ The XRMOD Engine simulator helps us verify our code for bugs and gives us a WYSI
 
 <center>
 
-<coverimg url={require('@site/static/static/dev-tools/simulator/simulator-next-version.png')} height="25rem" padding="0.5rem" label="Simulator"/>
+<coverimg url={require('@site/static/static/dev-tools/simulator/simulator-next-version.jpg')} height="25rem" padding="0.5rem" label="Simulator"/>
 
 </center>

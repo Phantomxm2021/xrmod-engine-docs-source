@@ -1,6 +1,6 @@
 ## Description
 
-从 ARExperience 脚本中获取应用信息
+获取当前应用数据；从ARExperience发起，数据由Native提供。
 
 ## Parameters
 

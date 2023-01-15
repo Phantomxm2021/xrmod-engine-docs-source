@@ -57,7 +57,7 @@ Unity 将为当前活动场景烘烤光照图，得到的图像文件将被移�
 
 在所有的照明设置完成后，我们需要将`PrefabBaker`脚本组件添加到我们的假根节点。如下面的图片所示。
 
-<coverimg url={require('@site/static/static/dev-tools/prefabbaker/addbakerscript.png')} height="100%" padding="0.5rem"/>
+<coverimg url={require('@site/static/static/dev-tools/prefabbaker/addbakerscript.jpg')} height="100%" padding="0.5rem"/>
 
 让我们去烘烤它。我们可以通过`工具`->`AR-MOD`->`PrefabBaker`打开`PrefabBaker`设置面板。
 
@@ -75,4 +75,4 @@ Unity 将为当前活动场景烘烤光照图，得到的图像文件将被移�
 - 如果勾选了 `Automatically clean up the scene lightmap`，"Prefab Bake"将清理当前预览中的所有烘烤。但是这并不能清除我们的数据，而只是预览数据。
 :::
 
-<coverimg url={require('@site/static/static/dev-tools/prefabbaker/bakeresult.png')} height="100%" padding="0.5rem"/>
+<coverimg url={require('@site/static/static/dev-tools/prefabbaker/bakeresult.jpg')} height="100%" padding="0.5rem"/>

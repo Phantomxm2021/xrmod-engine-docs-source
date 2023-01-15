@@ -1,28 +1,24 @@
----
-title: SaveKeyAndValue
----
+## 描述
 
-## Description
+本地存储临时数据。`SaveKeyAndValue`是一个在项目会话之间存储经验案例偏好的方法。它可以将字符串存储到用户的平台注册表中。
 
-Store temporary data locally. `SaveKeyAndValue` is a method that stores Experience case preferences between project sessions. It can store string into the user’s platform registry.
+为由给定的键和项目确定的偏好设置一个单一的字符串值。你可以使用`ARMODAPI.GetValueByKey`来检索这个值。
 
-Sets a single string value for the preference identified by the given key and project. You can use `ARMODAPI.GetValueByKey` to retrieve this value.
+## 参数
 
-## Parmaters
+| Param         | 描述                                  |
+| ------------- | ------------------------------------- |
+| \_projectName | 使用项目名称+密钥存储，防止密钥被占用 |
+| \_key         | 独一无二的名字                        |
+| \_value       | 需要保存的数据                        |
 
-| Param         | Description                                                    |
-| ------------- | -------------------------------------------------------------- |
-| \_projectName | Use ProjectName+Key storage to prevent Key from being occupied |
-| \_key         | Unique Name                                                    |
-| \_value       | Data tha nedds to be saved                                     |
-
-## Method
+## 方法
 
 ```cs
 public void SaveKeyAndValue(string _projectName, string _key, string _value)
 ```
 
-## Example
+## 例子
 
 ```cs
 internal static API ARMODAPI = new API(nameof(APITest));

@@ -9,7 +9,7 @@ description: embed xrmod into unity
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<coverimg url={require('@site/static/static/sdk/unity-sdk/unity-showcase.png')} height="25rem"/>
+<coverimg url={require('@site/static/static/sdk/unity-sdk/unity-showcase.jpg')} height="25rem"/>
 
 
 ## Installation
@@ -59,7 +59,7 @@ The default input system for Unity projects is the old input system, but since w
 
 If you select `Yes` your Unity will be `restarted`, here we can select `No` to restart `manually` later
 
-<coverimg url={require('@site/static/static/sdk/unity-sdk/xri-api-upgrade.png')} width="50%"/>
+<coverimg url={require('@site/static/static/sdk/unity-sdk/xri-api-upgrade.jpg')} width="50%"/>
 
 This proiect may contain an obsolete method to validate interactions between XR Interactors and Interactables. This Update is only required for older projects updating the XR Interaction Toolkit dackage. It this dackage was newly installed please cancel this operation.
 

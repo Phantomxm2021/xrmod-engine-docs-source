@@ -58,7 +58,7 @@ import TabItem from '@theme/TabItem';
 
 Unity项目的默认输入系统是旧的输入系统，但由于我们的XRI将使用新的输入系统，Unity将弹出一个确认窗口让你确认。如果你选择`Yes`，你的Unity将被`restarted`，这里我们可以选择`No`，以便以后`manually`重新启动。
 
-<coverimg url={require('@site/static/static/sdk/unity-sdk/xri-api-upgrade.png')} width="50%"/>
+<coverimg url={require('@site/static/static/sdk/unity-sdk/xri-api-upgrade.jpg')} width="50%"/>
 
 该项目可能包含一个过时的方法来验证XR交互器和可交互器之间的交互。只有在更新XR交互工具包的旧项目中才需要进行这一更新。如果该工具包是新安装的，请取消此操作。
 

@@ -125,5 +125,5 @@ description: 为消费者、工业用途、广告活动等创造融合数字和�
 在成功定位之前，地图没有与摄像机视图对齐。定位将尝试将地图（地图空间坐标）与相机视图（跟踪器空间坐标）对齐。
 
 <center>
-<coverimg  url={require('@site/static/static/dev-tools/worldmapper/visualize_localized.gif')} width="25rem" padding="0"/>
+<coverimg  url={require('@site/static/static/dev-tools/worldmapper/visualize_localized.jpg')} width="25rem" padding="0"/>
 </center>

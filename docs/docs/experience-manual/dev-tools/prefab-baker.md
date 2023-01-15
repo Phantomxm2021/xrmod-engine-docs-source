@@ -63,7 +63,7 @@ If you want to get better baking effect, please make detailed adjustment and exp
 
 With all the lighting setup, we need to add the `PrefabBaker` script component to our dummy root node. As shown in the image below:
 
-<coverimg  url={require('@site/static/static/dev-tools/prefabbaker/addbakerscript.png')} height="100%" padding="0.5rem"/>
+<coverimg  url={require('@site/static/static/dev-tools/prefabbaker/addbakerscript.jpg')} height="100%" padding="0.5rem"/>
 
 Let's go and bake it. We can open the `PrefabBaker` setting panel via `Tools`->`AR-MOD`->`PrefabBaker`.
 
@@ -81,4 +81,4 @@ Now we have completed the setup. Click the Open Baker button to display baking s
 - If the `Automatically clean up the scene lightmap` is checked, the "Prefab Bake" will clean up all the baking in the current preview. But this does not clear our data, but just preview the data.
 :::
 
-<coverimg  url={require('@site/static/static/dev-tools/prefabbaker/bakeresult.png')} height="100%" padding="0.5rem"/>
+<coverimg  url={require('@site/static/static/dev-tools/prefabbaker/bakeresult.jpg')} height="100%" padding="0.5rem"/>

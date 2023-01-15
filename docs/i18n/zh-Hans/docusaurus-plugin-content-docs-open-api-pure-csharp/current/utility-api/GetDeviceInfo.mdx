@@ -1,26 +1,22 @@
----
-title: GetDeviceInfo
----
+## 描述
 
-## Description
+访问系统和硬件信息。
 
-Access system and hardware information.
+使用这个方法来弄清楚底层平台和硬件的能力。例如，你可以检查哪些 RenderTexture 格式被支持（SuppersRenderTextureFormat），有多少 CPU 线程可用（processorCount），等等。
 
-Use this method to figure out capabilities of the underlying platform and hardware. For example, you can check which RenderTexture formats are supported (SupportsRenderTextureFormat), how many CPU threads are available (processorCount), and so on.
+## 返回值
 
-## Return
+| Type                                          | 描述          |
+| --------------------------------------------- | ------------- |
+| <highlight color="#AE6221">String</highlight> | 设备信息-Json |
 
-| Type                                          | Description       |
-| --------------------------------------------- | ----------------- |
-| <highlight color="#AE6221">String</highlight> | devices info-Json |
-
-## Method
+## 方法
 
 ```cs
 public string GetDeviceInfo()
 ```
 
-## Example
+## 例子
 
 ```cs
 internal static API ARMODAPI = new API(nameof(APITest));
@@ -31,6 +27,6 @@ private void OnLoad(){
 }
 ```
 
-## Relation
+## 关联
 
-If you want to use Litjson in your XRMOD case, you can click [here](#) to read more about it.
+如果你想在你的XRMOD案例中使用Litjson，你可以点击[这里](#)来阅读更多的信息。

@@ -1,31 +1,27 @@
----
-title: LoadAsset
----
+## 描述
 
-## Description
+通过项目名称和想要加载的资产名称，从我们的软件包中加载一个 unity 资产。
 
-Load a unity asset from our package by project name and wanna load asset name.
+## 参数
 
-## Parameters
+| Param                  | Type            | 描述               |
+| ---------------------- | --------------- | ------------------ |
+| T                      | T               | UnityObject 的类型 |
+| \_projectName          | String          | 项目名称           |
+| \_wannaLoadedAssetName | String          | 想加载资产名称     |
+| \_loadedCallback       | Action&lt;T&gt; | 加载后回调         |
 
-| Param                  | Type            | Description               |
-| ---------------------- | --------------- | ------------------------- |
-| T                      | T               | UnityObject Type          |
-| \_projectName          | String          | your project name         |
-| \_wannaLoadedAssetName | String          | you wanna load asset name |
-| \_loadedCallback       | Action&lt;T&gt; | call back when loaded     |
-
-## Method
+## 方法
 
 :::caution
-This api is loading `Prefab` from disk into memory. It is not instantiating the `Prefab` into the game scene.
+这个 api 正在从磁盘加载`Prefab`到内存中。它不是将`Prefab'实例化到游戏场景中。
 :::
 
 ```cs
 public void LoadAsset<T>(string _projectName, string _wannaLoadedAssetName,Action<T> _loadedCallback)
 ```
 
-## Example
+## 例子
 
 ```cs
 internal static API api = new API(nameof(TestAPI));

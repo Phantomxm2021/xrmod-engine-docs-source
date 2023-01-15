@@ -1,24 +1,20 @@
----
-title: IsPointerOverUi
----
+## 描述
 
-## Description
+它用于确定 ugui 对象是否被触及。防止点击 ugui 对象时的射线穿透。
 
-It is used to determine whether ugui objects are touched. Prevent raycast ray penetration when clicking ugui objects.
+## 返回值
 
-## Return
+| Type                                        | 描述                                          |
+| ------------------------------------------- | --------------------------------------------- |
+| <highlight color="#6D61F7">Bool</highlight> | True:触摸 UGUI 对象，False:不触摸 UGUI 对象。 |
 
-| Type | Description                                               |
-| ---- | --------------------------------------------------------- |
-| <highlight color="#6D61F7">Bool</highlight> | True:Touch ugui object,False:Not touching the UGUI object |
-
-## Method
+## 方法
 
 ```cs
 public bool IsPointerOverUi()
 ```
 
-## Example
+## 例子
 
 ```cs
 internal static API ARMODAPI = new API(nameof(APITest));

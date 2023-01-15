@@ -12,7 +12,7 @@ description: 安装并结合Unity Engine来制作独一无二的XR体验。
 XRMOD SDK 是使用 Unity 2021.3f1 开发的。 因此，所有 AR 体验内容都需要在 2021.3f1 之后开发。
 :::
 
-<coverimg url={require('@site/static/static/prepare-for-developer/unity-editor-preview.png')} height="100%" padding="0.5rem"/>
+<coverimg url={require('@site/static/static/prepare-for-developer/unity-editor-preview.jpg')} height="100%" padding="0.5rem"/>
 
 ## 额外
 

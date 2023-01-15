@@ -1,6 +1,6 @@
 ## Description
 
-Get app information from ARExperience script
+Get current application data; initiated from ARExperience, data provided by Native
 
 ## Parameters
 

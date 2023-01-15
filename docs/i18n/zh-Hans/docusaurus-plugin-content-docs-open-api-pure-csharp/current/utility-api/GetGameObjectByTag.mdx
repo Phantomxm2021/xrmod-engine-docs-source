@@ -1,28 +1,25 @@
----
-title: GetGameObjectByTag
----
+## 描述
 
-## Description
+通过标签找到游戏对象
 
-Finding the gameObject by tag
+## 参数
 
-## Parameters
+| Param        | Type            | 描述           |
+| ------------ | --------------- | -------------- |
+| \_tag        | String          | 独一无二的名称 |
+| \_gameObject | GameObject(out) | 搜索结果       |
 
-| Param        | Type            | Description       |
-| ------------ | --------------- | ----------------- |
-| \_tag        | String          | Unique name       |
-| \_gameObject | GameObject(out) | The search result |
-
-## Method
+## 方法
 
 :::caution
-You must add the `GameObjectRuntimeTag` script to the gameObject you will use for retrieval and enter `Tag` into the `GameObjectRuntimeTag.RuntimeTag` field.
+你必须将`GameObjectRuntimeTag`脚本添加到你将用于检索的gameObject中，并在`GameObjectRuntimeTag.RuntimeTag`字段中输入`Tag`。
 :::
 
 ```cs
 public void GetGameObjectByTag(string _tag,GameObject _gameObject)
 ```
-## Example
+
+## 例子
 
 ```cs
 private void OnLoad(){

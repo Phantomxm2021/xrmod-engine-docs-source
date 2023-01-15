@@ -5,172 +5,378 @@ title: 接入XRMOD(Swift)
 
 <iframe height="500px"  width="100%" className="video-showcase" src="//player.bilibili.com/player.html?aid=758355740&bvid=BV1q64y1o75i&cid=345215059&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-```swift title="ARMODUtility.swift"
-//
-//  ARMODUtility.swift
-//  ARMODStore
-//
-//  Created by Phantomsxr.com on 2021/5/2.
-//
+## 概述
 
-import Foundation
+我们都知道对于传统App开发者而言AR是一个比较新的技术，还有就是传统App开发者与3D和AR打交道较少，所以须花费相当大的精力和时间去学习相关知识，且不同平台的内容需要多次开发。
 
+为了解决这些问题，今天给大家带来一个解决方案。我们后续将会把不同平台的改造教程分成单个文档进行深入讲解，本节则是针对iOS端开发者的。
 
-class ARMODUtility {
-    public static var armod = ARMOD()
-    
-    static func getStatusBarHeight() -> CGFloat {
-        var heightToReturn: CGFloat = 0.0
-        for window in UIApplication.shared.windows {
-            if let height = window.windowScene?.statusBarManager?.statusBarFrame.height, height > heightToReturn {
-                heightToReturn = height
-            }
-        }
-        print(heightToReturn)
-        return heightToReturn
-    }
-    
-    static func initARMOD(){
-        
-        let configJson = convertPlistToJson(plistName: "AppConfig")
-        armod.registerAPIforNativeCalls(ARMODCallback())
-        armod.initARMOD(configJson)
-        armod.setUIInterfaceOrientation(.portrait)
-        armod.loadAndShowView()
-        
-    }
-    static func launchARById(id:String)  {
-        initARMOD()
-        armod.fetchProject(id)
-    }
-    
-    static func launchARScan()  {
-        initARMOD()
-        armod.fetchProjectByImage()
-    }
-    
-    static func convertPlistToJson(plistName:String) -> String {
-        if let url = Bundle.main.url(forResource:plistName, withExtension: "plist") {
-            do {
-                let data = try Data(contentsOf:url)
-                let dict = try PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [String:Any]
-                let jsonData = try JSONSerialization.data(withJSONObject: dict , options: .prettyPrinted)
-                return String(data: jsonData, encoding: String.Encoding.utf8) ?? ""
-            } catch {
-                print(error)
-            }
-        }
-        return ""
-    }
-}
+## 准备
+首先我们需要准备：
 
-```
+1. 一台安装了最新版本的XCode IDE的Mac电脑
+2. 一把iPhone 6s之后的设备
+3. 一份App源代码,如果您还没有App则可以创建一个全新的SwiftUI版本的App
+4. XRMOD SDK
 
-```swift title="ARMODCallback.swift"
+## 开始改造
+
+首先使用最新版本的XCode打开项目，在这边我们创建了两个控件分别是输入框和按钮，输入框将用于接受我们输入的XR项目Id，按钮则用于启动XRMOD。
+
+<coverimg url={require("@site/static/static/sdk/ios-sdk/xcode-swift-ui.png")} height="25rem"/>
+
+```swift title="ContentView.swift"
 //
-//  ARMODCallback.swift
-//  ARMOD Store
+//  ContentView.swift
+//  XRMODDemo
 //
-//  Created by phantomsxr.com on 2021/2/15.
+//  Created by NSWell on 2022/12/18.
 //
 
-import Foundation
-import UIKit
 import SwiftUI
 
-class ARMODCallback: UIResponder,NativeCallsProtocol {
-    func onARMODExit() {
-        
-    }
-
-    func packageSizeMoreThanPresetSize(_ currentSize: Float, preset presetSize: Float) {
-        showAlert(title: "Tips", buttonTitle: "Continue", msg: String(format: "Need to download %.2f", currentSize),completionHandler: {
-            ARMODUtility.armod.continueToDownloadARExperience()})
-    }
-    
-    fileprivate let loadingView = UIHostingController(rootView: LoadingView())
-    public static let arView = UIHostingController(rootView: ARView(statusBarHeight: ARMODUtility.getStatusBarHeight()))
-    
-    func throwException(_ message: String!, errorCode code: Int32) {
-        print(String(format: "[ERROR]:%@,code:%d", message,code))
-        showAlert(title: "ERROR", buttonTitle: "Ok", msg: String(format: "[ERROR]:%@,code:%d", message,code),completionHandler: {
-            ARMODUtility.armod.unloadAndHideView()})
-    }
-    
- 
-    func addLoadingOverlay() {
-        let controller = ARMODUtility.armod.getController()
-        let view = controller?.view
-        
-        view!.addSubview(loadingView.view)
-        controller?.addChild(loadingView)
-        loadingView.didMove(toParent: controller)
-        loadingView.view.backgroundColor = UIColor.clear
-        loadingView.view.translatesAutoresizingMaskIntoConstraints = false
-        loadingView.view.topAnchor.constraint(equalTo: view!.topAnchor).isActive = true
-        loadingView.view.bottomAnchor.constraint(equalTo: view!.bottomAnchor).isActive = true
-        loadingView.view.leftAnchor.constraint(equalTo: view!.leftAnchor).isActive = true
-        loadingView.view.rightAnchor.constraint(equalTo: view!.rightAnchor).isActive = true
-        
-        view!.addSubview(ARMODCallback.arView.view)
-        controller?.addChild(ARMODCallback.arView)
-        ARMODCallback.arView.didMove(toParent: controller)
-        ARMODCallback.arView.view.backgroundColor = UIColor.clear
-        ARMODCallback.arView.view.translatesAutoresizingMaskIntoConstraints = false
-        ARMODCallback.arView.view.topAnchor.constraint(equalTo: view!.topAnchor).isActive = true
-        ARMODCallback.arView.view.bottomAnchor.constraint(equalTo: view!.bottomAnchor).isActive = true
-        ARMODCallback.arView.view.leftAnchor.constraint(equalTo: view!.leftAnchor).isActive = true
-        ARMODCallback.arView.view.rightAnchor.constraint(equalTo: view!.rightAnchor).isActive = true
-        
-    }
-
-    
-    func updateLoadingProgress(_ progress: Float) {
-    }
-    
-    func removeLoadingOverlay() {
-        loadingView.removeFromParent()
-        loadingView.dismiss(animated: true, completion: nil)
-        loadingView.view.removeFromSuperview()
-    }
-    
-    func deviceNotSupport() {
-        print("Device not support")
-    }
-    
-    func sdkInitialized() {
-        print("SDK Initialized")
-        
-    }
-    
-    func openBuilt(inBrowser url: String!) {
-        print("")
-    }
-    
-    func recognitionStart() {
-        
-    }
-    
-    func recognitionComplete() {
-        print("")
-    }
-    
-    func tryAcquireInformation(_ opTag: String!) -> String! {
-        return ""
-    }
-    
-    
-    //https://stackoverflow.com/a/60562200
-    @objc private func showAlert(title:String,buttonTitle:String,msg:String,completionHandler:@escaping()->Void){
-        let alert =  UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: buttonTitle, style: .cancel) { (action) in
-            completionHandler()
+struct ContentView: View {
+    @State private var experienceId:String = ""
+    var body: some View {
+        VStack {
+           TextField("AR Experience Id", text: $experienceId)
+                .textFieldStyle(.roundedBorder)
+            
+            Button(action: {
+                XRMODUtility.LaunchXRById(experienceId: experienceId)                
+            }, label: {Text("Launch XR")})
         }
-        alert.addAction(cancelAction)
-        DispatchQueue.main.async {
-            ARMODUtility.armod.getController()?.present(alert, animated: true, completion: nil)
-        }
-    }    
+        .padding()
+    }
 }
 
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
 ```
+
+因为考虑到不同应用拥有不同的设计风格并且开发者更希望更自由的操作，所以 XRMOD 没提供任UI，需要开发者自己实现。
+
+在该项目中，我们明确知道了需要两个UI界面分别是XRMOD运行时的界面和XRMOD初始化加载资源时的过渡界面，开发者可视情况而定。
+
+好，在XCode中增加名为ARView和LoadingView这两个swift view。
+
+<center>
+<coverimg url={require("@site/static/static/sdk/ios-sdk/xcode-swift-ui-project.png")} width="15rem" label="Project"/>
+</center>
+
+ARView将叠加在XRMOD View之上，用于绘制关闭按钮或其他UI等。LoadingView则是显示XRMOD加载资源的状态、进度等。
+
+我们来实现下这两个View的内容吧。
+
+```swift title="LoadingView.swift"
+//
+//  LoadingView.swift
+//  XRMODDemo
+//
+//  Created by NSWell on 2022/12/18.
+//
+
+import SwiftUI
+
+struct LoadingView: View {
+    var body: some View {
+        VStack(alignment: .center){
+            Spacer()
+            Text("正在进入XR世界")
+            Spacer()
+        }
+    }
+}
+
+struct LoadingView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoadingView()
+    }
+}
+```
+
+```swift title="ARView.swift"
+//
+//  ARView.swift
+//  XRMODDemo
+//
+//  Created by NSWell on 2022/12/18.
+//
+
+import SwiftUI
+
+struct ARView: View {
+    var body: some View {
+        VStack(alignment:.leading){
+            HStack(alignment:.top){
+                Button(action: {}, label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .scaleEffect(1.5)
+                })
+                Spacer()
+            }
+            .padding()
+            Spacer()
+        }
+    }
+}
+
+struct ARView_Previews: PreviewProvider {
+    static var previews: some View {
+        ARView()
+    }
+}
+```
+
+
+<coverimg url={require("@site/static/static/sdk/ios-sdk/xcode-swift-ui-xrmod-github.png")} label="XRMOD Framework"/>
+
+OK，将Github下载来的压缩包解压，然后进入iOS文件夹内把Framework.zip解压，把解压得到的后缀为Framework的文件复制到XCode项目中。再复制ARMODCommunicationLayer.h和ARMODCommunicationLayer.mm这两个文件到Xcode项目中,这两个文件将是XRMOD暴露出来的API，将通过这些API进行启动XRMOD。
+
+:::caution
+XRMOD SDK无法在虚拟机中运行同时这也会破坏Preview模式运行，从Framework,Libraries, and Embedded Content中将其移除即可正常运行Preview。
+<coverimg url={require("@site/static/static/sdk/ios-sdk/xcode-swift-ui-embedded-caution.png")}/>
+:::
+
+
+<coverimg url={require("@site/static/static/sdk/ios-sdk/xcode-swift-ui-unzip.png")} label="Unzip"/>
+
+<center>
+<coverimg url={require("@site/static/static/sdk/ios-sdk/xcode-swift-ui-import.png")} width="15rem" label="Import"/>
+</center>
+
+如果首次在Swfit工程中使用objective-c文件则会弹出让我们创建 Bridging Header的提示，点击Create Bridging Header即可。
+
+<center>
+<coverimg url={require("@site/static/static/sdk/ios-sdk/xcode-swift-ui-bridgingheader.png")} width="15rem" label="Bridging Header"/>
+</center>
+
+Bridging Header创建完毕后必须将XRMOD相关头文件引入，否则无法正常调用XRMOD的API。我们使用#import方式导入XRMOD Communicationlayer.h
+
+<coverimg url={require("@site/static/static/sdk/ios-sdk/xcode-swift-ui-bridgingheader-edit.png")}/>
+
+```swift title="ARMODUtility.swift"
+//
+//  Use this file to import your target's public headers that you would like to expose to Swift.
+//
+
+#import "ARMODCommunicationLayer.h"
+```
+
+使用`Command`+`B`快捷键 或者通过`Product`->`Build` 进行编译，如果编译成功则XRMOD模块导入成功反之亦然。
+
+至此，我们XRMOD导入已完成，可以开始下一个环节了。
+
+接下来添加一个名为`XRMODCallback`的Swift文件用来实现XRMOD回调函数并继承`UIResponser`和`NativeCallProtocol`，然后让XCode帮我列举出所有需要实现的函数。函数内具体的逻辑先不用管它等会我们再逐一实现。
+
+
+```swift title="XRMODCcallback.swift"
+//
+//  XRMODCcallback.swift
+//  XRMODDemo
+//
+//  Created by NSWell on 2022/12/18.
+//
+
+import Foundation
+import SwiftUI
+
+class XRMODCallback: UIResponder,NativeCallsProtocol {
+}
+```
+
+再添加一个名为`XRMODUtility`的Swift文件作为调用XRMOD的API的全局入口；添加一个名为`InitXRMOD`的函数以供我们用来初始化XRMOD，在编写该函数之前我们需要分配一个XRMOD对象，才能调用对应的API。
+
+```swift title="XRMODUtility.swift"
+//
+//  XRMODUtility.swift
+//  XRMODDemo
+//
+//  Created by NSWell on 2022/12/18.
+//
+
+import Foundation
+
+class XRMODUtility{
+    public static var xrmod = ARMOD()
+    
+    public static func InitXRMOD()->Void{
+    }
+}
+```
+
+接下来开始编写InitXRMOD函数，将方才添加的`XRMODCallback`这个Swift类实例化并注册到XRMOD中，告知XRMOD这边接受回调，我们可以直接使用`registerAPIforNativeCall` API来注册。然后调用initARMOD函数来初始化，`initARMOD`有两个参数：第一个参数是初始化配置信息，该初始化配置信息必须为JSON字符并且需要按照官方提供的格式书写串；第二个参数是初始化成功的回调。详细看下初始化配置信息的JSON格式每个字段的作用。初始化配置信息分为四大大板块，分别是：
+
+- imageCloudRecognizerConfig: 云端图像识别的配置选项，
+    - gateway: 我们请求的API网关，
+    - maximumOfRetires: 图像识别最大的识别次数，如果超过这个次数后将不再识别；该配置选项目前仅支持商用版。
+- dashboardConfig: XRMOD SDK查询并获取XR体验内容的主要配置项；
+    - token: 我们在XRMOD Cloud创建的应用Token；
+    - dashboardGateway是请求资源的地址网关，固定地址为https://phantomsxr.com/api/v2/client/getarresources；
+    - maximum DownloadSize: 在移动流量情况下最大下载的内容体积以兆为单位，如果超过这个上限会终止下载，执行`PackageSizeMoreThanPresetSize`回调,调用`continueToDownloadARExperience` 即可忽略继续下载。
+- EngineType: XRMOD运行环境类型Unity和Native两种，这取决于您应用开发环境。
+- AppMode: XRMOD运行类型，Online即从服务端拿数据，Offline则从本地读取；该配置仅能使用一种模式。
+
+<coverimg url={require("@site/static/static/sdk/ios-sdk/xcode-swift-ui-config.png")} label="Config"/>
+
+在这就偷懒了使用plist文件来作为配置文件然后再将其转为JSON字符串。以下方法可以把pList文件转为 JSON字符串。
+
+```swift
+static func convertPlistToJson(plistName:String) -> String {
+    if let url = Bundle.main.url(forResource:plistName, withExtension: "plist") {
+        do {
+            let data = try Data(contentsOf:url)
+            let dict = try PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [String:Any]
+            let jsonData = try JSONSerialization.data(withJSONObject: dict , options: .prettyPrinted)
+            return String(data: jsonData, encoding: String.Encoding.utf8) ?? ""
+        } catch {
+            print(error)
+        }
+    }
+    return ""
+}
+```
+
+我们可以在`XRMODCallback`中增加一个View用来提示用户XRMOD正在启动中，打开`XRMODCallback`文件并使用`UIHostingController`来实例化View。
+
+```swift
+public static let loadingView = UIHostingController(rootView: LoadingView())
+```
+
+然后回到ARMODUtility，在`InitARMOD`回调中将LoadingView叠加到XRMOD View之上，使用getController函数来获取xrmod view的Controller view并将XRMODCallback中声明的LoadingView添加为 XRMOD Controller的`Subview`，手动约束loadingview与xrmod view对齐。除此之外我们还需要告诉SDK当前设备的朝向否则UI会错乱，调用`loadAndShow`将XRMOD SDK分配的View进行挂载和显示。
+
+```swift
+public static func InitXRMOD()->Void{
+        xrmod.registerAPIforNativeCalls(XRMODCallback())
+        xrmod.initARMOD(convertPlistToJson(plistName:"xrmodConfigure"), completed: {
+            let loadingView = XRMODCallback.loadingView
+            let view = xrmod.getController().view
+            view!.addSubview(loadingView.view)
+            
+            loadingView.view.translatesAutoresizingMaskIntoConstraints = false
+            loadingView.view.topAnchor.constraint(equalTo: view!.topAnchor).isActive=true
+            loadingView.view.bottomAnchor.constraint(equalTo: view!.bottomAnchor).isActive=true
+            loadingView.view.rightAnchor.constraint(equalTo: view!.rightAnchor).isActive=true
+            loadingView.view.leftAnchor.constraint(equalTo: view!.leftAnchor).isActive=true
+        })
+        
+        xrmod.setUIInterfaceOrientation(.portrait)
+        xrmod.loadAndShowView()
+    }
+```
+
+到这里调用`InitXRMOD`函数后，XRMOD就会启动然后叠加LoadingView等待资源加载完成，但需要注意的是资源加载完成LoadingView并不会被移除需要我们在`XRMODCallback`中实现。
+
+打开`XRMODCallback`文件，找到名为`removeLoadingOverlay`函数。然后调用loadingView的`dismiss`函数，将`animated`设置为`true`并在回调函数中增加`removeFromParent`和`removeFromSuperview`来移除loadingview。
+
+```swift
+func removeLoadingOverlay() {
+    XRMODCallback.loadingView.dismiss(animated: true,completion: {
+        XRMODCallback.loadingView.removeFromParent()
+        XRMODCallback.loadingView.view.removeFromSuperview()
+    })
+}
+```
+
+初始化函数我们已经写好了，接下来是调用API去检索我们项目的XR体验资源并呈现出来。增加一个名为`launchXRById`的新函数，然后调用我们方才写的`InitXRMOD`函数，再调用`fetchProject`函数，然后将我们的项目ID传入；这样就能加载到我们指定的内容了。
+
+```swift
+XRMODUtility.LaunchXRById(experienceId: experienceId)
+```
+
+我们仅需在按钮上调用launchXRById就能启动XRMOD和加载XR体验内容了。
+
+到目前为止我们能启动XRMOD 并体验到AR内容但我们无法关闭它，所以我们需要增加一个关闭XRMOD的按钮。打开XRMODCallback文件找到名为addLoadingOverlay的函数，和添加loadingview一样，将其复制过来稍加修改即可。
+
+```swift
+func addLoadingOverlay() {
+    let arView = XRMODCallback.arView
+    let controller = XRMODUtility.xrmod.getController()
+    let view = controller?.view
+    view!.addSubview(arView.view)
+    controller?.addChild(arView)
+    arView.didMove(toParent: controller)
+    arView.view.backgroundColor = UIColor.clear
+    arView.view.translatesAutoresizingMaskIntoConstraints = false
+    arView.view.topAnchor.constraint(equalTo: view!.topAnchor).isActive=true
+    arView.view.bottomAnchor.constraint(equalTo: view!.bottomAnchor).isActive=true
+    arView.view.rightAnchor.constraint(equalTo: view!.rightAnchor).isActive=true
+    arView.view.leftAnchor.constraint(equalTo: view!.leftAnchor).isActive=true
+}
+```
+
+然后我们需要将当前应用的UIWindow与XRMOD连接，并传递启动命令，我们来实现它吧。
+
+- 第一步我们需要拓展环境变了，在项目名称+App的文件中写入如下代码：
+
+```swift
+struct UIWindowKey:EnvironmentKey {
+    static var defaultValue: UIWindow?
+    typealias value = UIWindow?
+}
+
+extension EnvironmentValues{
+    var window:UIWindow?{
+        get{
+            return self[UIWindowKey.self]
+        }
+        set{
+            self[UIWindowKey.self] = newValue
+        }
+    }
+}
+```
+
+- 第二步在项目名称+App的文件中App中声明两个环境变量，代码如下:
+
+```swift
+@Environment(\.scenePhase) private var scenePhase
+@Environment(\.window) var uiWindow: UIWindow?
+```
+
+- 第三步在WindowGroup 实现 onChange(of:key,perform:{})监听，代码如下:
+
+```swift
+WindowGroup {
+    ContentView()
+}
+.onChange(of: scenePhase, perform: {(newScenePhase) in
+    switch newScenePhase{
+            case .active:
+                print("scene is now active!")
+            case .inactive:
+                print("scene is now inactive!")
+            case .background:
+                print("scene is now in the background!")
+            @unknown default:
+                print("Apple must have added something new!")
+            }
+}
+```
+
+- 第四步在active状态下获取window，代码如下:
+
+```swift
+if(uiWindow==nil){
+  let scene = UIApplication.shared.windows.last
+  if let windowScene = scene as? UIWindowScene {
+        let window = UIWindow(windowScene: windowScene)
+        UIWindowKey.defaultValue = window
+    }
+ XRMODUtility.xrmod.connect(uiWindow)
+ XRMODUtility.xrmod.connectArgcArgv(CommandLine.argc, setgArgv: CommandLine.unsafeArgv)
+}
+```
+## 构建测试
+
+来到XCode的General设置页面，将我们方才导入的Framework拖拽到Framework,Libraries, and Embedded Content中并将Embed类型设置为 Embed&Sign。
+
+然后就可以进行构建了，在这里需要注意XRMOD SDK无法在虚拟机中运行所以我们需要构建到真实的设备上；还需要关闭bitcode这个选项否则会构建失败。
+
+:::caution
+XRMOD SDK无法在虚拟机中运行同时这也会破坏Preview模式运行，从Framework,Libraries, and Embedded Content中将其移除即可正常运行Preview。
+<coverimg url={require("@site/static/static/sdk/ios-sdk/xcode-swift-ui-embedded-caution.png")}/>
+:::

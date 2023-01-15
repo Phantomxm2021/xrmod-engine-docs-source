@@ -18,4 +18,4 @@ import CardUrlParse from '@site/src/components/CardUrlParse'
 
 ---
 
-<CardUrlParse imagePath={require('@site/static/static/dev-tools/remotedebug/arfoundationeditorremote.png')} title='ARFoundation Editor Remote' description='AR Foundation Editor Remote is an Editor extension that allows you to transmit AR data from AR device to Unity Editor. Run and Debug AR projects right in the Unity Editor!' jumpUrl='https://assetstore.unity.com/packages/tools/utilities/ar-foundation-remote-168773'/>
+<CardUrlParse imagePath={require('@site/static/static/dev-tools/remotedebug/arfoundationeditorremote.jpg')} title='ARFoundation Editor Remote' description='AR Foundation Editor Remote is an Editor extension that allows you to transmit AR data from AR device to Unity Editor. Run and Debug AR projects right in the Unity Editor!' jumpUrl='https://assetstore.unity.com/packages/tools/utilities/ar-foundation-remote-168773'/>

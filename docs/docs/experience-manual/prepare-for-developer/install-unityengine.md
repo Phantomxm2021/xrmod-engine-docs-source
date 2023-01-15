@@ -15,7 +15,7 @@ The XRMOD SDK was developed using Unity 2021.3f1. Therefore, all AR experience c
 :::
 
 
-<coverimg  url={require('@site/static/static/prepare-for-developer/unity-editor-preview.png')}/>
+<coverimg  url={require('@site/static/static/prepare-for-developer/unity-editor-preview.jpg')}/>
 
 ## Extras
 
