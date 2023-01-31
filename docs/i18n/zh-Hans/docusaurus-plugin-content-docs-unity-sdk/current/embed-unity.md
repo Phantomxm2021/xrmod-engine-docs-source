@@ -10,7 +10,7 @@ import TabItem from "@theme/TabItem";
 
 ## XRMOD 引擎开发环境
 
-通过阅读[XR体验内容开发工具包安装文章](.../experience-manual/prepare-for-developer/install-xrmod-dev-tools)获得基本的开发环境。由于我们需要将 XRMOD 引擎和 Unity 结合起来开发一个新的 APP，我们需要安装一些必要的软件包。
+通过阅读[XR体验内容开发工具包安装文章](../experience-manual/prepare-for-developer/install-xrmod-dev-tools)获得基本的开发环境。由于我们需要将 XRMOD 引擎和 Unity 结合起来开发一个新的 APP，我们需要安装一些必要的软件包。
 
 <Tabs defaultValue='handheldar' values={[
     {label:"Apple",value:"appleglasses"},
