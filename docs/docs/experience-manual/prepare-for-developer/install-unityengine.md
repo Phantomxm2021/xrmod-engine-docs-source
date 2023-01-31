@@ -11,7 +11,7 @@ description: install unity and develop xrmod experience case
 Go to the official [Unity website](https://unity3d.com/get-unity/download/archive) to download Unity Hub. After Unity Hub is installed, you can install Unity through Unity Hub.
 
 :::tip
-The XRMOD SDK was developed using Unity 2021.3.4f1. Therefore, all AR experience content needs to be developed beyond 2021.3.4f1.
+The XRMOD SDK was developed using Unity 2021.3.4f1+. Therefore, all AR experience content needs to be developed beyond 2021.3.4f1.
 :::
 
 

@@ -9,7 +9,7 @@ description: 安装并结合Unity Engine来制作独一无二的XR体验。
 到[Unity 官方网站](https://unity3d.com/get-unity/download/archive)下载 Unity Hub。Unity Hub 安装好后，可以通过 Unity Hub 安装 Unity。
 
 :::tip
-XRMOD SDK是使用Unity 2021.3.4f1开发的。 因此，所有AR体验内容都需要在2021.3.4f1之后开发。
+XRMOD SDK是使用Unity 2021.3.4f1+开发的。 因此，所有AR体验内容都需要在2021.3.4f1之后开发。
 :::
 
 <coverimg url={require('@site/static/static/prepare-for-developer/unity-editor-preview.jpg')} height="100%" padding="0.5rem"/>
