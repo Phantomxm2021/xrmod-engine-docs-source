@@ -16,29 +16,29 @@ MOD既是修改的意思。这个概念在游戏中被广泛使用，对应的�
 import FeatureGrid from '@site/src/components/FeatureGrid'
 
 <FeatureGrid
-  basePath="./static/features/"
+  basePath="/static/"
   items={[
-    { name: "01. Plane Detect virtual object", img: 'planedetect.gif' },
-    { name: "02. Anchor Place", img: 'anchor.gif'  },
-    { name: "03. FaceMesh", img: 'facemesh.gif'  },
-    { name: "04. 360 panorama", img: '360panorama.gif'  },
-    { name: "05. Image tracking", img: 'imagetracking.gif'  },
-    { name: "06. AR world", img: 'arworld.gif' },
-    { name: "07. Point Cloud", img: 'pointcloud.gif'  },
-    { name: "08. Meshing", img: 'mesh.gif'  },
-    { name: "09. Light Estimation", img: 'lightestimation.gif'  },
-    { name: "10. Environment Reflection", img: 'environmentprob.gif'  },
-    { name: "11. Ocullusion", img: 'ocullusion.gif'  },
-    { name: "12. Multiplayer", img: 'multiplayer.webp'  },
-    { name: "13. Virtual Reality", img: 'vr.gif'  },
-    { name: "14. Mixed Reality", img: 'mr.gif' },
-    { name: "15. MOD", img: 'mod.webp'  },
-    { name: "16. Unity", img: 'unity.png'  },
-    { name: "17. Dashboard CMS", img: 'cms.gif'  },
-    { name: "18 .SDKs", img: 'sdk.png'  },
-    { name: "19 .Templates", img: 'templates.png'  },
-    { name: "20 .Unified Format", img: 'unifiedformat.png'  },
-    { name: "21 .Cloud Base", img: 'cloudbase.jpg'  },
+    { name: "01. Plane Detect virtual object", video: 'videos/planedetect.mp4' },
+    { name: "02. Anchor Place", video: 'videos/anchor.mp4'  },
+    { name: "03. FaceMesh", video: 'videos/facemesh.mp4'  },
+    { name: "04. 360 panorama", video: 'videos/360panorama.mp4'  },
+    { name: "05. Image tracking", video: 'videos/imagetracking.mp4'  },
+    { name: "06. AR world", video: 'videos/arworld.mp4' },
+    { name: "07. Point Cloud", video: 'videos/pointcloud.mp4'  },
+    { name: "08. Meshing", video: 'videos/mesh.mp4'  },
+    { name: "09. Light Estimation", video: 'videos/lightestimation.mp4'  },
+    { name: "10. Environment Reflection", video: 'videos/environmentprob.mp4'  },
+    { name: "11. Ocullusion", video: 'videos/ocullusion.mp4'  },
+    { name: "12. Multiplayer", video: 'videos/multiplayer.mp4'  },
+    { name: "13. Virtual Reality", video: 'videos/vr.mp4'  },
+    { name: "14. Mixed Reality", video: 'videos/mr.mp4' },
+    { name: "15. MOD", img: 'features/mod.webp'  },
+    { name: "16. Unity", img: 'features/unity.png'  },
+    { name: "17. Dashboard CMS", video: 'videos/cms.mp4'  },
+    { name: "18 .SDKs", img: 'features/sdk.png'  },
+    { name: "19 .Templates", img: 'features/templates.png'  },
+    { name: "20 .Unified Format", img: 'features/unifiedformat.png'  },
+    { name: "21 .Cloud Base", img: 'features/cloudbase.jpg'  },
     
   ]}
 />
