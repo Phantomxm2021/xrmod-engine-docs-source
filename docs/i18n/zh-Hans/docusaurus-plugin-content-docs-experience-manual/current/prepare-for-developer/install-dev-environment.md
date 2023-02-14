@@ -107,4 +107,4 @@ Unity项目的默认输入系统是旧的输入系统，但由于我们的XRI将
 - 请确保第5区的所有选项都是✅状态
 :::
 
-完成所有配置后，我们就可以开发内容了。点击[这里](../tutorial-advanced/create-first-arexperience)，了解如何开发您的第一个XR体验内容。
+完成所有配置后，我们就可以开发内容了。点击[这里](../tutorial-advanced/how-create-xrmod-project)，了解如何开发您的第一个XR体验内容。

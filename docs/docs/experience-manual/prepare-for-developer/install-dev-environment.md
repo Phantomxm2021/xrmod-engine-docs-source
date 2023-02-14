@@ -108,5 +108,5 @@ If a ❌ <sup>6</sup> appears in the [5] area you will see the **Fix** button be
 - Make sure that all options in area 5 are ✅ status
 :::
 
-Once all the configuration is done, we are ready to develop the content. Click [here](../tutorial-advanced/create-first-arexperience) to learn how to develop your first XR Experience content.
+Once all the configuration is done, we are ready to develop the content. Click [here](../tutorial-advanced/how-create-xrmod-project) to learn how to develop your first XR Experience content.
 

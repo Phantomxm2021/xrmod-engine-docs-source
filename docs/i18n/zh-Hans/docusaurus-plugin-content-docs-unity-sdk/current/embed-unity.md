@@ -88,4 +88,4 @@ public void ARModuleStart(){
 
 ## 总结
 
-从那时起，我们的AR-APP已经完成了。使用XRMOD引擎为我们节省了大量的时间，也为我们节省了如何与XR SDK互动的逻辑和知识。下一步是为它创建一个漂亮的UI/UX和XR体验。内容。如果您不知道如何制作内容，您可以[点击这里](../experience-manual/tutorial-basics/create-first-arexperience)来阅读。
+从那时起，我们的AR-APP已经完成了。使用XRMOD引擎为我们节省了大量的时间，也为我们节省了如何与XR SDK互动的逻辑和知识。下一步是为它创建一个漂亮的UI/UX和XR体验。内容。如果您不知道如何制作内容，您可以[点击这里](../experience-manual/tutorial-basics/how-create-xrmod-project)来阅读。
