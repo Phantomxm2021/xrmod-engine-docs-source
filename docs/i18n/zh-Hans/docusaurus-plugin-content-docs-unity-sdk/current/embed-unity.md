@@ -40,7 +40,7 @@ import TabItem from "@theme/TabItem";
 
 </Tabs>
 
-安装完成后，在 Unity 顶部的菜单栏中打开`Edit`->`Project Settings`->`PhantomsXR`->`XR-MOD Engine SDK Settings`来初始化我们的项目配置，如下图所示。完成这一步骤后，我们就可以开始开发 AR-APP 了。
+安装完成后，在Unity顶部的菜单栏中打开`Edit`->`Project Settings`->`PhantomsXR`->`XR-MOD Engine SDK Settings`来初始化我们的项目配置，如下图所示。完成这一步骤后，我们就可以开始开发AR-APP了。
 
 <coverimg url={require("@site/static/static/sdk/unity-sdk/xrmod-settings.png")} height="25rem" />
 
