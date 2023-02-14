@@ -36,8 +36,8 @@ paths:
               examples:
                 example-1:
                   value:
-                    code: 200,
-                    message: ''
+                    status_code: 200
+                    msg: ''
                     data:                      
                       all_project:
                         - app_uid: 3663670167 
@@ -74,8 +74,8 @@ paths:
               examples:
                 example-1:
                   value:
-                    code: 200,
-                    message: ''
+                    status_code: 200
+                    msg: ''
                     data:                      
                       all_project:
                         - app_uid: 3663670167 
@@ -113,8 +113,8 @@ paths:
               examples:
                 example-1:
                   value:
-                    code: 200,
-                    message: ''
+                    status_code: 200
+                    msg: ''
                     data:
                       app_uid: 3663670167,
                       user_uid: 1012451543,
@@ -155,8 +155,8 @@ paths:
               examples:
                 example-1:
                   value:
-                    code: 200,
-                    message: ''
+                    status_code: 200
+                    msg: ''
                     data:
                       app_uid: 3663670167,
                       user_uid: 1012451543,
@@ -196,8 +196,8 @@ paths:
               examples:
                 example-1:
                   value:
-                    code: 200,
-                    message: ''
+                    status_code: 200
+                    msg: ''
                     data:
                       id: 48
                       app_uid: 3663670167,
@@ -255,8 +255,8 @@ paths:
               examples:
                 example-1:
                   value:
-                    code: 200,
-                    message: ''
+                    status_code: 200
+                    msg: ''
                     data:
                       id: 48
                       app_uid: 3663670167,
@@ -286,6 +286,89 @@ paths:
       tags:
         - Get UDM
   
+  /getportfoliolist:
+    get:
+      summary: Get portfolio list
+      description: |
+        Get the list of the portfolio project
+      operationId: GetPortfolioList
+      parameters: 
+        - $ref: '#/components/parameters/portfolio_type'
+        - $ref: '#/components/parameters/platform'
+        - $ref: '#/components/securitySchemes'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    status_code: 200
+                    msg: ''
+                    data:
+                      portfolios:
+                        - id: 41
+                          app_uid: 3663670167 
+                          user_uid: 1012451543
+                          portfolio_uid: 3749040281
+                          portfolio_name: "SLAMSample"
+                          project_brief: "Place an virutal object in real world."
+                          portfolio_header: "https://../AR_icon.jpg"
+                          project_uid:
+                            - 2290430457
+      tags:
+        - Get Portfolio
+  /getportfoliodetail:
+    get:
+      summary: Get portfolio detail
+      description: |
+        Get the detail of the portfolio project
+      operationId: GetPortfolioDetail
+      parameters: 
+        - $ref: '#/components/parameters/portfolio_type'
+        - $ref: '#/components/parameters/platform'
+        - $ref: '#/components/parameters/portfolio_uid'
+        - $ref: '#/components/securitySchemes'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value:
+                    status_code: 200
+                    msg: ''
+                    data:
+                        id: 41
+                        app_uid: 3663670167 
+                        user_uid: 1012451543
+                        portfolio_uid: 3749040281
+                        portfolio_name: "SLAMSample"
+                        project_brief: "Place an virutal object in real world."
+                        portfolio_header: "https://../AR_icon.jpg"
+                        project_uid:
+                          - 2290430457
+                        create_time:  "2023-01-28T07:07:33.025568Z"
+                        update_time: "2023-02-07T15:18:26.140005Z"
+                        portfolio_description: "<figure class=\"image\"><img src=\"https://.../3655893721/media/1727574086/965dc94225752540363"
+                        portfolio_tags:
+                          - XR
+                        project_uid:
+                          - 1918979569
+                        portfolio_type: 0
+                          
+      tags:
+        - Get Portfolio
 components:
   parameters:
     app_package_id:
@@ -312,12 +395,6 @@ components:
       required: true
       schema:
         type: string
-    platform:
-      name: platform
-      in: query
-      required: true
-      schema:
-        type: string
     data_type:
       name: data_type
       in: query
@@ -337,6 +414,30 @@ components:
       required: true
       schema:
         type: string
+    platform:
+      name: platform
+      in: query
+      required: true
+      schema:
+        type: string
+      description: |- 
+        The platform is divided into iOS Android Hololens2 Pico Quest Nreal web etc.
+    portfolio_uid:
+      name: portfolio_uid
+      in: query
+      required: true
+      schema:
+        type: number
+      description: |- 
+        The detailed information of the portfolio will be queried.
+    portfolio_type:
+      name: portfolio_type
+      in: query
+      required: true
+      schema:
+        type: string
+      description: |- 
+        Portfolio_typp is divided into two types, one is graphic (0) and the other is list (1)
   securitySchemes:
     Authorization:
       type: apiKey
@@ -348,6 +449,7 @@ components:
 tags:
   - name: Get XR-Experience
   - name: Get UDM
+  - name: Get Porfolio
 externalDocs:
   url: ''
   description: ''
