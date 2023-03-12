@@ -1,5 +1,5 @@
 ## Description
-Show the ARMOD View window after InitARMODModle
+Show the XRMOD View window after InitARMODModle
 
 ## Method
 

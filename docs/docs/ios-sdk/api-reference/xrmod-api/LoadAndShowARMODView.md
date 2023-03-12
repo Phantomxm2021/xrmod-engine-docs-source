@@ -1,5 +1,5 @@
 ## Description
-Load and display ARMOD view immediately
+Load and display XRMOD view immediately
 
 ## Method
 

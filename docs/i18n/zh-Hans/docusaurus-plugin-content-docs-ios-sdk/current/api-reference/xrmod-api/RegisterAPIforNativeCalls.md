@@ -8,7 +8,7 @@
 - 当设备不支持 AR 时执行`notSupportARMOD`。
 - SDK 错误，在查询项目时将执行 showAlertConfirmation
 
-在 ARMOD 加载后的任何时候调用它来设置实现 NativeCallsProtocol 方法的对象。
+在 XRMOD 加载后的任何时候调用它来设置实现 NativeCallsProtocol 方法的对象。
 
 ## 参数
 

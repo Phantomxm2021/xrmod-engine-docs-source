@@ -1,6 +1,6 @@
 ## Description
 
-使用配置信息初始化 ARMOD SDK。此方法将自动调用。
+使用配置信息初始化 XRMOD SDK。此方法将自动调用。
 
 ## Parameters
 

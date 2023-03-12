@@ -3,7 +3,7 @@ sidebar_position: 2
 title: Life Cycle API
 ---
 
-## What is ARMOD Events?
+## What is XRMOD Events?
 
 ARMODE 事件是一个脚本（类），它也是任何 AR 体验的交互式逻辑的入口点；它通常由包工具在创建项目时创建。
 

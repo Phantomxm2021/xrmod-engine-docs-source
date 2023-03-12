@@ -1,6 +1,6 @@
 ## Description
 
-Unload current ARMOD Window
+Unload current XRMOD Window
 
 ## Method
 

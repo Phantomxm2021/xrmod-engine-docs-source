@@ -11,11 +11,11 @@ import TabItem from "@theme/TabItem";
 ## 下载 XRMOD Engine
 
 增强您的应用程序的第一步是获取我们的 SDK！
-我们已将 XRMOD Engine 上传到 github。您可以[点击此处](https://github.com/Phantomxm2021/ARMOD-Framework)前往 github 页面并下载我们的 XRMOD Engine。如果您认为 XRMOD 不错，请给我们一颗星。谢谢！
+我们已将 XRMOD Engine 上传到 github。您可以[点击此处](https://github.com/Phantomxm2021/XRMOD-Framework)前往 github 页面并下载我们的 XRMOD Engine。如果您认为 XRMOD 不错，请给我们一颗星。谢谢！
 
-## 导入 ARMOD 框架
+## 导入 XRMOD 框架
 
-将 ARMOD SDK 和脚本拖放到您的项目中。
+将 XRMOD SDK 和脚本拖放到您的项目中。
 
 <coverimg url={require("@site/static/static/sdk/ios-sdk/setup.png")} height="100%" padding="0" />
 
@@ -26,30 +26,30 @@ import TabItem from "@theme/TabItem";
 | Name                       | Description                          |
 | -------------------------- | ------------------------------------ |
 | UnityFramework.framework   | 这是核心库，所有的 AR 算法都在其中。 |
-| ARMODCommunicationLayer.h  | ARMOD SDK 的 iOS 功能接口            |
-| ARMODCommunicationLayer.mm | 实现 ARMOD SDK 的 iOS 功能接口       |
+| ARMODCommunicationLayer.h  | XRMOD SDK 的 iOS 功能接口            |
+| ARMODCommunicationLayer.mm | 实现 XRMOD SDK 的 iOS 功能接口       |
 
 :::info
 ARMODCommunicationLayer.h 和 ARMODCommunicationLayer.mm 是 Unity 交互的连接层，也被称为胶水代码。
 :::
 
-将 `ARMOD UnityFramework.framework`拖到`Framework,Libraries,and Embeded content`部分。并设置嵌入类型为嵌入和签署。像这样。
+将 `XRMOD UnityFramework.framework`拖到`Framework,Libraries,and Embeded content`部分。并设置嵌入类型为嵌入和签署。像这样。
 
 <coverimg url={require("@site/static/static/sdk/ios-sdk/dragtoembed.png")} height="100%" padding="0" />
 
 ## 嵌入编码
 
-在我们开始之前，我们必须弄清楚 ARMOD 和 Native 应用程序之间的关系。
+在我们开始之前，我们必须弄清楚 XRMOD 和 Native 应用程序之间的关系。
 
-- 首先要明确的是，ARMOD 不包含任何用户界面
-- ARMOD 只允许您插入视图或堆栈
+- 首先要明确的是，XRMOD 不包含任何用户界面
+- XRMOD 只允许您插入视图或堆栈
 - UI 事件和数据只由 iOS Native Calls Protocol API 通知。
-- UI 操作事件只由 iOS ARMOD API 通知 ARMOD 引擎。
+- UI 操作事件只由 iOS XRMOD API 通知 XRMOD 引擎。
 
 <coverimg url={require("@site/static/static/sdk/ios-sdk/layers.png")} height="25rem" padding="0" />
 
 :::caution
-由于本地应用程序不能直接监控 ARMOD 的状态，如下载资产状态、进度、ErrorAlert 等，我们只能实现 ARMOD 回调方法来监控 ARMOD 的状态。
+由于本地应用程序不能直接监控 XRMOD 的状态，如下载资产状态、进度、ErrorAlert 等，我们只能实现 XRMOD 回调方法来监控 XRMOD 的状态。
 :::
 
 ## 项目设置
@@ -66,7 +66,7 @@ ARMODCommunicationLayer.h 和 ARMODCommunicationLayer.mm 是 Unity 交互的连�
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "NSObject+ARMOD.h"
+#import "NSObject+XRMOD.h"
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
     @autoreleasepool {
@@ -76,7 +76,7 @@ int main(int argc, char * argv[]) {
 
     //Add new line
     // highlight-next-line
-    [[ARMOD sharedInstance] connectArgcArgv:argc setgArgv:argv];
+    [[XRMOD sharedInstance] connectArgcArgv:argc setgArgv:argv];
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
 
@@ -93,8 +93,8 @@ int main(int argc, char * argv[]) {
     //New Line added
     // highlight-start
     [self.window makeKeyAndVisible];
-    [[ARMOD sharedInstance] connectARMOD:self.window];
-    [[ARMOD sharedInstance] connectLaunchOpts:launchOptions];
+    [[XRMOD sharedInstance] connectARMOD:self.window];
+    [[XRMOD sharedInstance] connectLaunchOpts:launchOptions];
     // highlight-end
 
     return YES;
@@ -117,7 +117,7 @@ int main(int argc, char * argv[]) {
     [[self window] makeKeyAndVisible];
 
     //New Line
-    [[ARMOD sharedInstance] connectARMOD:self.window];
+    [[XRMOD sharedInstance] connectARMOD:self.window];
 }
 ```
 
@@ -125,8 +125,8 @@ int main(int argc, char * argv[]) {
 
 ### 启动 AR
 
-因为每次启动 ARMOD 时，您都需要传递信息来初始化 SDK，以便验证您相应的账户。
-我们需要调用以下一行代码进行初始化。由于 ARMOD 初始化接口只支持 JSON 格式的数据，您可以使用您喜欢的数据格式将其转换为 json，然后传入此方法。
+因为每次启动 XRMOD 时，您都需要传递信息来初始化 SDK，以便验证您相应的账户。
+我们需要调用以下一行代码进行初始化。由于 XRMOD 初始化接口只支持 JSON 格式的数据，您可以使用您喜欢的数据格式将其转换为 json，然后传入此方法。
 
 ```objectivec
 //Configure AR SDK. We need to convert the dictionary to NSString and then pass it to our SDK.
@@ -217,7 +217,7 @@ imageCloudRecognizerConfig 还不被支持，所以您可以忽略它。
     NSDictionary *appConfigDict = [NSDictionary dictionaryWithContentsOfFile:appConfigFilePath];
 
     //ARSDK is a singleton
-    self.armod = ARMOD.sharedInstance;
+    self.armod = XRMOD.sharedInstance;
 
     //SDK event register,e.g. download asset event,Not Support event and so on.
     [self.armod registerAPIforNativeCalls:[ARViewExtension alloc]];
@@ -240,7 +240,7 @@ imageCloudRecognizerConfig 还不被支持，所以您可以忽略它。
 ```
 
 :::caution
-ARMOD UnityFramework不支持Bitcode
+XRMOD UnityFramework不支持Bitcode
 :::
 
 ## 总结
@@ -259,7 +259,7 @@ ARMOD UnityFramework不支持Bitcode
 ```log
 @"UILaunchStoryboardName key is missing from info.plist"),
 function ShowSplashScreen, file /Users/*/Documents/*/*/
-ARMODs/Unity/ARMOD-iOS-Unity/ARMOD-iOS/Build/U201904/
+ARMODs/Unity/XRMOD-iOS-Unity/XRMOD-iOS/Build/U201904/
 Classes/UI/SplashScreen.mm, line 186.
 ```
 

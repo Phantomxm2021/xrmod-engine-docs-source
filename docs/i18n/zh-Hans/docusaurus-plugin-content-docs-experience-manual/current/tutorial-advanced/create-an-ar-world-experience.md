@@ -265,7 +265,7 @@ namespace ImmersalTest
 {
     public class ImmersalTestMainEntry
     {
-        //ARMOD API
+        //XRMOD API
         internal static API ARMODAPI = new API(nameof(ImmersalTest));
 
         private GameObject ARSpace;
@@ -312,13 +312,13 @@ namespace ImmersalTest
 
 现在我们来实现可视化脚本的逻辑。
 
-- 在视觉画布上添加 `ARMOD API`节点
-- 在 `ARMOD API`节点的 `ProjectName`字段中输入您的项目名称。
+- 在视觉画布上添加 `XRMOD API`节点
+- 在 `XRMOD API`节点的 `ProjectName`字段中输入您的项目名称。
 - 在视觉画布上添加 `Load Assets(Async)`节点。
 - 在 `Load Assets(Aysnc)`节点的`Name`字段中输入您想加载的游戏对象的名称。
-- 连接 `ARMOD API`到 `Load Assets(Async)`。
+- 连接 `XRMOD API`到 `Load Assets(Async)`。
 - 在视觉画布上添加 `On Start`节点
-- 连接 `On Start`到 `ARMOD API`。
+- 连接 `On Start`到 `XRMOD API`。
 - 选择 `On Start`节点，在左侧面板上将 `Coroutine`设置为 `True`。
 
 :::danger

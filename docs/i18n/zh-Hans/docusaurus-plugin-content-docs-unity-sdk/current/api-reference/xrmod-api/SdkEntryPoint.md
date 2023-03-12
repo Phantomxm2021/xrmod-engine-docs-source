@@ -4,7 +4,7 @@ SDKEntryPoint 是 XRMOD 的入口。它被用来启动和关闭 XRMOD 模块。
 
 ### 描述
 
-用配置信息初始化 ARMOD SDK。此方法将自动调用。
+用配置信息初始化 XRMOD SDK。此方法将自动调用。
 
 ### 参数
 
@@ -55,7 +55,7 @@ tmp_SDKEntryPoint.LaunchXRQuery(_arExperienceId);
 
 ### 描述
 
-卸载当前 ARMOD 窗口
+卸载当前 XRMOD 窗口
 
 :::danger
 当 xrmod 关闭时，所有内容将被释放。这包括**ActionNotifications**以及艺术资源。

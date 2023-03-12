@@ -16,11 +16,11 @@ import TabItem from '@theme/TabItem';
 ## Download the XRMOD Framework
 
 The first step to enhancing your application is to get our SDK！
-We have uploaded XRMOD Framework (0.0.1) to github. You can [click here](https://github.com/Phantomxm2021/ARMOD-Framework) to go to the github page and download our XRMOD framework. If you think XRMOD is good please give us a star. Thank you!
+We have uploaded XRMOD Framework (0.0.1) to github. You can [click here](https://github.com/Phantomxm2021/XRMOD-Framework) to go to the github page and download our XRMOD framework. If you think XRMOD is good please give us a star. Thank you!
 
-## Import ARMOD Framework 
+## Import XRMOD Framework 
 
-Drag and drop the ARMOD SDK and scripts to your project.
+Drag and drop the XRMOD SDK and scripts to your project.
 
 <coverimg url={require('../../static/static/sdk/ios-sdk/setup.png')} height="100%" padding="0" />
 
@@ -31,30 +31,30 @@ This image is from SwfitUI project. So it has ARMODStore-Bridging-Header.h file
 |Name|Description|
 |---|---|
 |UnityFramework.framework|This is core library, all AR algorithm in it|
-|ARMODCommunicationLayer.h|ARMOD SDK iOS function Interfaces|
-|ARMODCommunicationLayer.mm|Realization of ARMOD SDK iOS Function Interface|
+|ARMODCommunicationLayer.h|XRMOD SDK iOS function Interfaces|
+|ARMODCommunicationLayer.mm|Realization of XRMOD SDK iOS Function Interface|
 
 :::info
 ARMODCommunicationLayer.h and ARMODCommunicationLayer.mm are the connection layers for Unity interaction, also known as glue code.
 :::
 
-Drag and drop the `ARMOD UnityFramework.framework` to `Framework,Libraries,and Embeded content` section. And set Embed type to Embed & Sign. Like this:
+Drag and drop the `XRMOD UnityFramework.framework` to `Framework,Libraries,and Embeded content` section. And set Embed type to Embed & Sign. Like this:
 
 <coverimg url={require("../../static/static/sdk/ios-sdk/dragtoembed.png")} height="100%" padding="0" />
 
 ## Embed Coding
 
-Before we start, we have to figure out the relationship between ARMOD and Native app.
+Before we start, we have to figure out the relationship between XRMOD and Native app.
 
-- The first thing to be clear is that ARMOD does not contain any UI
-- ARMOD only allows you to insert view or stack
+- The first thing to be clear is that XRMOD does not contain any UI
+- XRMOD only allows you to insert view or stack
 - UI events and data are only notified by iOS Native Calls Protocol API
-- UI operation events are only notified by iOS ARMOD API to ARMOD Engine
+- UI operation events are only notified by iOS XRMOD API to XRMOD Engine
 
 <coverimg url={require('../../static/static/sdk/ios-sdk/layers.png')}  height="25rem"  padding="0"/>
 
 :::caution
-Since native applications cannot directly monitor the status of ARMOD, such as download asset status, progress, ErrorAlert, etc., we can only implement ARMOD callback methods to monitor the status of ARMOD.
+Since native applications cannot directly monitor the status of XRMOD, such as download asset status, progress, ErrorAlert, etc., we can only implement XRMOD callback methods to monitor the status of XRMOD.
 :::
 
 ## Setup Project
@@ -71,7 +71,7 @@ Now we need to embed it into our native app. Edit the main.mm file and add a new
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "NSObject+ARMOD.h"
+#import "NSObject+XRMOD.h"
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
     @autoreleasepool {
@@ -80,7 +80,7 @@ int main(int argc, char * argv[]) {
     }
     
     //Add new line
-    [[ARMOD sharedInstance] connectArgcArgv:argc setgArgv:argv];
+    [[XRMOD sharedInstance] connectArgcArgv:argc setgArgv:argv];
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
 
@@ -97,8 +97,8 @@ didFinishLaunchingWithOptions:(NSDictionary )launchOptions and add some codes in
 
     //New Line added
     [self.window makeKeyAndVisible];    
-    [[ARMOD sharedInstance] connectARMOD:self.window]; 
-    [[ARMOD sharedInstance] connectLaunchOpts:launchOptions];
+    [[XRMOD sharedInstance] connectARMOD:self.window]; 
+    [[XRMOD sharedInstance] connectLaunchOpts:launchOptions];
 
     return YES;
 }
@@ -119,14 +119,14 @@ Go to SceneDelegate.m file and edit it.
     [[self window] makeKeyAndVisible];
     
     //New Line
-    [[ARMOD sharedInstance] connectARMOD:self.window];
+    [[XRMOD sharedInstance] connectARMOD:self.window];
 }
 ```
 
 ## Implement Callback
 ### Launch AR
-Because every time you start ARMOD, you need to pass in the information to initialize the SDK in order to verify your corresponding account.
-We need to call the following line of code to initialize. Since the ARMOD initialization interface only supports data in JSON format, you can use your favorite data format to convert it to json and then pass it into this method.
+Because every time you start XRMOD, you need to pass in the information to initialize the SDK in order to verify your corresponding account.
+We need to call the following line of code to initialize. Since the XRMOD initialization interface only supports data in JSON format, you can use your favorite data format to convert it to json and then pass it into this method.
 ```objectivec
 //Configure AR SDK. We need to convert the dictionary to NSString and then pass it to our SDK.
 [self.armod initARMOD:[self convertToJsonData:appConfigDict]];
@@ -217,7 +217,7 @@ Assign the ButtonEvent method to our AR Launch button.
     NSDictionary *appConfigDict = [NSDictionary dictionaryWithContentsOfFile:appConfigFilePath];
     
     //ARSDK is a singleton
-    self.armod = ARMOD.sharedInstance;
+    self.armod = XRMOD.sharedInstance;
     
     //SDK event register,e.g. download asset event,Not Support event and so on.
     [self.armod registerAPIforNativeCalls:[ARViewExtension alloc]];
@@ -240,7 +240,7 @@ Assign the ButtonEvent method to our AR Launch button.
 ```
 
 :::caution
-ARMOD UnityFramework is not support Bitcode
+XRMOD UnityFramework is not support Bitcode
 :::
 
 ## Summary
@@ -258,7 +258,7 @@ More infomation of Native API you should read iOS Native Calls Protocol API. We 
 ```log
 @"UILaunchStoryboardName key is missing from info.plist"), 
 function ShowSplashScreen, file /Users/*/Documents/*/*/
-ARMODs/Unity/ARMOD-iOS-Unity/ARMOD-iOS/Build/U201904/
+ARMODs/Unity/XRMOD-iOS-Unity/XRMOD-iOS/Build/U201904/
 Classes/UI/SplashScreen.mm, line 186.
 ```
 Add UILaunchStoryboardName field to your project's plist.

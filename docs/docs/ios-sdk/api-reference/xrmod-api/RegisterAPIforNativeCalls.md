@@ -8,7 +8,7 @@ Used to connect the communication between SDK.Register a custom-implemented moni
 - Execute `notSupportARMOD` when the device does not support AR;
 - SDK error, will execute showAlertConfirmation when the project is inquired
 
-Call it at any time after ARMOD is loaded to set the object that implements the NativeCallsProtocol method.
+Call it at any time after XRMOD is loaded to set the object that implements the NativeCallsProtocol method.
 
 ## Parameters
 

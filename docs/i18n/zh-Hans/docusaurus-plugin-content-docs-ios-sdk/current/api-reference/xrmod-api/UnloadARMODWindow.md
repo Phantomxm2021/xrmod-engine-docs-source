@@ -1,6 +1,6 @@
 ## 描述
 
-卸载当前 ARMOD 窗口
+卸载当前 XRMOD 窗口
 
 ## 方法
 ```objectivec

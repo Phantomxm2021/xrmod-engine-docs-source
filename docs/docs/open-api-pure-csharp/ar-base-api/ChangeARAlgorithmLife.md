@@ -21,7 +21,7 @@ public void ChangeARAlgorithmLife(ARAlgorithmNotificationData _data)
 ## Example
 
 ```cs
-//ARMOD API
+//XRMOD API
 internal static API ARMODAPI = new API(nameof(APITest));
 private GameObject cubePrefab;
 private bool enabledAlgorithm;

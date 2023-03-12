@@ -1,6 +1,6 @@
 ## Description
 
-Current device is not support ARMOD
+Current device is not support XRMOD
 
 ## Method
 

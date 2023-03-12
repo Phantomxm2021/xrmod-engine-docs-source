@@ -9,7 +9,7 @@ title: Native Base API
 
 使用应用程序的内置浏览器打开 URL
 
-### 入参
+### 参数
 
 | Param  | Type                              | Description                  |
 | ------ | --------------------------------- | ---------------------------- |
@@ -27,7 +27,7 @@ public void OpenBuiltInBrowser(OpenBuiltInNotificationData _data)
 
 获取应用的基础信息
 
-### 入参
+### 参数
 
 | Param  | Type                              | Description                |
 | ------ | --------------------------------- | -------------------------- |

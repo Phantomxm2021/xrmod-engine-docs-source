@@ -1,7 +1,7 @@
 
 ## Description
 
-Subclass of BaseNotificationData. When you are call the method will be need pass this data to ARMOD SDK.
+Subclass of BaseNotificationData. When you are call the method will be need pass this data to XRMOD SDK.
 
 ## Parameters
 

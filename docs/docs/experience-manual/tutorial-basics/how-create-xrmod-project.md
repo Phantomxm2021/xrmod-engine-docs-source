@@ -18,7 +18,7 @@ If you haven't installed the XRMOD development environment, please [click here](
 
 ## Create Our Project
 
-We need to open **PackageToolsEditor** tool via `Unity Menu Bar`->`Tools`->`ARMOD`->`Package Tools Editor`.
+We need to open **PackageToolsEditor** tool via `Unity Menu Bar`->`Tools`->`XRMOD`->`Package Tools Editor`.
 
 <coverimg  url={require('@site/static/static/dev-tools/packagetoolseditor/package-editor.png')} height="100%" padding="0.5rem"/>
 

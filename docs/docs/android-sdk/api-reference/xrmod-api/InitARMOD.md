@@ -1,13 +1,13 @@
 ## Description
 
-Initialize ARMOD SDK with configuration information. 
+Initialize XRMOD SDK with configuration information. 
 
 ## Parameters
 
 | Name         | Type     | Description                                                   |
 | ------------ | -------- | ------------------------------------------------------------- |
 | appconfigure | NSString | This is a json string. Use to init our sdk and authentication |
-| Class        | Activity | View displayed after closing ARMOD                            |
+| Class        | Activity | View displayed after closing XRMOD                            |
 
 ## Method
 

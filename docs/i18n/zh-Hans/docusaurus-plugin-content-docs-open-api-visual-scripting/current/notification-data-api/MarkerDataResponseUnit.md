@@ -1,7 +1,7 @@
 
 ## Description
 
-BaseNotificationData的子类。当使用图像跟踪时，ARMOD SDK事件接收器函数将接收这种类型的数据。
+BaseNotificationData的子类。当使用图像跟踪时，XRMOD SDK事件接收器函数将接收这种类型的数据。
 
 
 ## Parameters

@@ -1,5 +1,5 @@
 ---
-title: TryAcquireProjectUid
+title: TryAcquireProjectInfo
 ---
 
 ## Description
@@ -15,7 +15,7 @@ Get current ARExperience project info. For example you want to use for restful a
 ## Method
 
 ```cs
-public string TryAcquireProjectUid()
+public string TryAcquireProjectInfo()
 ```
 
 ## Example
@@ -23,7 +23,7 @@ public string TryAcquireProjectUid()
 ```cs
 internal static API ARMODAPI = new API(nameof(APITest));
 private void OnLoad(){
-    var tmp_CurrentProjectUid = ARMODAPI.TryAcquireProjectUid();
+    var tmp_CurrentProjectUid = ARMODAPI.TryAcquireProjectInfo();
     Debug.Log($"Current Project uid:{tmp_CurrentProjectUid}");
 }
 ```

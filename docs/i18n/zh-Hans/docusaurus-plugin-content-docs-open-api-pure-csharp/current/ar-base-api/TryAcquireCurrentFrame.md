@@ -25,7 +25,7 @@ public Texture2D TryAcquireCurrentFrame()
 ## Example
 
 ```cs
-//ARMOD API
+//XRMOD API
 internal static API ARMODAPI = new API(nameof(TryAcquireFrameTest));
 private TryAcquireCurrentFrameNotificationData tryAcquireCurrentFrame;
 private AROcclusionNotificationData humanStencil;

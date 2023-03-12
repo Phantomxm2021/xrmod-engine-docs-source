@@ -1,12 +1,12 @@
 ## Description
 
-Get current ARMOD Window root controller
+Get current XRMOD Window root controller
 
 ## Return
 
 | Type                                                      | Description            |
 | --------------------------------------------------------- | ---------------------- |
-| <highlight color="#B092CA"> UIViewController </highlight> | ARMOD UIViewController |
+| <highlight color="#B092CA"> UIViewController </highlight> | XRMOD UIViewController |
 
 ## Method
 

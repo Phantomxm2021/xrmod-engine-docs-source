@@ -1,19 +1,24 @@
 ---
 sidebar_position: 6
-title: UDM System
+title: XR Web Editor
 keywords: [ar,xr,vr,apple glasses,hololens,quest,pico,easyAR,vuforia,xrmod,mod,doc,XR,facebook,meta,unity]
 image: img/xrmod-docs-card.png
-description: UDM is a customization system, which allows users to customize XR content and replace parts, etc. 
+description: XR Web Editor is a lightweight XR authoring editor, known as the Lite version of Unity. This editor can create a variety of XR patterns, and is very suitable for users with zero code and zero foundation. Compared with other XR editors, the use of XR Web Editor does not require the foundation of Unity, so it is more convenient and easy to use.
 ---
-## What is UDM System?
+## What is XR Web Editor?
 
-UDM is a customization system that allows users to assemble their own products through XR. This feature does not require you to write a single line of code, just upload a 3D model from the console or use the public repository to create an XR experience.
+XR Web Editor is a lightweight XR authoring editor, known as the Lite version of Unity. This editor can create a variety of XR patterns, and is very suitable for users with zero code and zero foundation. Compared with other XR editors, the use of XR Web Editor does not require the foundation of Unity, so it is more convenient and easy to use.
+
+XR Web Editor has a large number of built-in tools and resources, which can help users quickly create various types of XR applications, such as AR, VR, MR, etc. It has a friendly user interface and easy-to-understand operating steps, making it easy for users to design and modify.
+
+The advantage of XR Web Editor is that it does not require users to have the foundation of Unity, and there is no need to download and install complicated software. Users can access and start using directly through the browser, which makes the creation of XR applications more convenient. In addition, XR Web Editor also supports multi-person collaboration, allowing multiple users to edit the same XR project at the same time, further improving work efficiency.
+In a word, XR Web Editor is a powerful and easy-to-use XR authoring editor, suitable for all zero-code and zero-based users who want to create XR applications.
 
 <coverimg  url={require('@site/static/static/dev-tools/udmsystem/hololen_udm.jpg')} height="100%" padding="0.5rem"/>
 
-## UDM projects
+## XR Web Editor projects
 
-You must read the [XRMOD Cloud](./dashboard) manual before you start. Now let's start creating our first UDM project via the XRMOD Cloud console.
+You must read the [XRMOD Cloud](./dashboard) manual before you start. Now let's start creating our first XR Web Editor project via the XRMOD Cloud console.
 
 1. Register an XRMOD Cloud account and verify it.
 <coverimg  url={require('@site/static/static/dev-tools/cmsdashboard/dashboard_en.jpg')} height="100%" padding="0.5rem"/>
@@ -24,18 +29,18 @@ You must read the [XRMOD Cloud](./dashboard) manual before you start. Now let's 
 3. Click on the app in the list of apps (i.e. the one you just created) to enter it.
 <coverimg  url={require('@site/static/static/dev-tools/udmsystem/inside_the_app.jpg')} height="100%" padding="0.5rem"/>
 
-4. Click the **Create project** button or right-top menu to create our first XR-Project. You will see the following screen, at this moment we have to select the UDM category to create. 
+4. Click the **Create project** button or right-top menu to create our first XR-Project. You will see the following screen, at this moment we have to select the XR Web Editor category to create. 
 <coverimg  url={require('@site/static/static/dev-tools/udmsystem/create_udm_project_1.jpg')} height="100%" padding="0.5rem"/>
 <coverimg  url={require('@site/static/static/dev-tools/udmsystem/create_udm_project_2.jpg')} height="100%" padding="0.5rem"/>
 <coverimg  url={require('@site/static/static/dev-tools/udmsystem/create_udm_project_3.jpg')} height="100%" padding="0.5rem"/>
 <coverimg  url={require('@site/static/static/dev-tools/udmsystem/create_udm_project_4.jpg')} height="100%" padding="0.5rem"/>
 <coverimg  url={require('@site/static/static/dev-tools/udmsystem/udm_project_detail.jpg')} height="100%" padding="0.5rem"/>
 
-5. Now our UDM project has been created. But it is not yet ready for use and needs further setup. In the first place, we need click on the **XR Editor** tab item to enter the XRMOD Cloud Editor.
+5. Now our XR Web Editor project has been created. But it is not yet ready for use and needs further setup. In the first place, we need click on the **XR Editor** tab item to enter the XRMOD Cloud Editor.
 <coverimg  url={require('@site/static/static/dev-tools/udmsystem/udm_further_setip.jpg')} height="100%" padding="0.5rem"/>
 <coverimg  url={require('@site/static/static/dev-tools/udmsystem/empty_project.jpg')} height="100%" padding="0.5rem"/>
 
-6. A newly created UDM project will prompt you to upload your own 3D model since it is not initially set up with a 3D model. Of course we also consider that creators may not have 3D models, so we provide over a million 3D models for you to use. If you use the public library model, here you click **Cancel** to go to the Editor home page.
+6. A newly created XR Web Editor project will prompt you to upload your own 3D model since it is not initially set up with a 3D model. Of course we also consider that creators may not have 3D models, so we provide over a million 3D models for you to use. If you use the public library model, here you click **Cancel** to go to the Editor home page.
 <coverimg  url={require('@site/static/static/dev-tools/udmsystem/empty_project.jpg')} height="100%" padding="0.5rem"/>
 
 7. Open our Resources panel via the **Library** menu bar at the top of the Editor. The default opening panel selects your private 3D model page, you can click Private and Public to switch between them.
@@ -64,8 +69,8 @@ Go to your XR project and set its status to **Publish** (check the Publish box),
 <coverimg  url={require('@site/static/static/dev-tools/udmsystem/online_project.jpg')} height="100%" padding="0.5rem"/>
 
 
-If you don't have your own XR app yet, you can scan the QR code to download the ARMOD app to see your XR experience.
+If you don't have your own XR app yet, you can scan the QR code to download the XRMOD app to see your XR experience.
 
 <coverimg  url={require('@site/static/static/dev-tools/cmsdashboard/ARMODApp.png')} height="100%" padding="0.5rem"/>
 
-Ok. If you use our ARMOD APP, you can turn on the share of your project; this will allow you to see your XR experience in the ARMOD App community page. If you do not want to turn on sharing, you can also enter your XR-Experience Id on the third page of the ARMOD APP to experience it.
+Ok. If you use our XRMOD APP, you can turn on the share of your project; this will allow you to see your XR experience in the XRMOD App community page. If you do not want to turn on sharing, you can also enter your XR-Experience Id on the third page of the XRMOD APP to experience it.

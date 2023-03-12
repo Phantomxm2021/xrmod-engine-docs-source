@@ -29,7 +29,7 @@ namespace APITest.Runtime
 {
     public class APITestMainEntry
     {
-        //ARMOD API        
+        //XRMOD API        
         internal static API ARMODAPI = new API(nameof(APITest));
 
         public async void OnLoad()

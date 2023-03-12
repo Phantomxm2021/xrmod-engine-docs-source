@@ -18,7 +18,7 @@ sidebar_position: 1
 
 ## 创建我们的项目
 
-我们需要通过Unity菜单栏`Tools`->`ARMOD`->`Package Tools Editor`打开**PackageToolsEditor**。
+我们需要通过Unity菜单栏`Tools`->`XRMOD`->`Package Tools Editor`打开**PackageToolsEditor**。
 
 <coverimg  url={require('@site/static/static/dev-tools/packagetoolseditor/package-editor.png')} height="100%" padding="0.5rem"/>
 

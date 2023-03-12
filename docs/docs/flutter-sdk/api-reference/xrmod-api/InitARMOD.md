@@ -1,6 +1,6 @@
 ## Description
 
-Initialize ARMOD SDK with configuration information.
+Initialize XRMOD SDK with configuration information.
 
 ## Parameters
 

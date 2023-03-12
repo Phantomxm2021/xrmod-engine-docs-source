@@ -1,6 +1,6 @@
 ## Description
 
-Subclass of BaseNotificationData. When using image tracking, the ARMOD SDK Event Receiver function will receive this type of data.
+Subclass of BaseNotificationData. When using image tracking, the XRMOD SDK Event Receiver function will receive this type of data.
 
 ## Parameters
 

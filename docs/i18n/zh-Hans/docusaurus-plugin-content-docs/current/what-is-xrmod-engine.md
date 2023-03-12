@@ -46,7 +46,7 @@ import FeatureGrid from '@site/src/components/FeatureGrid'
 <UrlGrid
   basePath="/static/repository/"
   items={[
-    { name: "AR-MOD Framework", img: 'framework.jpg', sourcecode:'https://github.com/Phantomxm2021/ARMOD-Framework' },
+    { name: "AR-MOD Framework", img: 'framework.jpg', sourcecode:'https://github.com/Phantomxm2021/XRMOD-Framework' },
     { name: "Flutter Plugin", img: 'flutter_ar.jpg', sourcecode:'https://pub.dev/packages/flutter_armod_widget/versions/2.0.0-pre.1' },
     { name: "Unity Plugin", img: 'unity_ar.jpg', sourcecode:'./experience-manual/prepare-for-developer/install-xrmod-dev-tools' },
     

@@ -77,7 +77,7 @@ Now we have completed the setup. Click the Open Baker button to display baking s
 
 
 :::tip
-- We recommend that you set the saved path to the ARMOD Project Artwork folder.
+- We recommend that you set the saved path to the XRMOD Project Artwork folder.
 - If the `Automatically clean up the scene lightmap` is checked, the "Prefab Bake" will clean up all the baking in the current preview. But this does not clear our data, but just preview the data.
 :::
 

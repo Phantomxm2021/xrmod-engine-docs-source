@@ -3,7 +3,7 @@ SDKEntryPoint is the entrance to XRMOD. It is used to launch and shut down the X
 ## InitSDK
 ### Description
 
-Initialize ARMOD SDK with configuration information. This method will call  automatically.
+Initialize XRMOD SDK with configuration information. This method will call  automatically.
 
 ### Parameters
 |Name|Type|Description|
@@ -52,7 +52,7 @@ tmp_SDKEntryPoint.LaunchXRQuery(_arExperienceId);
 
 ### Description
 
-Unload current ARMOD Window
+Unload current XRMOD Window
 
 :::danger
 When xrmod is closed, all content will be released. This includes **ActionNotifications** as well as art resources.

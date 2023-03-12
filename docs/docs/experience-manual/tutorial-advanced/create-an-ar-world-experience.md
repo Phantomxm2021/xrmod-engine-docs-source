@@ -267,7 +267,7 @@ namespace ImmersalTest
 {
     public class ImmersalTestMainEntry
     {
-        //ARMOD API
+        //XRMOD API
         internal static API ARMODAPI = new API(nameof(ImmersalTest));
 
         private GameObject ARSpace;
@@ -313,13 +313,13 @@ Create a visual scripting graph(`SciptGraph`) into your project's `Scripting/Run
 
 Now let's implement the logic of the visualization script.
 
-- Add `ARMOD API` node to the visual canvas
-- Typing your name of project in the `ProjectName` field of the `ARMOD API` node
+- Add `XRMOD API` node to the visual canvas
+- Typing your name of project in the `ProjectName` field of the `XRMOD API` node
 - Add `Load Assets(Async)` node to the visual canvas
 - Typing the name of the game object you want to load to the `Name` field of the `Load Assets(Aysnc)` node
-- Connection `ARMOD API` to `Load Assets(Async)`
+- Connection `XRMOD API` to `Load Assets(Async)`
 - Add `On Start` node to the visual canvas
-- Connection `On Start` to `ARMOD API`
+- Connection `On Start` to `XRMOD API`
 - Select the `On Start` node and set `Coroutine` to `True` on the left side panel
 
 :::danger

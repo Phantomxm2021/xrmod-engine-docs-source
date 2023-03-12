@@ -84,7 +84,7 @@ namespace HowToCreateProject.Runtime
 {
     public class HowToCreateProjectMainEntry
     {
-        //ARMOD API
+        //XRMOD API
         internal static API ARMODAPI = new API(nameof(HowToCreateProject));
 
         // highlight-next-line

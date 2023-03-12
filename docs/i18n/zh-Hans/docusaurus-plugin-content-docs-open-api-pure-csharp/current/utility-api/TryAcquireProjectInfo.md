@@ -11,7 +11,7 @@
 ## 方法
 
 ```cs
-public string TryAcquireProjectUid()
+public string TryAcquireProjectInfo()
 ```
 
 ## 例子
@@ -19,7 +19,7 @@ public string TryAcquireProjectUid()
 ```cs
 internal static API ARMODAPI = new API(nameof(APITest));
 private void OnLoad(){
-    var tmp_CurrentProjectUid = ARMODAPI.TryAcquireProjectUid();
+    var tmp_CurrentProjectUid = ARMODAPI.TryAcquireProjectInfo();
     Debug.Log($"Current Project uid:{tmp_CurrentProjectUid}");
 }
 ```
