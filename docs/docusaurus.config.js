@@ -30,8 +30,8 @@ function defineSection(section, version = {}, options = {}) {
       id: section,
       sidebarPath: require.resolve("./sidebars.js"),
       breadcrumbs: false,
-      showLastUpdateTime:true,
-      showLastUpdateAuthor:false,
+      showLastUpdateTime: true,
+      showLastUpdateAuthor: false,
       editUrl:
         "https://github.com/Phantomxm2021/xrmod-engine-docs-source/tree/main/docs",
       versions: version && {
@@ -97,14 +97,14 @@ const config = {
 
           ...defaultSettings,
         },
-        blog: false,
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/Phantomxm2021/xrmod-engine-docs-source/tree/main/docs',
-        // },
+        // blog: true,
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            "https://github.com/Phantomxm2021/xrmod-engine-docs-source/tree/main/docs",
+        },
         theme: {
           customCss: [
             require.resolve("./src/css/custom.css"),
@@ -149,9 +149,9 @@ const config = {
     //   },
     // ],
     [
-      '@docusaurus/plugin-google-gtag',
+      "@docusaurus/plugin-google-gtag",
       {
-        trackingID: 'G-02WKKNH4ZE',
+        trackingID: "G-02WKKNH4ZE",
         anonymizeIP: true,
       },
     ],
@@ -167,7 +167,7 @@ const config = {
         language: ["en", "zh"],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
-        docsRouteBasePath:"/"
+        docsRouteBasePath: "/",
       },
     ],
   ],
@@ -217,8 +217,9 @@ const config = {
             position: "left",
           },
           // { to: "pricing", label: "Pricing", position: "left" },
+          // { to: "/blog", label: "Blog", position: "left" },
           { to: "changelog", label: "Changelog", position: "left" },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          
           // {
           //   type: "docsVersionDropdown",
           //   position: "right",

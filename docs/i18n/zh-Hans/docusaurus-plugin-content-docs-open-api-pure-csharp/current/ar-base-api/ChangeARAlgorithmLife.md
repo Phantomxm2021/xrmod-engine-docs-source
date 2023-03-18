@@ -52,4 +52,21 @@ public async void OnLoad()
 
 
 ## Relation
-In this API (ChangeARAlgorithmLife), we use `ARAlgorithmNotificationData` to store the data we want to send; click [here](#) to learn more about `ARAlgorithmNotificationData`.
+在这个API（ChangeARAlgorithmLife）中，我们使用`ARAlgorithmNotificationData`来存储我们想要发送的数据；点击[这里](../notification-data/ARAlgorithmNotificationData) 了解更多关于`ARAlgorithmNotificationData`。
+
+### Switching Stereo or Monocular
+
+```csharp
+internal static readonly API ARMODAPI = new API(nameof(YOUR_PROJECT_NAME_HERE));
+private bool isMRMode = false;
+ARMODAPI.ChangeARAlgorithmLife(new ARAlgorithmNotificationData
+{
+    BaseData = isMRMode ? "0" : "1",
+    ARAlgorithmType = ARAlgorithmType.Stereo,
+    ARAlgorithmOperator = ARAlgorithmOperator.StartAlgorithm,
+    Mixed = false
+});
+```
+:::danger
+在这里，我们需要传递**BaseData**数据。0代表单眼模式，1代表立体模式。
+:::

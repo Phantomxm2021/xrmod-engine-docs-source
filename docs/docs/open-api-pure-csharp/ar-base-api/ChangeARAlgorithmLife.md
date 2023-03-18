@@ -52,4 +52,22 @@ public async void OnLoad()
 
 
 ## Relation
-In this API (ChangeARAlgorithmLife), we use `ARAlgorithmNotificationData` to store the data we want to send; click [here](#) to learn more about `ARAlgorithmNotificationData`.
+In this API (ChangeARAlgorithmLife), we use `ARAlgorithmNotificationData` to store the data we want to send; click [here](../notification-data/ARAlgorithmNotificationData) to learn more about `ARAlgorithmNotificationData`.
+
+
+### Switching Stereo or Monocular
+
+```csharp
+internal static readonly API ARMODAPI = new API(nameof(YOUR_PROJECT_NAME_HERE));
+private bool isMRMode = false;
+ARMODAPI.ChangeARAlgorithmLife(new ARAlgorithmNotificationData
+{
+    BaseData = isMRMode ? "0" : "1",
+    ARAlgorithmType = ARAlgorithmType.Stereo,
+    ARAlgorithmOperator = ARAlgorithmOperator.StartAlgorithm,
+    Mixed = false
+});
+```
+:::danger
+Here we need to passing the **BaseData** data. 0 for monocular mode and 1 for stereo mode.
+:::
