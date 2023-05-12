@@ -301,8 +301,8 @@
     "message": "什么是XRMOD Engine",
     "description": "The card title"
   },
-  "Take you to understand xrmod before and after, let you know more about xrmod engine.": {
-    "message": "带您了解xrmod前后，让您更了解xrmod引擎。",
+  "Explore XRMOD and unleash its potential for your XR projects.": {
+    "message": "探索XRMOD并释放其在XR项目中的潜力。",
     "description": "The card title"
   },
   "How XRMOD works": {
@@ -312,39 +312,39 @@
   "XRMOD Engine Docs": {
     "message": "XRMOD Engine 文档"
   },
-  "Explore our guides and examples to integrate XRMOD engine easily into your apps. And make amzing XR-Experience.": {
+  "Discover our guides and examples for seamless integration of the XRMOD engine into your applications, and create incredible XR experiences.": {
     "message": "探索我们的指南和实例，将XRMOD引擎轻松整合到您的应用程序中。让您的XR体验更加精彩。"
   },
-  "Essential reading for a better understanding of how to best use XRMOD SDKs": {
-    "message": "为更好地了解如何更好地使用XRMOD SDKs，必须阅读的内容",
+  "Indispensable reading for gaining a deeper understanding of optimal usage of XRMOD SDKs.": {
+    "message": "深入了解 XRMOD SDK 的最佳使用的不可或缺的阅读材料。",
     "description": "The card description"
   },
-  "Integrate XRMOD in your Android App": {
-    "message": "在您的安卓应用中整合XRMOD",
+  "Integrating the XRMOD engine on the Android platform requires no modification to your existing business or codebase. Simply call a few APIs to embed the engine seamlessly.": {
+    "message": "在 Android 平台上集成 XRMOD 引擎不需要修改您现有的业务或代码库。只需调用几个 API 即可无缝嵌入引擎。",
     "description": "The card description"
   },
-  "Integrate XRMOD in your iOS App": {
-    "message": "在您的iOS应用程序中整合XRMOD",
+  "Integrating the XRMOD engine on the iOS platform requires no modification to your existing business or codebase. Simply call a few APIs to embed the engine seamlessly.": {
+    "message": "在 iOS 平台上集成 XRMOD 引擎不需要修改您现有的业务或代码库。只需调用几个 API 即可无缝嵌入引擎。",
     "description": "The card description"
   },
-  "Integrate XRMOD in your Flutter App": {
-    "message": "在您的Flutter应用程序中整合XRMOD",
+  "Integrating the XRMOD engine on the Flutter platform requires no modification to your existing business or codebase. Simply call a few APIs to embed the engine seamlessly.": {
+    "message": "在 Flutter 平台上集成 XRMOD 引擎不需要修改您现有的业务或代码库。只需调用几个 API 即可无缝嵌入引擎。",
     "description": "The card description"
   },
-  "Develop on Unity Engine using XRMOD.": {
-    "message": "使用XRMOD在Unity Engine上开发",
+  "Integrating the XRMOD engine into your Unity platform is a breeze, as it requires no modifications to your existing business or codebase.": {
+    "message": "将 XRMOD 引擎集成到您的 Unity 平台是一件轻而易举的事，因为它不需要修改您现有的业务或代码库。",
     "description": "The card description"
   },
-  "Use them to release our content to all applications using the XR-MOD framework.": {
-    "message": "用它们来向所有使用XR-MOD框架的应用程序发布我们的内容。",
+  "Package Tools are essential content creation tools within the XRMOD framework, enabling effortless management of resources, algorithms, compression, and more.": {
+    "message": "包工具是 XRMOD 框架内必不可少的内容创建工具，可轻松管理资源、算法、压缩等。",
     "description": "The card description"
   },
-  "Object Capture uses photogrammetry to turn a series of pictures into 3D-Model file.": {
-    "message": "物体捕获使用摄影测量法将一系列的图片变成3D模型文件。",
+  "Transform your photos into stunning 3D models, optimized for AR, with the new Object Capture API on macOS Monterey.": {
+    "message": "使用 macOS Monterey 上的新 Object Capture API，将您的照片转换为令人惊叹的 3D 模型，并针对 AR 进行了优化。",
     "description": "The card description"
   },
-  "A remote debugging tool for AR experience develop.": {
-    "message": "一个用于AR体验开发的远程调试工具。",
+  "A remote debugging tool for XR experience develop.": {
+    "message": "一个用于XR体验开发的远程调试工具。",
     "description": "The card description"
   },
   "API Reference": {
@@ -485,8 +485,8 @@
   "Custom XRMOD Cloud": {
     "message": "定制XRMOD云"
   },
-  "The XRMOD engine provides a solution for implementing augmented reality functions on the cross platform. Embedding XRMOD engine on the cross platform does not need to change your original business and code, and only needs to call several APIs to complete the embedding. XRMOD engine is a free and without watermark XR construction system that supports commercial licenses (free commercial licenses).": {
-    "message": "XRMOD引擎为在跨平台上实现增强现实功能提供了一个解决方案。在跨平台上嵌入XRMOD引擎不需要改变您原有的业务和代码，只需要调用几个API即可完成嵌入。XRMOD引擎是一个免费的、无水印的元空间构建系统，支持商业许可（免费商业许可）。"
+  "Committed to delivering cutting-edge XR technology and an open platform for businesses and customers, we provide a zero-code creation cloud to help them better apply XR technology in organizational and customer.": {
+    "message": "致力于提供尖端的 XR 技术和开放的为企业和客户提供平台，我们提供零代码创云，帮助他们更好地将XR技术应用在组织和客户。"
   },
   "Sign up to get 10,000 API calls per month for free!": {
     "message": "注册后，每月可免费获得10,000次API调用!"

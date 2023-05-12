@@ -7,28 +7,27 @@ description: what is xrmod engine, it a XR construction system. it's free.
 slug: /
 ---
 
-The goal of this manual is to provide a beginner to proficient guide in XR content creation.
+The aim of this manual is to provide novice learners with a comprehensive guide for XR content creation. 
 
-If you are still a beginner, don't worry that you can't make an xr experience, in xrmod engine we provide many ways to help build the xr experience you have conceived.
+ If you are new to this field, do not worry about creating an XR experience as XRMOD engine offers numerous methods to help you build your envisioned XR experience. 
 
-Let's discover **XRMOD engine in less than 5 minutes**.
+Let us explore the **XRMOD engine in less than 5 minutes**.
 
 :::tip
-We recommend that you read all chapters in sidebar order.
+We suggest reading all chapters in the order listed on the sidebar for optimal comprehension.
 :::
 
 ## What's XRMOD engine
 
-In short, XRMOD Engine is a XR construction system developed based on the OpenXR protocol. Not only VR (Virtual Reality), AR (Augmented Reality), MR (Mixed Reality), but also continued support for traditional screen reading methods.
+The XRMOD Engine is an XR construction system built on the OpenXR protocol. It supports not only VR (Virtual Reality), AR (Augmented Reality), and MR (Mixed Reality), but also traditional screen-based methods.
 
-XRMOD engine is a free and without watermark XR construction system that supports commercial licenses (free commercial licenses).
+Moreover, the XRMOD Engine is free and comes without any watermarks. It also offers commercial licenses for free.
 
 ## What's mean of MOD in the XRMOD
 
-MOD is Modification or module. The concept is widely used in games and corresponds to modifiable video games. Famous games like Warcraft, Red Alert, Half-Life, CS, Victory Day and more!
+A MOD in gaming is a modification program that can alter game content, adding new features, items, characters, scenes, and more. MODs can be created by players themselves, or downloaded from other players who have created them.
 
-We ported the MOD concept to the XRMOD Engine, giving users more freedom to create the creative interactive experience content they need! In this process, users do not need to worry about algorithm and code implementation, but only need to focus on the production of innovative interactive experience content. With only a small amount of code, you can use and create greater business value in applications that use XRMOD Engine.
-
+We have extended the MOD concept to the XRMOD Engine, offering users more freedom to create interactive content that is both creative and engaging. With our engine, users no longer need to worry about algorithm and code implementation, but can instead focus on producing innovative interactive experiences. With just a few lines of code, users can leverage the power of the XRMOD Engine to create more business value in their applications.
 
 ## Features
 

@@ -25,13 +25,28 @@ Everything is ready, we use the shortcut keys (**Mac**: *Command+Shift+B*; **Win
 <Tabs defaultValue='handheldar' values={[
     {label:"Apple",value:"appleglasses"},
     {label:"HandheldAR",value:"handheldar"},
-    {label:"Hololens2",value:"hololens2"},
-    {label:"Quest2",value:"quest2"},
-    {label:"PicoNeo3",value:"piconeo3"},
+    {label:"Hololens",value:"hololens"},
+    {label:"Quest",value:"quest"},
+    {label:"Pico",value:"pico"},
     {label:"WebXR",value:"webar"},
     {label:"Web3D",value:"web3d"},
     {label:"Classic3D",value:"classic3d"},
 ]}>
+
+<TabItem value="appleglasses">
+
+- com.phantomsxr.xrmodenginesettings
+- com.phantomsxr.appleglasses
+- com.phantomsxr.ilcore
+- com.phantomsxr.foundation
+- com.phantomsxr.armodsimulator
+
+:::tip
+How to check the package name?
+<coverimg url={require('@site/static/static/sdk/unity-sdk/package-name.png')} height="25rem"/>
+:::
+
+</TabItem>
 
 <TabItem value="handheldar">
 
@@ -47,6 +62,55 @@ How to check the package name?
 :::
 
 </TabItem>
+
+
+<TabItem value="hololens">
+
+- com.phantomsxr.xrmodenginesettings
+- com.phantomsxr.hololens
+- com.phantomsxr.ilcore
+- com.phantomsxr.foundation
+- com.phantomsxr.armodsimulator
+
+:::tip
+How to check the package name?
+<coverimg url={require('@site/static/static/sdk/unity-sdk/package-name.png')} height="25rem"/>
+:::
+
+</TabItem>
+
+
+<TabItem value="quest">
+
+- com.phantomsxr.xrmodenginesettings
+- com.phantomsxr.quest
+- com.phantomsxr.ilcore
+- com.phantomsxr.foundation
+- com.phantomsxr.armodsimulator
+
+:::tip
+How to check the package name?
+<coverimg url={require('@site/static/static/sdk/unity-sdk/package-name.png')} height="25rem"/>
+:::
+
+</TabItem>
+
+
+<TabItem value="pico">
+
+- com.phantomsxr.xrmodenginesettings
+- com.phantomsxr.pico
+- com.phantomsxr.ilcore
+- com.phantomsxr.foundation
+- com.phantomsxr.armodsimulator
+
+:::tip
+How to check the package name?
+<coverimg url={require('@site/static/static/sdk/unity-sdk/package-name.png')} height="25rem"/>
+:::
+
+</TabItem>
+
 
 
 </Tabs>

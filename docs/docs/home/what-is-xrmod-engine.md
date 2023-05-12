@@ -6,19 +6,20 @@ image: img/xrmod-docs-card.png
 description: XRMOD Engine is a free watermark-free XR build system that supports commercial licenses (free commercial licenses).
 ---
 
-In short, XRMODEngine is a XR construction system developed based on the OpenXR protocol. Not only VR (Virtual Reality), AR (Augmented Reality), MR (Mixed Reality), but also continued support for traditional screen reading methods.
-XRMOD Engine is a free watermark-free XR build system that supports commercial licenses (free commercial licenses).
+The XRMOD Engine is an XR construction system built on the OpenXR protocol. It supports not only VR (Virtual Reality), AR (Augmented Reality), and MR (Mixed Reality), but also traditional screen-based methods.  
+
+Moreover, the XRMOD Engine is free and comes without any watermarks. It also offers commercial licenses for free.
 
 ## Concept of XRMOD
-MOD is both Modification. The concept is widely used in games and corresponds to modifiable video games. Famous games like Warcraft, Red Alert, Half-Life, CS, Victory Day and more!
-We ported the MOD concept to the XRMOD Engine, giving users more freedom to create the creative interactive experience content they need! In this process, users do not need to worry about algorithm and code implementation, but only need to focus on the production of innovative interactive experience content. With just a small amount of code, you can use and create greater business value in applications that use XRMOD Engine.
 
+A MOD in gaming is a modification program that can alter game content, adding new features, items, characters, scenes, and more. MODs can be created by players themselves, or downloaded from other players who have created them.
 
-The XRMOD engine can be a module or an unity plugin, depending on the environment you are using. 
+We have extended the MOD concept to the XRMOD Engine, offering users more freedom to create interactive content that is both creative and engaging. With our engine, users no longer need to worry about algorithm and code implementation, but can instead focus on producing innovative interactive experiences. With just a few lines of code, users can leverage the power of the XRMOD Engine to create more business value in their applications.
+
 
 |Name|Description|
 |---|---|
-|Be Module|As the name implies, it will allow developers to embed XRMOD Engine into the App (with Unity).|
+|Be Module|As its name suggests, this will enable developers to easily incorporate the XRMOD engine into their native app.|
 |Be Unity Plugin| XRMOD Engine provides full support for the Unity Editor, which can be used by creators not only for the creation of XR experience content, but also for plug-ins for Unity cross-platform applications.|
 
 ## Features

@@ -35,13 +35,14 @@ export default function Homepage() {
             </h2>
             <p>
               <Translate>
-                Explore our guides and examples to integrate XRMOD engine easily
-                into your apps. And make amzing XR-Experience.
+                Discover our guides and examples for seamless integration of the
+                XRMOD engine into your applications, and create incredible XR
+                experiences.
               </Translate>
             </p>
           </div>
 
-          <Section title="Get to know XRMOD">
+          <Section title="🚀 Get to know XRMOD">
             <Card
               title={translate({
                 message: "What is XRMOD engine",
@@ -49,7 +50,7 @@ export default function Homepage() {
               })}
               description={translate({
                 message:
-                  "Take you to understand xrmod before and after, let you know more about xrmod engine.",
+                  "Explore XRMOD and unleash its potential for your XR projects.",
                 description: "The card title",
               })}
               to="/what-is-xrmod-engine"
@@ -62,7 +63,7 @@ export default function Homepage() {
               })}
               description={translate({
                 message:
-                  "Essential reading for a better understanding of how to best use XRMOD SDKs",
+                  "Indispensable reading for gaining a deeper understanding of optimal usage of XRMOD SDKs.",
                 description: "The card description",
               })}
               to="/how-xrmod-works"
@@ -73,7 +74,8 @@ export default function Homepage() {
             <Card
               title="Android"
               description={translate({
-                message: "Integrate XRMOD in your Android App",
+                message:
+                  "Integrating the XRMOD engine on the Android platform requires no modification to your existing business or codebase. Simply call a few APIs to embed the engine seamlessly.",
                 description: "The card description",
               })}
               to="/android-sdk/"
@@ -82,7 +84,8 @@ export default function Homepage() {
             <Card
               title="iOS"
               description={translate({
-                message: "Integrate XRMOD in your iOS App",
+                message:
+                  "Integrating the XRMOD engine on the iOS platform requires no modification to your existing business or codebase. Simply call a few APIs to embed the engine seamlessly.",
                 description: "The card description",
               })}
               to="/ios-sdk/"
@@ -91,7 +94,8 @@ export default function Homepage() {
             <Card
               title="Flutter"
               description={translate({
-                message: "Integrate XRMOD in your Flutter App",
+                message:
+                  "Integrating the XRMOD engine on the Flutter platform requires no modification to your existing business or codebase. Simply call a few APIs to embed the engine seamlessly.",
                 description: "The card description",
               })}
               to="/flutter-sdk/"
@@ -100,7 +104,8 @@ export default function Homepage() {
             <Card
               title="Unity Engine"
               description={translate({
-                message: "Develop on Unity Engine using XRMOD.",
+                message:
+                  "Integrating the XRMOD engine into your Unity platform is a breeze, as it requires no modifications to your existing business or codebase.",
                 description: "The card description",
               })}
               to="/unity-sdk/"
@@ -113,7 +118,7 @@ export default function Homepage() {
               title="Package Tools Editor"
               description={translate({
                 message:
-                  "Use them to release our content to all applications using the XR-MOD framework.",
+                  "Package Tools are essential content creation tools within the XRMOD framework, enabling effortless management of resources, algorithms, compression, and more.",
                 description: "The card description",
               })}
               to="/experience-manual/dev-tools/package-tools/"
@@ -124,7 +129,7 @@ export default function Homepage() {
               title="ObjectCapture"
               description={translate({
                 message:
-                  "Object Capture uses photogrammetry to turn a series of pictures into 3D-Model file.",
+                  "Transform your photos into stunning 3D models, optimized for AR, with the new Object Capture API on macOS Monterey.",
                 description: "The card description",
               })}
               to="/experience-manual/dev-tools/object-capture/"
@@ -134,7 +139,7 @@ export default function Homepage() {
             <Card
               title="Remote Debug"
               description={translate({
-                message: "A remote debugging tool for AR experience develop.",
+                message: "A remote debugging tool for XR experience develop.",
                 description: "The card description",
               })}
               to="/experience-manual/dev-tools/remote-debug/"
