@@ -14,8 +14,37 @@ import TabItem from '@theme/TabItem';
 
 ## 安装
 
+在上一章中，我们已经安装了 Unity 并创建了一个 Unity 项目。接下来，我们需要安装 XRMOD 开发包。在项目开始之前，我们需要使用`Unity Package Manager`来安装 XRMOD 工具包。
 
-通过阅读[XR体验内容开发工具包安装文章](./install-xrmod-dev-tools)获得基本的开发环境。由于我们需要将XRMOD引擎与Unity结合起来，开发一个新的APP或XR-Experience内容，我们需要安装一些必要的软件包。
+### Add Registries
+
+1. 打开 Unity Editor 并创建一个 URP 项目
+2. 通过`Edit`->`ProjectSetting`->`Package Manager`来设置`Unity Package Manager`注册
+3. 在`Package Manager`->`Scoped Registries`中输入以下表格，勾选`enable Preview Packages`和`Enable Pre-release Packages`，然后点击 Apply 来保存您的设置
+
+| Name       | URL                        | Scope(s)       |
+| ---------- | -------------------------- | -------------- |
+| PhantomsXR | https://registry.npmjs.org | com.phantomsxr |
+
+![Setup Package Registries](@site/static/static/prepare-for-developer/unity-package-registries-setup.png)
+
+5. 通过顶部菜单栏的 `Window` > `Package Manager`打开`Unity Package Manager`
+6. 再次将`registry`切换到`My Registries`您将看到所有的开发包
+
+<coverimg url={require('@site/static/static/prepare-for-developer/unity-swtich-registries.jpg')} height="100%" padding="0.5rem"/>
+
+### Install packages
+
+通过安装`XRMOD Engine Settings`来初始化我们的Unity项目，然后根据您需要开发的平台安装相应的软件包。
+
+
+<coverimg url={require('@site/static/static/prepare-for-developer/unity-install-packages.png')} height="100%" padding="0.5rem"/>
+
+
+<coverimg  url={require('@site/static/static/prepare-for-developer/unity-install-packages-1.png')}/>
+
+
+## 程序包安装
 
 一切准备就绪，我们使用快捷键（**Mac**：*Command+Shift+B*；**Win**：Ctrl+Shift+B）打开构建设置面板，改变为我们需要的平台。
 

@@ -14,9 +14,31 @@ import TabItem from '@theme/TabItem';
 
 ## Installation
 
+In the previous chapter, we have installed Unity and created a Unity project. Next, we need to install the XRMOD development kit. Before the project starts, we need to install the XRMOD Kit using the `Unity Package Manager` .
 
-Get the basic development environment by reading [the XR Experience Content Development Kit Installation article](./install-xrmod-dev-tools). Since we need to combine XRMOD Engine with Unity to develop a new APP or XR-Experience content, We need to install some required packages.
+### Add Registries
 
+1. Open Unity Editor and create an URP project
+2. Set the `Unity Package Manager` registries through `Edit`->`ProjectSetting`->`Package Manager`
+4. Typing inthe form below in `Package Manager`->`Scoped Registries`, checked the `enable Preview Packages` and `Enable Pre-release Packages`, then click Apply to save your setings.
+
+|Name|URL|Scope(s)|
+|---|---|---|
+|PhantomsXR|	https://registry.npmjs.org	|com.phantomsxr|
+
+
+<coverimg  url={require('@site/static/static/prepare-for-developer/unity-package-registries-setup.png')}/>
+
+5. Open the `Unity Package Manager` via `Window` > `Package Manager` in the top menu bar
+6. Switch the `registry` to `My Registries` again and you will see all development packages.
+
+
+<coverimg  url={require('@site/static/static/prepare-for-developer/unity-swtich-registries.jpg')}/>
+
+
+<coverimg  url={require('@site/static/static/prepare-for-developer/unity-install-packages-1.png')}/>
+
+## Packages Install
 Everything is ready, we use the shortcut keys (**Mac**: *Command+Shift+B*; **Win**: Ctrl+Shift+B) to open the Build Settings panel and change to the platform we need.
 
 <coverimg url={require('@site/static/static/sdk/unity-sdk/switch-platform.png')} fit="scale-down" height="25rem" label="Switch Platform"/>
@@ -140,28 +162,9 @@ After the installation is complete, open the `Edit`->`Project Settings`->`Phanto
 
 Configure your project according to the following platform.
 
-<Tabs defaultValue='handheldar' values={[
-    {label:"Apple",value:"appleglasses"},
-    {label:"HandheldAR",value:"handheldar"},
-    {label:"Hololens2",value:"hololens2"},
-    {label:"Quest2",value:"quest2"},
-    {label:"PicoNeo3",value:"piconeo3"},
-    {label:"WebXR",value:"webar"},
-    {label:"Web3D",value:"web3d"},
-    {label:"Classic3D",value:"classic3d"},
-]}>
-
-<TabItem value="handheldar">
-
 Now you can see a new settings view appear; Set up according to the order of the pictures below:
 
 <coverimg url={require('@site/static/static/sdk/unity-sdk/xrmod-settings.png')}/>
-
-</TabItem>
-
-
-</Tabs>
-
 
 :::tip
 If a ❌ <sup>6</sup> appears in the [5] area you will see the **Fix** button behind it, click on it to fix it.
