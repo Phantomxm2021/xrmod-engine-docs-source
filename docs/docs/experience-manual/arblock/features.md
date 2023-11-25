@@ -154,3 +154,21 @@ Multiplayer Block is a system for building multiplayer capabilities for AR exper
 
 
 <coverimg  url={require('@site/static/static/blocks/features-block/multiplayerblock.jpg')} height="25rem" padding="0"/>
+
+## Work Space Block
+
+<coverimg  url={require('@site/static/static/blocks/features-block/work-space-block.png')} height="25rem" padding="0"/>
+
+
+:::info
+By default, XR-Experience launch into the Fully Space. And It's work only **Headset platform** not work with **HandheldAR**.
+:::
+
+## Shared Space
+
+where they exist side by side — much like multiple apps on a Mac desktop. Apps can use windows and volumes to show content, and the user can reposition these elements wherever they like. 
+
+## Fully Space
+
+ For a more immersive experience, an app can open a dedicated Full Space where only that app’s content will appear. Inside a Full Space, an app can use windows and volumes, create unbounded 3D content, open a portal to a different world, or even fully immerse people in an environment.
+

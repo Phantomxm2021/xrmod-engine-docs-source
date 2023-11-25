@@ -118,7 +118,7 @@ const config = {
     [
       require.resolve("./plugins/changelog/index.js"),
       {
-        blogTitle: "XRMOD changelog",
+        blogTitle: "XRMOD CHANGEDLOG",
         blogDescription:
           "Keep yourself up-to-date about new features in every release",
         blogSidebarCount: "ALL",
@@ -130,7 +130,7 @@ const config = {
         authorsMapPath: "authors.json",
         feedOptions: {
           type: "all",
-          title: "XRMOD changelog",
+          title: "XRMOD CHANGEDLOG",
           description:
             "Keep yourself up-to-date about new features in every release",
           copyright: `Copyright © ${new Date().getFullYear()} PhantomsXR Co,Ltd.`,
