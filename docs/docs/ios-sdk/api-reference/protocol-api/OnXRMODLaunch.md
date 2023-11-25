@@ -5,5 +5,5 @@ Execute after the XRMOD Engine initialization is complete
 ## Method
 
 ```objectivec
-- (void)onARMODLaunch;
+- (void)onXRMODLaunch;
 ```

@@ -5,5 +5,5 @@ When your device supports ARCore but you are installing the ARCore service, this
 ## Method
 
 ```cs
- void onNeedInstallARCoreService();
+ Action NeedInstallARCoreServicesEventHandle;
 ```

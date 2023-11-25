@@ -11,5 +11,5 @@ Listening and receiving messages from XR-Experience.
 ## Method
 
 ```cs
-public static event Action<string> NativePlugins.Plugin.NativeAPI.OnMessageReceviedHandle;
+Action<string> OnMessageReceviedHandle;
 ```

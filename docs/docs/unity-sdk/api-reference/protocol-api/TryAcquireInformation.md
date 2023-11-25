@@ -12,5 +12,5 @@ Get app information from ARExperience script
 ## Method
 
 ```cs
-Future<String> onTryAcquireInformation(String opTag);
+Action<string, TryAcquireInformationDelegate> TryAcquireInformationEventHandle;
 ```

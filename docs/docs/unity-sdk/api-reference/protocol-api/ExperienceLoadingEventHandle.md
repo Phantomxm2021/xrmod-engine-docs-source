@@ -1,6 +1,6 @@
 ## Description
 
-Loading ARExperience asset progress
+Loading XRExperience asset progress
 
 ## Parameters
 
@@ -11,5 +11,5 @@ Loading ARExperience asset progress
 ## Method
 
 ```cs
-void onUpdateLoadingProgress(progress)
+Action<float> ExperienceLoadingEventHandle;
 ```

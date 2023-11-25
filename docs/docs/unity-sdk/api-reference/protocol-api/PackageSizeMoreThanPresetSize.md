@@ -12,5 +12,5 @@ Detected that the ARExperience package is too large
 ## Method
 
 ```cs
-void onPackageSizeMoreThanPresetSize(currentSize, presetSize)
+Action<float,float> PackageSizeMoreThanPresetSizeEventHandle;
 ```

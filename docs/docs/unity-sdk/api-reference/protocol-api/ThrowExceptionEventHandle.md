@@ -12,5 +12,5 @@ The method will be executed if an exception occurs
 ## Method
 
 ```cs
- void onThrowException(String errorMsg, int erorCode);
+Action<string int> ThrowExceptionEventHandle;
 ```

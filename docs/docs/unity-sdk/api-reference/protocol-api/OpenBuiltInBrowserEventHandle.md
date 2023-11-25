@@ -11,5 +11,5 @@ Open the URL in a custom browser
 ## Method
 
 ```cs
-void onOpenBuiltInBrowser(url)
+Action<string> OpenBuiltInBrowserEventHandle
 ```
