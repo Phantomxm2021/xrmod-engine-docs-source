@@ -68,6 +68,19 @@ export default function Homepage() {
               })}
               to="/how-xrmod-works"
             />
+
+            <Card
+              title={translate({
+                message: "How to use XRMOD",
+                description: "The card title",
+              })}
+              description={translate({
+                message:
+                  "Learn how to go from installing XRMOD to developing XR experiences using XRMOD.",
+                description: "The card description",
+              })}
+              to="/experience-manual"
+            />
           </Section>
 
           <Section title="📱 Mobile SDKs" id="mobile-sdks">

@@ -172,3 +172,21 @@ AR World Scale 根据开发者设定的尺寸值来缩放当前 AR 体验场景�
   height="25rem"
   padding="0"
 />
+
+## Work Space Block
+
+<coverimg  url={require('@site/static/static/blocks/features-block/work-space-block.png')} height="25rem" padding="0"/>
+
+
+:::info
+默认情况下，XR-Experience 会进入全空间。它仅适用于 **Headset platform**，不适用于 **HandheldAR**。
+:::
+
+## Shared Space
+
+它们并排存在——就像 Mac 桌面上的多个应用程序一样。应用程序可以使用窗口和体积来显示内容，并且用户可以将这些元素重新定位到任何他们喜欢的位置。
+
+## Fully Space
+
+为了获得更加身临其境的体验，应用程序可以打开一个专用的完整空间，其中只会显示该应用程序的内容。在完整空间内，应用程序可以使用窗口和体积，创建无限的3D内容，打开通往不同世界的门户，甚至使人们完全沉浸在环境中。
+

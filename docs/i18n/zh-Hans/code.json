@@ -301,6 +301,10 @@
     "message": "什么是XRMOD Engine",
     "description": "The card title"
   },
+  "How to use XRMOD":{
+    "message": "如何使用XRMOD",
+    "description": "The card title"
+  },
   "Explore XRMOD and unleash its potential for your XR projects.": {
     "message": "探索XRMOD并释放其在XR项目中的潜力。",
     "description": "The card title"
@@ -316,6 +320,10 @@
     "message": "探索我们的指南和实例，将XRMOD引擎轻松整合到您的应用程序中。让您的XR体验更加精彩。"
   },
   "Indispensable reading for gaining a deeper understanding of optimal usage of XRMOD SDKs.": {
+    "message": "了解如何从安装 XRMOD 到使用 XRMOD 开发 XR 体验。",
+    "description": "The card description"
+  },
+  "Learn how to go from installing XRMOD to developing XR experiences using XRMOD.": {
     "message": "深入了解 XRMOD SDK 的最佳使用的不可或缺的阅读材料。",
     "description": "The card description"
   },

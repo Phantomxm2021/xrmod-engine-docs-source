@@ -10,39 +10,7 @@ import TabItem from "@theme/TabItem";
 
 ## XRMOD 引擎开发环境
 
-通过阅读[XR体验内容开发工具包安装文章](../experience-manual/prepare-for-developer/install-xrmod-dev-tools)获得基本的开发环境。由于我们需要将 XRMOD 引擎和 Unity 结合起来开发一个新的 APP，我们需要安装一些必要的软件包。
-
-<Tabs defaultValue='handheldar' values={[
-    {label:"Apple",value:"appleglasses"},
-    {label:"HandheldAR",value:"handheldar"},
-    {label:"Hololens2",value:"hololens2"},
-    {label:"Quest2",value:"quest2"},
-    {label:"Pico",value:"pico"},
-    {label:"WebXR",value:"webar"},
-    {label:"Web3D",value:"web3d"},
-    {label:"Classic3D",value:"classic3d"},
-]}>
-
-<TabItem value="handheldar">
-
-- com.phantomsxr.xrmodenginesettings
-- com.phantomsxr.xrmod.handheldar
-- com.phantomsxr.ilcore
-- com.phantomsxr.foundation
-
-:::tip
-如何检查软件包的名称？
-
-<coverimg url={require("@site/static/static/sdk/unity-sdk/package-name.png")} height="25rem" />
-:::
-
-</TabItem>
-
-</Tabs>
-
-安装完成后，在Unity顶部的菜单栏中打开`Edit`->`Project Settings`->`PhantomsXR`->`XR-MOD Engine SDK Settings`来初始化我们的项目配置，如下图所示。完成这一步骤后，我们就可以开始开发AR-APP了。
-
-<coverimg url={require("@site/static/static/sdk/unity-sdk/xrmod-settings.png")} height="25rem" />
+通过阅读[XR体验内容开发工具包安装文章](../experience-manual/prepare-for-developer/install-xrmod-engine)获得基本的开发环境。
 
 ## 启动 XRMOD 引擎
 
@@ -50,10 +18,21 @@ import TabItem from "@theme/TabItem";
 
 <coverimg url={require("@site/static/static/sdk/unity-sdk/scene-list.png")} height="10rem" />
 
-在 Assets 面板中创建一个名为 Scripts 的新文件夹（用于存储项目脚本--个人习惯），在该文件夹的内容中创建一个新的 C# Script，并将其命名为 App。
+在Project面板中有一个名为Scripts的文件夹，将该文件夹内**项目名称XRMODBootstrap.cs**脚本赋予到您场景GameObject上。该组件上每个字段解释如下：
 
-在等待 Unity 编译后，我们双击刚刚创建的 Script，打开它进行编辑。思路的流程大致如下。
 
+| Name                | Type   | Description                                                                                                                             |
+| ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| dashboardConfig     | String | 配置                                                                                                                                    |
+| token               | String | 用户认证                                                                                                                                |
+| dashboardGateway    | String | API 网关                                                                                                                                |
+| timeout             | Int    | http 请求的超时                                                                                                                         |
+| maximumDownloadSize | Float  | AR 体验包的最大下载尺寸。如果超过这个值，(void)packageSizeMoreThanPresetSize:(float)currentSize preset:(float)presetSize 方法将被响应到 |
+| EngineType          | String | 它是用来告诉大家 AR MOD SDK 目前是在什么环境下运行的。如果是基于 Unity 的二次开发，需要填写 Unity。                                     |
+| AppModel            | String | 用来区分当前应用程序的模式分为三种情况。在线--与 Dashboard 连接，离线--通过加载本地内容不与互联网连接，模拟器--用于 Unity 编辑器 。     |
+| ProjectUID            | String | 您托管在XRMOD Cloud中的项目ID。     |
+
+### 启动器是如何工作的？
 1. 获取 SDK EntryPoint
 2. 建立和配置 SDKConfiguration，并通过 SDK EntryPoint.Init 传入 SDK 初始化。
 3. 调用 SDKEntryPoint.LaunchARQuery 来启动 XR 并加载内容。要使用这个方法，您需要传入项目 ID 或项目名称。
@@ -76,15 +55,31 @@ public void ARModuleStart(){
 }
 ```
 
-| Name                | Type   | Description                                                                                                                             |
-| ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| dashboardConfig     | String | 配置                                                                                                                                    |
-| token               | String | 用户认证                                                                                                                                |
-| dashboardGateway    | String | API 网关                                                                                                                                |
-| timeout             | Int    | http 请求的超时                                                                                                                         |
-| maximumDownloadSize | Float  | AR 体验包的最大下载尺寸。如果超过这个值，(void)packageSizeMoreThanPresetSize:(float)currentSize preset:(float)presetSize 方法将被响应到 |
-| EngineType          | String | 它是用来告诉大家 AR MOD SDK 目前是在什么环境下运行的。如果是基于 Unity 的二次开发，需要填写 Unity。                                     |
-| AppModel            | String | 用来区分当前应用程序的模式分为三种情况。在线--与 Dashboard 连接，离线--通过加载本地内容不与互联网连接，模拟器--用于 Unity 编辑器 。     |
+## Close XRMOD
+
+Since it can be turned on and off on demand, xrmod allows you to call [Dispose](./api-reference/xrmod-api/SdkEntryPoint#dispose) to turn off XR.
+
+```cs
+public void DisableAR(){
+    var tmp_SDKEntryPoint = UnityEngine.Object.FindObjectOfType<SDKEntryPoint>();
+    tmp_SDKEntryPoint.Dispose();
+    
+    // Reload the Main scene for ready
+    // highlight-next-line
+    SceneManager.LoadScene("Main");
+}
+```
+
+## Managed code stripping
+
+During the build process, Unity removes unused or unreachable code through a process called [managed code stripping](https://docs.unity3d.com/Manual/ManagedCodeStripping.html), which can significantly decrease your application’s final size. Managed code stripping removes code from managed assemblies, including assemblies built from the C# scripts
+ in your project, assemblies that are part of packages and plugins, and assemblies in .NET Framework.
+
+Unity uses a tool called the Unity linker to perform a static analysis of the code in your project’s assemblies. The static analysis identifies any classes, portions of classes, functions, or portions of functions that can’t be reached during execution. This analysis only includes code that exists at build time because runtime generated code doesn’t exist when Unity performs the static analysis.
+
+You can configure the level of code stripping Unity performs for your project using the **Managed Stripping Level** setting. To prevent Unity removing specific parts of your code, use annotations to indicate which parts of your code base the Unity linker should preserve. For more information, see Unity [linker](https://docs.unity3d.com/Manual/unity-linker.html).
+
+
 
 ## 总结
 
